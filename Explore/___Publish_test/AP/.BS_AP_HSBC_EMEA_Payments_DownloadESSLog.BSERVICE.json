@@ -1,0 +1,53 @@
+{
+  "objectInfo" : {
+    "id" : "2PEiYUndJTqjUG077MyJwv",
+    "name" : "BS_AP_HSBC_EMEA_Payments_DownloadESSLog",
+    "type" : "BSERVICE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ2700000000002C"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      }, {
+        "name" : "017JAQ28000000000057",
+        "value" : "2PEiYUndJTqjUG077MyJwv@HSBC_EMEA_DMS_Download_logfile_ID"
+      } ],
+      "additionalInfo" : {
+        "description" : " To download ESS job log",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "updateTime" : "2025-03-13T13:44:01.873Z",
+  "objectRefs" : [ {
+    "id" : "anBxG9rxJ6cjyVHFunoXky",
+    "name" : "REST_AP_HSBC_EMEA_Payments_Downloadlog",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0B0000000000OD"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Rest Connection to donwload the ESS job log",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

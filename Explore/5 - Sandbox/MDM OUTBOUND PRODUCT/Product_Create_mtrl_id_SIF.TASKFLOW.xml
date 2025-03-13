@@ -1,0 +1,904 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>Jk7KsqeErhNzUze-gt-24118960-2022-02-18T00:23:53.567Z::tf.xml</types1:EntryId>
+      <types1:Name>Product_Create_mtrl_id_SIF</types1:Name>
+      <types1:MimeType>application/xml+taskflow</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>SA_sabhisek</types1:CreatedBy>
+      <types1:CreationDate>2022-02-18T00:23:54Z</types1:CreationDate>
+      <types1:ModifiedBy>SA_sabhisek</types1:ModifiedBy>
+      <types1:ModificationDate>2022-02-18T00:43:51Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                   xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                   xmlns:list="urn:activevos:spi:list:functions"
+                   displayName="Product_Create_mtrl_id_SIF"
+                   name="Product_Create_mtrl_id_SIF"
+                   overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <tempFields>
+               <field description="" name="DESC" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:mt-MTRL-ID-SIF-DESC</option>
+                  </options>
+               </field>
+               <field description="" name="COST" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:mt-MTRL-ID-SIF-COST</option>
+                  </options>
+               </field>
+               <field description="" name="BOM_REL" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:mt-MTRL-ID-SIF-BOM-REL</option>
+                  </options>
+               </field>
+               <field description="" name="DIM" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:mt-MTRL-ID-SIF-DIM</option>
+                  </options>
+               </field>
+               <field description="" name="SLS" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:mt-MTRL-ID-SIF-SLS</option>
+                  </options>
+               </field>
+               <field description="" name="PLNT" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:mt-MTRL-ID-SIF-PLNT</option>
+                  </options>
+               </field>
+               <field description="" name="MTRL_VAL" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:mt-MTRL-ID-SIF-MTRL-VAL</option>
+                  </options>
+               </field>
+               <field description="" name="MLSTN" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:mt-MTRL-ID-SIF-MLSTN</option>
+                  </options>
+               </field>
+               <field description="" name="TAX" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:mt-MRL-ID-SIF-TAX</option>
+                  </options>
+               </field>
+               <field description="" name="Product_Create" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:Product-Create</option>
+                  </options>
+               </field>
+               <field description="" name="ID" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:MTRL-ID-DIF-ID</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <rest/>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="kwxw46p4" targetId="kwxw46p9"/>
+               </start>
+               <eventContainer id="kwxw46p9">
+                  <service id="kwxw46p3">
+                     <title>Product_Create</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">Product_Create</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">hqwx5pTd50riilZacv5LMJ</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="Product-Create">temp.Product_Create</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.Product_Create/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.Product_Create/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.Product_Create/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.Product_Create/output/Task_Id">Task Id</operation>
+                        <operation source="field" to="temp.Product_Create/output/Task_Status">Task Status</operation>
+                        <operation source="field" to="temp.Product_Create/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field" to="temp.Product_Create/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field" to="temp.Product_Create/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field" to="temp.Product_Create/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field" to="temp.Product_Create/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.Product_Create/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.Product_Create/output/Error_Message">Error Message</operation>
+                        <operation source="field" to="temp.Product_Create/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field" to="temp.Product_Create/output/FirstErrorCode">First Error Code</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="kwxw46p5" targetId="kwwgay99"/>
+                  <events>
+                     <catch faultField="temp.Product_Create/fault"
+                            id="kwxw46p7"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.Product_Create/fault"
+                            id="kwxw46p8"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <eventContainer id="kwwgay99">
+                  <service id="j3wfjy2k">
+                     <title>DESC</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">mt_MTRL_ID_SIF_DESC</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">lVYPcDaytETbfHmspzKzQG</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="mt-MTRL-ID-SIF-DESC">temp.DESC</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.DESC/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.DESC/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.DESC/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.DESC/output/Task_Id">Task Id</operation>
+                        <operation source="field" to="temp.DESC/output/Task_Status">Task Status</operation>
+                        <operation source="field" to="temp.DESC/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field" to="temp.DESC/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field" to="temp.DESC/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field" to="temp.DESC/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field" to="temp.DESC/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.DESC/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.DESC/output/Error_Message">Error Message</operation>
+                        <operation source="field" to="temp.DESC/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field" to="temp.DESC/output/FirstErrorCode">First Error Code</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="j3wfjy2t" targetId="kwwgaybq"/>
+                  <events>
+                     <catch faultField="temp.DESC/fault"
+                            id="kwwgay97"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.DESC/fault"
+                            id="kwwgay98"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <eventContainer id="kwwgaybq">
+                  <service id="j3wfjy2s">
+                     <title>COST</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">mt_MTRL_ID_SIF_COST</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">enfGWt8xAW4hcyltrcfwOQ</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="mt-MTRL-ID-SIF-COST">temp.COST</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.COST/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.COST/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.COST/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.COST/output/Task_Id">Task Id</operation>
+                        <operation source="field" to="temp.COST/output/Task_Status">Task Status</operation>
+                        <operation source="field" to="temp.COST/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field" to="temp.COST/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field" to="temp.COST/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field" to="temp.COST/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field" to="temp.COST/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.COST/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.COST/output/Error_Message">Error Message</operation>
+                        <operation source="field" to="temp.COST/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field" to="temp.COST/output/FirstErrorCode">First Error Code</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="kwwgayct" targetId="kwwgaydf"/>
+                  <events>
+                     <catch faultField="temp.COST/fault"
+                            id="kwwgaybo"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.COST/fault"
+                            id="kwwgaybp"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <eventContainer id="kwwgaydf">
+                  <service id="kwwgaycs">
+                     <title>BOM_REL</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">mt_MTRL_ID_SIF_BOM_REL</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">5C3JcmBve3XluUSDezR8EK</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="mt-MTRL-ID-SIF-BOM-REL">temp.BOM_REL</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.BOM_REL/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.BOM_REL/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.BOM_REL/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.BOM_REL/output/Task_Id">Task Id</operation>
+                        <operation source="field" to="temp.BOM_REL/output/Task_Status">Task Status</operation>
+                        <operation source="field" to="temp.BOM_REL/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field" to="temp.BOM_REL/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field" to="temp.BOM_REL/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field" to="temp.BOM_REL/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field" to="temp.BOM_REL/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.BOM_REL/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.BOM_REL/output/Error_Message">Error Message</operation>
+                        <operation source="field" to="temp.BOM_REL/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field" to="temp.BOM_REL/output/FirstErrorCode">First Error Code</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="kwwgayey" targetId="kwwgayfk"/>
+                  <events>
+                     <catch faultField="temp.BOM_REL/fault"
+                            id="kwwgaydd"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.BOM_REL/fault"
+                            id="kwwgayde"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <eventContainer id="kwwgayfk">
+                  <service id="kwwgayex">
+                     <title>DIM</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">mt_MTRL_ID_SIF_DIM</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">3eyyT0BBFePb9gzUtxmdQq</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="mt-MTRL-ID-SIF-DIM">temp.DIM</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.DIM/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.DIM/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.DIM/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.DIM/output/Task_Id">Task Id</operation>
+                        <operation source="field" to="temp.DIM/output/Task_Status">Task Status</operation>
+                        <operation source="field" to="temp.DIM/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field" to="temp.DIM/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field" to="temp.DIM/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field" to="temp.DIM/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field" to="temp.DIM/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.DIM/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.DIM/output/Error_Message">Error Message</operation>
+                        <operation source="field" to="temp.DIM/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field" to="temp.DIM/output/FirstErrorCode">First Error Code</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="kwwgaygm" targetId="kwwgaygr"/>
+                  <events>
+                     <catch faultField="temp.DIM/fault"
+                            id="kwwgayfi"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.DIM/fault"
+                            id="kwwgayfj"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <eventContainer id="kwwgaygr">
+                  <service id="kwwgaygl">
+                     <title>SLS</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">mt_MTRL_ID_SIF_SLS</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">bZbWS3YwpsIkcyi1EFp4Co</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="mt-MTRL-ID-SIF-SLS">temp.SLS</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.SLS/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.SLS/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.SLS/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.SLS/output/Task_Id">Task Id</operation>
+                        <operation source="field" to="temp.SLS/output/Task_Status">Task Status</operation>
+                        <operation source="field" to="temp.SLS/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field" to="temp.SLS/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field" to="temp.SLS/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field" to="temp.SLS/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field" to="temp.SLS/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.SLS/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.SLS/output/Error_Message">Error Message</operation>
+                        <operation source="field" to="temp.SLS/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field" to="temp.SLS/output/FirstErrorCode">First Error Code</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="kwwgayht" targetId="kwwgayhy"/>
+                  <events>
+                     <catch faultField="temp.SLS/fault"
+                            id="kwwgaygp"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.SLS/fault"
+                            id="kwwgaygq"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <eventContainer id="kwwgayhy">
+                  <service id="kwwgayhs">
+                     <title>PLNT</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">mt_MTRL_ID_SIF_PLNT</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">6GYN9jIJ653gIIi83lGiOj</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="mt-MTRL-ID-SIF-PLNT">temp.PLNT</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.PLNT/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.PLNT/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.PLNT/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.PLNT/output/Task_Id">Task Id</operation>
+                        <operation source="field" to="temp.PLNT/output/Task_Status">Task Status</operation>
+                        <operation source="field" to="temp.PLNT/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field" to="temp.PLNT/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field" to="temp.PLNT/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field" to="temp.PLNT/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field" to="temp.PLNT/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.PLNT/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.PLNT/output/Error_Message">Error Message</operation>
+                        <operation source="field" to="temp.PLNT/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field" to="temp.PLNT/output/FirstErrorCode">First Error Code</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="kwwgayj0" targetId="kwwgayj5"/>
+                  <events>
+                     <catch faultField="temp.PLNT/fault"
+                            id="kwwgayhw"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.PLNT/fault"
+                            id="kwwgayhx"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <eventContainer id="kwwgayj5">
+                  <service id="kwwgayiz">
+                     <title>MTRL_VAL</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">mt_MTRL_ID_SIF_MTRL_VAL</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">2HFk7PPNT2uf0rhy1Uxkqx</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="mt-MTRL-ID-SIF-MTRL-VAL">temp.MTRL_VAL</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.MTRL_VAL/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.MTRL_VAL/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.MTRL_VAL/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.MTRL_VAL/output/Task_Id">Task Id</operation>
+                        <operation source="field" to="temp.MTRL_VAL/output/Task_Status">Task Status</operation>
+                        <operation source="field" to="temp.MTRL_VAL/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field" to="temp.MTRL_VAL/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field" to="temp.MTRL_VAL/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field" to="temp.MTRL_VAL/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field" to="temp.MTRL_VAL/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.MTRL_VAL/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.MTRL_VAL/output/Error_Message">Error Message</operation>
+                        <operation source="field" to="temp.MTRL_VAL/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field" to="temp.MTRL_VAL/output/FirstErrorCode">First Error Code</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="kwwgayk7" targetId="kwwgaykc"/>
+                  <events>
+                     <catch faultField="temp.MTRL_VAL/fault"
+                            id="kwwgayj3"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.MTRL_VAL/fault"
+                            id="kwwgayj4"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <eventContainer id="kwwgaykc">
+                  <service id="kwwgayk6">
+                     <title>MLSTN</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">mt_MTRL_ID_SIF_MLSTN</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">4GrN46OgWuIgdKDHxpRzKd</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="mt-MTRL-ID-SIF-MLSTN">temp.MLSTN</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.MLSTN/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.MLSTN/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.MLSTN/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.MLSTN/output/Task_Id">Task Id</operation>
+                        <operation source="field" to="temp.MLSTN/output/Task_Status">Task Status</operation>
+                        <operation source="field" to="temp.MLSTN/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field" to="temp.MLSTN/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field" to="temp.MLSTN/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field" to="temp.MLSTN/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field" to="temp.MLSTN/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.MLSTN/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.MLSTN/output/Error_Message">Error Message</operation>
+                        <operation source="field" to="temp.MLSTN/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field" to="temp.MLSTN/output/FirstErrorCode">First Error Code</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="kwwgayle" targetId="kwwgaylj"/>
+                  <events>
+                     <catch faultField="temp.MLSTN/fault"
+                            id="kwwgayka"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.MLSTN/fault"
+                            id="kwwgaykb"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <eventContainer id="kwwgaylj">
+                  <service id="kwwgayld">
+                     <title>TAX</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">mt_MRL_ID_SIF_TAX</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">aWlcRinNTWncqrKE9ZOLC2</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="mt-MRL-ID-SIF-TAX">temp.TAX</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.TAX/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.TAX/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.TAX/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.TAX/output/Task_Id">Task Id</operation>
+                        <operation source="field" to="temp.TAX/output/Task_Status">Task Status</operation>
+                        <operation source="field" to="temp.TAX/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field" to="temp.TAX/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field" to="temp.TAX/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field" to="temp.TAX/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field" to="temp.TAX/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.TAX/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.TAX/output/Error_Message">Error Message</operation>
+                        <operation source="field" to="temp.TAX/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field" to="temp.TAX/output/FirstErrorCode">First Error Code</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="kx7qqotu" targetId="kx7qqotz"/>
+                  <events>
+                     <catch faultField="temp.TAX/fault"
+                            id="kwwgaylh"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.TAX/fault"
+                            id="kwwgayli"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <eventContainer id="kx7qqotz">
+                  <service id="kx7qqott">
+                     <title>ID</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">MTRL_ID_DIF_ID</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">9p0LdxNHTWsfEjrghpiswR</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="MTRL-ID-DIF-ID">temp.ID</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.ID/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.ID/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.ID/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.ID/output/Task_Id">Task Id</operation>
+                        <operation source="field" to="temp.ID/output/Task_Status">Task Status</operation>
+                        <operation source="field" to="temp.ID/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field" to="temp.ID/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field" to="temp.ID/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field" to="temp.ID/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field" to="temp.ID/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.ID/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.ID/output/Error_Message">Error Message</operation>
+                        <operation source="field" to="temp.ID/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field" to="temp.ID/output/FirstErrorCode">First Error Code</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="kx7qqotv" targetId="c"/>
+                  <events>
+                     <catch faultField="temp.ID/fault"
+                            id="kx7qqotx"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.ID/fault"
+                            id="kx7qqoty"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <end id="c"/>
+            </flow>
+            <dependencies>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mt-MTRL-ID-SIF-DESC"
+                              isByCopy="true"
+                              name="mt-MTRL-ID-SIF-DESC">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mt-MTRL-ID-SIF-COST"
+                              isByCopy="true"
+                              name="mt-MTRL-ID-SIF-COST">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mt-MTRL-ID-SIF-BOM-REL"
+                              isByCopy="true"
+                              name="mt-MTRL-ID-SIF-BOM-REL">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mt-MTRL-ID-SIF-DIM"
+                              isByCopy="true"
+                              name="mt-MTRL-ID-SIF-DIM">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mt-MTRL-ID-SIF-SLS"
+                              isByCopy="true"
+                              name="mt-MTRL-ID-SIF-SLS">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mt-MTRL-ID-SIF-PLNT"
+                              isByCopy="true"
+                              name="mt-MTRL-ID-SIF-PLNT">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mt-MTRL-ID-SIF-MTRL-VAL"
+                              isByCopy="true"
+                              name="mt-MTRL-ID-SIF-MTRL-VAL">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mt-MTRL-ID-SIF-MLSTN"
+                              isByCopy="true"
+                              name="mt-MTRL-ID-SIF-MLSTN">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mt-MRL-ID-SIF-TAX"
+                              isByCopy="true"
+                              name="mt-MRL-ID-SIF-TAX">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="Product-Create"
+                              isByCopy="true"
+                              name="Product-Create">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="MTRL-ID-DIF-ID"
+                              isByCopy="true"
+                              name="MTRL-ID-DIF-ID">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+            </dependencies>
+         </taskflow>
+      </types1:Entry>
+      <types1:GUID>0CAovP2dj6XcrSmgSkDe0T</types1:GUID>
+      <types1:DisplayName>Product_Create_mtrl_id_SIF</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2025-03-13T13:44:00.519Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

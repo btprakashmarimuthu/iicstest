@@ -1,0 +1,67 @@
+{
+  "objectInfo" : {
+    "id" : "2p7CTxf4fg8lin1jailnsW",
+    "name" : "MI_AP_Italy_EFT_Register_RPT_To_DMS",
+    "type" : "MI_TASK",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "67691"
+      },
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "To send Payment File Register Report to DMS",
+        "contentType" : "Binary",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "dat",
+  "updateTime" : "2025-03-13T13:44:01.884Z",
+  "objectRefs" : [ {
+    "id" : "2oVrwKWo5Ymkc35QwMap4A",
+    "name" : "OCI Cluster",
+    "type" : "AgentGroup",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ2500000000003Z"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "8iL0hF3Evc7ib9cGu2l366",
+    "name" : "SFTP_DMS_EFT_Outbound",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0B0000000000OF"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Connection to EFT Dev Server for DMS outbound connections",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

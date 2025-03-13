@@ -1,0 +1,50 @@
+{
+  "objectInfo" : {
+    "id" : "a2x1aNmJ39RhGGwNzhJgiG",
+    "name" : "TF_Sub_Task_Capture_Ingestion_Results",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "TBtXFEpciZBpDUQ-gt-90782284-2023-06-07T15:17:38.731Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "This common taskflow needs to be added after mass Ingestion tasks in main taskflows to keep a log of the files processed via that Mass Ingestion in IDFS Database.",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-03-13T13:44:01.891Z",
+  "objectRefs" : [ {
+    "id" : "3lLlKHPXIdClqQh9ru1vge",
+    "name" : "MT_Write_File_Ingestion_Metrics_To_DB",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0Z0000000001IO"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Mapping task to load file ingestion details in target table MH_FILE_INGESTION_RESULTS_RAW",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/___Publish_test/Common Componets"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

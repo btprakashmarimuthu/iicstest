@@ -1,0 +1,211 @@
+{
+  "objectInfo" : {
+    "id" : "6JQ0qhAt6kDhWrYRJqAVIG",
+    "name" : "Mapping_Update - OUTBOUND Taskflow",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "yHfSTu0kMVX3cjk-gt-24118939-2022-02-18T00:23:53.394Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "Binary",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-03-13T13:44:01.874Z",
+  "objectRefs" : [ {
+    "id" : "4SG9FkOeLigkhYffejBf87",
+    "name" : "Mapping_Update_PRD_TO_MLSTN - OUTBOUND",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0Z0000000000A2"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/5 - Sandbox/MDM OUTBOUND PRODUCT"
+  }, {
+    "id" : "8au4u8j30Ccev3agpdLbAI",
+    "name" : "Mapping_Update_PRD_TO_DESC - OUTBOUND",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0Z0000000000A3"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/5 - Sandbox/MDM OUTBOUND PRODUCT"
+  }, {
+    "id" : "fF2n9gtTQoQl8zhy56iikd",
+    "name" : "Mapping_Update_PRD_TO_DIM - OUTBOUND",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0Z0000000000A5"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/5 - Sandbox/MDM OUTBOUND PRODUCT"
+  }, {
+    "id" : "4zz7zE5vPSVlEoEEBFpXMK",
+    "name" : "Mapping_Update_PRD_TO_PLNT - OUTBOUND",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0Z00000000009Z"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/5 - Sandbox/MDM OUTBOUND PRODUCT"
+  }, {
+    "id" : "dNBZkymOqSCdnNWUduP88r",
+    "name" : "Mapping_Update_PRD_TO_SALES - OUTBOUND",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0Z00000000009T"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/5 - Sandbox/MDM OUTBOUND PRODUCT"
+  }, {
+    "id" : "6oNhxfPOSUTly95PfvDl6y",
+    "name" : "Mapping_Update_PRD_TO_STORAGE - OUTBOUND",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0Z00000000009W"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/5 - Sandbox/MDM OUTBOUND PRODUCT"
+  }, {
+    "id" : "0rRCjo5NCoIdOFWILJ5jgU",
+    "name" : "Mapping_Update_PRD - OUTBOUND",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0Z0000000000A6"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/5 - Sandbox/MDM OUTBOUND PRODUCT"
+  }, {
+    "id" : "3JAMychoovYk4eLh1A08mO",
+    "name" : "Mapping_Update_PRD_TO_SALESDELIVERY - OUTBOUND",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0Z0000000000A7"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/5 - Sandbox/MDM OUTBOUND PRODUCT"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

@@ -1,0 +1,53 @@
+{
+  "objectInfo" : {
+    "id" : "2aAox5xkNqCfdLr9znEbgw",
+    "name" : "BS_AP_HSBC_EMEA_Payments_Report",
+    "type" : "BSERVICE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ2700000000002D"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      }, {
+        "name" : "017JAQ28000000000058",
+        "value" : "2aAox5xkNqCfdLr9znEbgw@/Custom/Integrations/P2P/Payments/Payment_Status_REF_RPT/Payment_Status_REF_RPT.xdo"
+      } ],
+      "additionalInfo" : {
+        "description" : "Business Service to access Payments report",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "updateTime" : "2025-03-13T13:44:01.884Z",
+  "objectRefs" : [ {
+    "id" : "5KYRQ9ZBIkghvaMRxXx58r",
+    "name" : "ORCL_AP_HSBC_EMEA_Payments_Report",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0B0000000000OM"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Oracle Connection to access HSBC EMEA Payments Report",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

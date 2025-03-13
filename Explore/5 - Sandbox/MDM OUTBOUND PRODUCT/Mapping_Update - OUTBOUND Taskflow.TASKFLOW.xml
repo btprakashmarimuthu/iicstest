@@ -1,0 +1,742 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>yHfSTu0kMVX3cjk-gt-24118939-2022-02-18T00:23:53.394Z::tf.xml</types1:EntryId>
+      <types1:Name>Mapping_Update_-_OUTBOUND_Taskflow</types1:Name>
+      <types1:MimeType>application/xml+taskflow</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>SA_sabhisek</types1:CreatedBy>
+      <types1:CreationDate>2022-02-18T00:23:53Z</types1:CreationDate>
+      <types1:ModifiedBy>SA_sabhisek</types1:ModifiedBy>
+      <types1:ModificationDate>2022-02-18T00:43:51Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                   xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                   xmlns:list="urn:activevos:spi:list:functions"
+                   displayName="Mapping_Update - OUTBOUND Taskflow"
+                   name="Mapping_Update_-_OUTBOUND_Taskflow"
+                   overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <tempFields>
+               <field description="" name="PRD" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:Mapping-Update-PRD---OUTBOUND</option>
+                  </options>
+               </field>
+               <field description="" name="DESC" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:Mapping-Update-PRD-TO-DESC---OUTBOUND</option>
+                  </options>
+               </field>
+               <field description="" name="DIM" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:Mapping-Update-PRD-TO-DIM---OUTBOUND</option>
+                  </options>
+               </field>
+               <field description="" name="MLSTN" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:Mapping-Update-PRD-TO-MLSTN---OUTBOUND</option>
+                  </options>
+               </field>
+               <field description="" name="PLNT" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:Mapping-Update-PRD-TO-PLNT---OUTBOUND</option>
+                  </options>
+               </field>
+               <field description="" name="SALES" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:Mapping-Update-PRD-TO-SALES---OUTBOUND</option>
+                  </options>
+               </field>
+               <field description="" name="SALES DELIVERY" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:Mapping-Update-PRD-TO-SALESDELIVERY---OUTBOUND</option>
+                  </options>
+               </field>
+               <field description="" name="STORAGE" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:Mapping-Update-PRD-TO-STORAGE---OUTBOUND</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <rest/>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="kwapi58c" targetId="kwapi58b"/>
+               </start>
+               <container id="kwapi58b" type="parallel">
+                  <title>Parallel Paths 1</title>
+                  <flow id="kwapi58f">
+                     <eventContainer id="kwapi59p">
+                        <service id="kwapi591">
+                           <title>PRD</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">Mapping_Update_PRD - OUTBOUND</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">0rRCjo5NCoIdOFWILJ5jgU</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="Mapping-Update-PRD---OUTBOUND">temp.PRD</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.PRD/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.PRD/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.PRD/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.PRD/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.PRD/output/Task_Status">Task Status</operation>
+                              <operation source="field" to="temp.PRD/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field" to="temp.PRD/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field" to="temp.PRD/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field" to="temp.PRD/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.PRD/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.PRD/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.PRD/output/Error_Message">Error Message</operation>
+                              <operation source="field" to="temp.PRD/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field" to="temp.PRD/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.PRD/fault"
+                                  id="kwapi59n"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.PRD/fault"
+                                  id="kwapi59o"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="kwapi58g" targetId="kwapi58b" type="containerLink"/>
+                  </flow>
+                  <flow id="kwapi58i">
+                     <eventContainer id="kwapi5ds">
+                        <service id="kwapi5bd">
+                           <title>DESC</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">Mapping_Update_PRD_TO_DESC - OUTBOUND</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">8au4u8j30Ccev3agpdLbAI</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="Mapping-Update-PRD-TO-DESC---OUTBOUND">temp.DESC</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.DESC/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.DESC/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.DESC/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.DESC/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.DESC/output/Task_Status">Task Status</operation>
+                              <operation source="field" to="temp.DESC/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field" to="temp.DESC/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field" to="temp.DESC/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field" to="temp.DESC/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.DESC/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.DESC/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.DESC/output/Error_Message">Error Message</operation>
+                              <operation source="field" to="temp.DESC/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field" to="temp.DESC/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.DESC/fault"
+                                  id="kwapi5dq"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.DESC/fault"
+                                  id="kwapi5dr"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="kwapi58j" targetId="kwapi58b" type="containerLink"/>
+                  </flow>
+                  <flow id="kwapi5bi">
+                     <eventContainer id="kwapi5ft">
+                        <service id="kwapi5cy">
+                           <title>DIM</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">Mapping_Update_PRD_TO_DIM - OUTBOUND</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">fF2n9gtTQoQl8zhy56iikd</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="Mapping-Update-PRD-TO-DIM---OUTBOUND">temp.DIM</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.DIM/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.DIM/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.DIM/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.DIM/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.DIM/output/Task_Status">Task Status</operation>
+                              <operation source="field" to="temp.DIM/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field" to="temp.DIM/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field" to="temp.DIM/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field" to="temp.DIM/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.DIM/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.DIM/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.DIM/output/Error_Message">Error Message</operation>
+                              <operation source="field" to="temp.DIM/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field" to="temp.DIM/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.DIM/fault"
+                                  id="kwapi5fr"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.DIM/fault"
+                                  id="kwapi5fs"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="kwapi5bj" targetId="kwapi58b" type="containerLink"/>
+                  </flow>
+                  <flow id="kwapi5bo">
+                     <eventContainer id="kwapi5ko">
+                        <service id="kwapi5ji">
+                           <title>MLSTN</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">Mapping_Update_PRD_TO_MLSTN - OUTBOUND</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">4SG9FkOeLigkhYffejBf87</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="Mapping-Update-PRD-TO-MLSTN---OUTBOUND">temp.MLSTN</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.MLSTN/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.MLSTN/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.MLSTN/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.MLSTN/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.MLSTN/output/Task_Status">Task Status</operation>
+                              <operation source="field" to="temp.MLSTN/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field" to="temp.MLSTN/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field" to="temp.MLSTN/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field" to="temp.MLSTN/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.MLSTN/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.MLSTN/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.MLSTN/output/Error_Message">Error Message</operation>
+                              <operation source="field" to="temp.MLSTN/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field" to="temp.MLSTN/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.MLSTN/fault"
+                                  id="kwapi5km"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.MLSTN/fault"
+                                  id="kwapi5kn"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="kwapi5bp" targetId="kwapi58b" type="containerLink"/>
+                  </flow>
+                  <flow id="kwapi5bv">
+                     <eventContainer id="kwapi5mp">
+                        <service id="kwapi5ju">
+                           <title>PLNT</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">Mapping_Update_PRD_TO_PLNT - OUTBOUND</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">4zz7zE5vPSVlEoEEBFpXMK</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="Mapping-Update-PRD-TO-PLNT---OUTBOUND">temp.PLNT</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.PLNT/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.PLNT/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.PLNT/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.PLNT/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.PLNT/output/Task_Status">Task Status</operation>
+                              <operation source="field" to="temp.PLNT/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field" to="temp.PLNT/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field" to="temp.PLNT/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field" to="temp.PLNT/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.PLNT/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.PLNT/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.PLNT/output/Error_Message">Error Message</operation>
+                              <operation source="field" to="temp.PLNT/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field" to="temp.PLNT/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.PLNT/fault"
+                                  id="kwapi5mn"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.PLNT/fault"
+                                  id="kwapi5mo"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="kwapi5bw" targetId="kwapi58b" type="containerLink"/>
+                  </flow>
+                  <flow id="kwapi5c3">
+                     <eventContainer id="kwapi5qc">
+                        <service id="kwapi5p6">
+                           <title>SALES</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">Mapping_Update_PRD_TO_SALES - OUTBOUND</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">dNBZkymOqSCdnNWUduP88r</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="Mapping-Update-PRD-TO-SALES---OUTBOUND">temp.SALES</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.SALES/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.SALES/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.SALES/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.SALES/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.SALES/output/Task_Status">Task Status</operation>
+                              <operation source="field" to="temp.SALES/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field" to="temp.SALES/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field" to="temp.SALES/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field" to="temp.SALES/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.SALES/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.SALES/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.SALES/output/Error_Message">Error Message</operation>
+                              <operation source="field" to="temp.SALES/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field" to="temp.SALES/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.SALES/fault"
+                                  id="kwapi5qa"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.SALES/fault"
+                                  id="kwapi5qb"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="kwapi5c4" targetId="kwapi58b" type="containerLink"/>
+                  </flow>
+                  <flow id="kwapi5cc">
+                     <eventContainer id="kwapi5rv">
+                        <service id="kwapi5pi">
+                           <title>SALES DELIVERY</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">Mapping_Update_PRD_TO_SALESDELIVERY - OUTBOUND</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">3JAMychoovYk4eLh1A08mO</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="Mapping-Update-PRD-TO-SALESDELIVERY---OUTBOUND">temp.SALES DELIVERY</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.SALES DELIVERY/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.SALES DELIVERY/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.SALES DELIVERY/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.SALES DELIVERY/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.SALES DELIVERY/output/Task_Status">Task Status</operation>
+                              <operation source="field" to="temp.SALES DELIVERY/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field" to="temp.SALES DELIVERY/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field" to="temp.SALES DELIVERY/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field" to="temp.SALES DELIVERY/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.SALES DELIVERY/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.SALES DELIVERY/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.SALES DELIVERY/output/Error_Message">Error Message</operation>
+                              <operation source="field" to="temp.SALES DELIVERY/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field" to="temp.SALES DELIVERY/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.SALES DELIVERY/fault"
+                                  id="kwapi5rt"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.SALES DELIVERY/fault"
+                                  id="kwapi5ru"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="kwapi5cd" targetId="kwapi58b" type="containerLink"/>
+                  </flow>
+                  <flow id="kwapi5cm">
+                     <eventContainer id="kwapi5u8">
+                        <service id="kwapi5te">
+                           <title>STORAGE</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">Mapping_Update_PRD_TO_STORAGE - OUTBOUND</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">6oNhxfPOSUTly95PfvDl6y</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="Mapping-Update-PRD-TO-STORAGE---OUTBOUND">temp.STORAGE</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.STORAGE/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.STORAGE/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.STORAGE/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.STORAGE/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.STORAGE/output/Task_Status">Task Status</operation>
+                              <operation source="field" to="temp.STORAGE/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field" to="temp.STORAGE/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field" to="temp.STORAGE/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field" to="temp.STORAGE/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.STORAGE/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.STORAGE/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.STORAGE/output/Error_Message">Error Message</operation>
+                              <operation source="field" to="temp.STORAGE/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field" to="temp.STORAGE/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.STORAGE/fault"
+                                  id="kwapi5u6"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.STORAGE/fault"
+                                  id="kwapi5u7"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="kwapi5cn" targetId="kwapi58b" type="containerLink"/>
+                  </flow>
+                  <link id="kwapi58e" targetId="kwapi58f" type="containerLink"/>
+                  <link id="kwapi58h" targetId="kwapi58i" type="containerLink"/>
+                  <link id="kwapi5bh" targetId="kwapi5bi" type="containerLink"/>
+                  <link id="kwapi5bn" targetId="kwapi5bo" type="containerLink"/>
+                  <link id="kwapi5bu" targetId="kwapi5bv" type="containerLink"/>
+                  <link id="kwapi5c2" targetId="kwapi5c3" type="containerLink"/>
+                  <link id="kwapi5cb" targetId="kwapi5cc" type="containerLink"/>
+                  <link id="kwapi5cl" targetId="kwapi5cm" type="containerLink"/>
+                  <link id="kwapi58u" targetId="c"/>
+               </container>
+               <end id="c"/>
+            </flow>
+            <dependencies>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="Mapping-Update-PRD---OUTBOUND"
+                              isByCopy="true"
+                              name="Mapping-Update-PRD---OUTBOUND">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Input Parameters"
+                            name="input"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="Mapping-Update-PRD-TO-DESC---OUTBOUND"
+                              isByCopy="true"
+                              name="Mapping-Update-PRD-TO-DESC---OUTBOUND">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Input Parameters"
+                            name="input"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="Mapping-Update-PRD-TO-DIM---OUTBOUND"
+                              isByCopy="true"
+                              name="Mapping-Update-PRD-TO-DIM---OUTBOUND">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Input Parameters"
+                            name="input"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="Mapping-Update-PRD-TO-MLSTN---OUTBOUND"
+                              isByCopy="true"
+                              name="Mapping-Update-PRD-TO-MLSTN---OUTBOUND">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Input Parameters"
+                            name="input"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="Mapping-Update-PRD-TO-PLNT---OUTBOUND"
+                              isByCopy="true"
+                              name="Mapping-Update-PRD-TO-PLNT---OUTBOUND">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Input Parameters"
+                            name="input"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="Mapping-Update-PRD-TO-SALES---OUTBOUND"
+                              isByCopy="true"
+                              name="Mapping-Update-PRD-TO-SALES---OUTBOUND">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Input Parameters"
+                            name="input"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="Mapping-Update-PRD-TO-SALESDELIVERY---OUTBOUND"
+                              isByCopy="true"
+                              name="Mapping-Update-PRD-TO-SALESDELIVERY---OUTBOUND">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Input Parameters"
+                            name="input"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="Mapping-Update-PRD-TO-STORAGE---OUTBOUND"
+                              isByCopy="true"
+                              name="Mapping-Update-PRD-TO-STORAGE---OUTBOUND">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Input Parameters"
+                            name="input"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+            </dependencies>
+         </taskflow>
+      </types1:Entry>
+      <types1:GUID>6JQ0qhAt6kDhWrYRJqAVIG</types1:GUID>
+      <types1:DisplayName>Mapping_Update - OUTBOUND Taskflow</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2025-03-13T13:44:00.632Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

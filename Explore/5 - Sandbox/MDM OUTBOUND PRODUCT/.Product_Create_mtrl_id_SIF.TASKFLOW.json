@@ -1,0 +1,280 @@
+{
+  "objectInfo" : {
+    "id" : "0CAovP2dj6XcrSmgSkDe0T",
+    "name" : "Product_Create_mtrl_id_SIF",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "Jk7KsqeErhNzUze-gt-24118960-2022-02-18T00:23:53.567Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-03-13T13:44:01.889Z",
+  "objectRefs" : [ {
+    "id" : "hqwx5pTd50riilZacv5LMJ",
+    "name" : "Product_Create",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0Z00000000009Q"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/5 - Sandbox/MDM OUTBOUND PRODUCT"
+  }, {
+    "id" : "3eyyT0BBFePb9gzUtxmdQq",
+    "name" : "mt_MTRL_ID_SIF_DIM",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0Z0000000000A0"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/5 - Sandbox/MDM OUTBOUND PRODUCT"
+  }, {
+    "id" : "2HFk7PPNT2uf0rhy1Uxkqx",
+    "name" : "mt_MTRL_ID_SIF_MTRL_VAL",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0Z00000000009S"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/5 - Sandbox/MDM OUTBOUND PRODUCT"
+  }, {
+    "id" : "lVYPcDaytETbfHmspzKzQG",
+    "name" : "mt_MTRL_ID_SIF_DESC",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0Z00000000009V"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/5 - Sandbox/MDM OUTBOUND PRODUCT"
+  }, {
+    "id" : "5C3JcmBve3XluUSDezR8EK",
+    "name" : "mt_MTRL_ID_SIF_BOM_REL",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0Z0000000000A8"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/5 - Sandbox/MDM OUTBOUND PRODUCT"
+  }, {
+    "id" : "9p0LdxNHTWsfEjrghpiswR",
+    "name" : "MTRL_ID_DIF_ID",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0Z00000000009X"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/5 - Sandbox/MDM OUTBOUND PRODUCT"
+  }, {
+    "id" : "bZbWS3YwpsIkcyi1EFp4Co",
+    "name" : "mt_MTRL_ID_SIF_SLS",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0Z00000000009U"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/5 - Sandbox/MDM OUTBOUND PRODUCT"
+  }, {
+    "id" : "enfGWt8xAW4hcyltrcfwOQ",
+    "name" : "mt_MTRL_ID_SIF_COST",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0Z0000000000A1"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/5 - Sandbox/MDM OUTBOUND PRODUCT"
+  }, {
+    "id" : "4GrN46OgWuIgdKDHxpRzKd",
+    "name" : "mt_MTRL_ID_SIF_MLSTN",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0Z0000000000AA"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/5 - Sandbox/MDM OUTBOUND PRODUCT"
+  }, {
+    "id" : "6GYN9jIJ653gIIi83lGiOj",
+    "name" : "mt_MTRL_ID_SIF_PLNT",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0Z00000000009Y"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/5 - Sandbox/MDM OUTBOUND PRODUCT"
+  }, {
+    "id" : "aWlcRinNTWncqrKE9ZOLC2",
+    "name" : "mt_MRL_ID_SIF_TAX",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0Z0000000000A9"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/5 - Sandbox/MDM OUTBOUND PRODUCT"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

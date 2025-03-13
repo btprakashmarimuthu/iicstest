@@ -1,0 +1,67 @@
+{
+  "objectInfo" : {
+    "id" : "65jtiEj6OUnbPnWZiOGOiM",
+    "name" : "MI_AP_Italy_EFT_Installment_RPT_Pull",
+    "type" : "MI_TASK",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "67687"
+      },
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "To pull Installment reports from EFT Server to IICS Server",
+        "contentType" : "Binary",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "dat",
+  "updateTime" : "2025-03-13T13:44:01.892Z",
+  "objectRefs" : [ {
+    "id" : "2oVrwKWo5Ymkc35QwMap4A",
+    "name" : "OCI Cluster",
+    "type" : "AgentGroup",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ2500000000003Z"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "3lXUuJXYddeidmiEdIORmL",
+    "name" : "SFTP_Oracle_Financials_SaaS_Outbound",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0B0000000000OH"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Oracle Financials SaaS Outbound",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

@@ -1,0 +1,96 @@
+{
+  "objectInfo" : {
+    "id" : "2Wf6WjXd1AolTEmPHAlpOj",
+    "name" : "M_AP_Italy_HSBC_SubmitEFTPayment_Process",
+    "type" : "DTEMPLATE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ170000000001FF"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Mapping to Submit ESS job for Payment process",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "updateTime" : "2025-03-13T13:44:01.891Z",
+  "objectRefs" : [ {
+    "id" : "2nl9DvmV1UpeAYHIfsg5iW",
+    "name" : "FF_AP_SourceFiles",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0B0000000000OG"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "To extract files from Sourcefiles/AP path",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "9MX37tRUGSViBiuM4IlPQe",
+    "name" : "FF_AP_HSBC_Italy_EFT_Payments_Sourcefiles",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0B0000000000OI"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "To access file for Italy Payments",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "5gARMIHxsk6gLNyZDf1dAS",
+    "name" : "BS_AP_HSBC_EMEA_Payments_SubmitESSJobRequest",
+    "type" : "BSERVICE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ2700000000002F"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      }, {
+        "name" : "017JAQ2800000000005A",
+        "value" : "5gARMIHxsk6gLNyZDf1dAS@HSBC_EMEA_Payments_SubmitESSJobRequest_id"
+      } ],
+      "additionalInfo" : {
+        "description" : "To submit ESS job to SaaS",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/___Publish_test/AP"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

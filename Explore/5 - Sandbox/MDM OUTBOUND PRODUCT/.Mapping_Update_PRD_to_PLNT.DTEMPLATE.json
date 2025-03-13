@@ -1,0 +1,155 @@
+{
+  "objectInfo" : {
+    "id" : "0rLquRIvVoviCDD01RkZ0k",
+    "name" : "Mapping_Update_PRD_to_PLNT",
+    "type" : "DTEMPLATE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ1700000000009P"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "updateTime" : "2025-03-13T13:44:01.880Z",
+  "objectRefs" : [ {
+    "id" : "hxt02uEC2GvhyEP8gpTKkO",
+    "name" : "Odata_SAP_toMDM_Product_Srv_QA",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0B00000000004V"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "gfqoR8Fzt87dG51ShUYO8z",
+    "name" : "MDM Dev",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0B00000000004U"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Landing tables for MDM Hub",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "6wTrEKOlJkDfE6vyLSNuQV",
+    "name" : "SAP_API_PRODUCT_SRV-QA",
+    "type" : "BSERVICE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ2700000000000S"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      }, {
+        "name" : "017JAQ2800000000001H",
+        "value" : "6wTrEKOlJkDfE6vyLSNuQV@API_PRODUCT_SRV/A_ProductSupplyPlanning"
+      }, {
+        "name" : "017JAQ2800000000001G",
+        "value" : "6wTrEKOlJkDfE6vyLSNuQV@API_PRODUCT_SRV/A_ProductPurchaseText"
+      }, {
+        "name" : "017JAQ2800000000001J",
+        "value" : "6wTrEKOlJkDfE6vyLSNuQV@API_PRODUCT_SRV/A_ProductUnitsOfMeasure"
+      }, {
+        "name" : "017JAQ2800000000001I",
+        "value" : "6wTrEKOlJkDfE6vyLSNuQV@API_PRODUCT_SRV/A_ProductSalesTax"
+      }, {
+        "name" : "017JAQ2800000000001L",
+        "value" : "6wTrEKOlJkDfE6vyLSNuQV@API_PRODUCT_SRV/A_ProductSalesDelivery"
+      }, {
+        "name" : "017JAQ2800000000001K",
+        "value" : "6wTrEKOlJkDfE6vyLSNuQV@API_PRODUCT_SRV/A_ProductSales"
+      }, {
+        "name" : "017JAQ2800000000001N",
+        "value" : "6wTrEKOlJkDfE6vyLSNuQV@API_PRODUCT_SRV/A_ProductStorage"
+      }, {
+        "name" : "017JAQ2800000000001M",
+        "value" : "6wTrEKOlJkDfE6vyLSNuQV@API_PRODUCT_SRV/A_ProductPlantCosting"
+      }, {
+        "name" : "017JAQ2800000000001B",
+        "value" : "6wTrEKOlJkDfE6vyLSNuQV@API_PRODUCT_SRV/A_ProductDescription"
+      }, {
+        "name" : "017JAQ2800000000001A",
+        "value" : "6wTrEKOlJkDfE6vyLSNuQV@API_PRODUCT_SRV/A_Product"
+      }, {
+        "name" : "017JAQ2800000000001D",
+        "value" : "6wTrEKOlJkDfE6vyLSNuQV@API_PRODUCT_SRV/A_ProductPlantMRPArea"
+      }, {
+        "name" : "017JAQ2800000000001C",
+        "value" : "6wTrEKOlJkDfE6vyLSNuQV@API_PRODUCT_SRV/A_ProductPlant"
+      }, {
+        "name" : "017JAQ2800000000001F",
+        "value" : "6wTrEKOlJkDfE6vyLSNuQV@API_PRODUCT_SRV/A_ProductPlantStorage"
+      }, {
+        "name" : "017JAQ2800000000001E",
+        "value" : "6wTrEKOlJkDfE6vyLSNuQV@API_PRODUCT_SRV/A_ProductPlantSales"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/5 - Sandbox/MDM OUTBOUND PRODUCT"
+  }, {
+    "id" : "5y30wSzz3K9jqB58IB2e8F",
+    "name" : "FlatFile_Output_Location",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0B00000000004O"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

@@ -1,0 +1,159 @@
+{
+  "objectInfo" : {
+    "id" : "0mDhh8vu7m9cLmLviQb2e6",
+    "name" : "MT_AP_Italy_HSBC_SubmitEFTPayment_Process",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0Z0000000001IS"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Mapping Task to Submit ESS job for Payment process",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "updateTime" : "2025-03-13T13:44:01.890Z",
+  "objectRefs" : [ {
+    "id" : "2oVrwKWo5Ymkc35QwMap4A",
+    "name" : "OCI Cluster",
+    "type" : "AgentGroup",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ2500000000003Z"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "5qCZoAbH80ogll6bfbQ9ed",
+    "name" : "REST_AP_HSBC_EMEA_Payments_SubmitESSJobRequest",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0B0000000000OE"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "To submit ESS Job Request to SaaS",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "2Wf6WjXd1AolTEmPHAlpOj",
+    "name" : "M_AP_Italy_HSBC_SubmitEFTPayment_Process",
+    "type" : "DTEMPLATE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ170000000001FF"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Mapping to Submit ESS job for Payment process",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/___Publish_test/AP"
+  }, {
+    "id" : "2nl9DvmV1UpeAYHIfsg5iW",
+    "name" : "FF_AP_SourceFiles",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0B0000000000OG"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "To extract files from Sourcefiles/AP path",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "9MX37tRUGSViBiuM4IlPQe",
+    "name" : "FF_AP_HSBC_Italy_EFT_Payments_Sourcefiles",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0B0000000000OI"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "To access file for Italy Payments",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "5gARMIHxsk6gLNyZDf1dAS",
+    "name" : "BS_AP_HSBC_EMEA_Payments_SubmitESSJobRequest",
+    "type" : "BSERVICE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ2700000000002F"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      }, {
+        "name" : "017JAQ2800000000005A",
+        "value" : "5gARMIHxsk6gLNyZDf1dAS@HSBC_EMEA_Payments_SubmitESSJobRequest_id"
+      } ],
+      "additionalInfo" : {
+        "description" : "To submit ESS job to SaaS",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/___Publish_test/AP"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

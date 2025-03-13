@@ -1,0 +1,47 @@
+{
+  "objectInfo" : {
+    "id" : "26K625jXs6VdxO49yPEhwz",
+    "name" : "MI_AP_Italy_EFT_Installment_File_Archive",
+    "type" : "MI_TASK",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "67685"
+      },
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "To archive copy of Payables Selected Installment Report after sending to DMS",
+        "contentType" : "Binary",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "dat",
+  "updateTime" : "2025-03-13T13:44:01.881Z",
+  "objectRefs" : [ {
+    "id" : "2oVrwKWo5Ymkc35QwMap4A",
+    "name" : "OCI Cluster",
+    "type" : "AgentGroup",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ2500000000003Z"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/SYS"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

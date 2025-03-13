@@ -1,0 +1,139 @@
+{
+  "objectInfo" : {
+    "id" : "cIo21uja3aGbfboszWnv2p",
+    "name" : "MT_AP_Italy_EFTPayments_Get_PPR_Status",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0Z0000000001IQ"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "To initiate M_AP_Italy_EFTPayments_Get_PPR_Status",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "updateTime" : "2025-03-13T13:44:01.891Z",
+  "objectRefs" : [ {
+    "id" : "2oVrwKWo5Ymkc35QwMap4A",
+    "name" : "OCI Cluster",
+    "type" : "AgentGroup",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ2500000000003Z"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "7pBelbbE4RCfSdVKQLidwI",
+    "name" : "BS_AP_HSBC_EMEA_Payment_Status_No_Invoice",
+    "type" : "BSERVICE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ2700000000002E"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      }, {
+        "name" : "017JAQ28000000000059",
+        "value" : "7pBelbbE4RCfSdVKQLidwI@/Custom/Integrations/P2P/Payments/Payment_Status_REF_RPT/PPR Status Ref Rep.xdo"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/___Publish_test/AP"
+  }, {
+    "id" : "2vUMHeQqZKXcIrgOBxRIsF",
+    "name" : "M_AP_Italy_EFTPayments_Get_PPR_Status",
+    "type" : "DTEMPLATE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ170000000001FD"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Mapping to get Transmit Status for Payments.",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/___Publish_test/AP"
+  }, {
+    "id" : "5KYRQ9ZBIkghvaMRxXx58r",
+    "name" : "ORCL_AP_HSBC_EMEA_Payments_Report",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0B0000000000OM"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Oracle Connection to access HSBC EMEA Payments Report",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "9MX37tRUGSViBiuM4IlPQe",
+    "name" : "FF_AP_HSBC_Italy_EFT_Payments_Sourcefiles",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0B0000000000OI"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "To access file for Italy Payments",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}
