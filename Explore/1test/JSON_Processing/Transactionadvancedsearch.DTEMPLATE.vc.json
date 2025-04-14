@@ -1,0 +1,861 @@
+{
+  "content" : {
+    "allowMaxFieldLength" : "false",
+    "bigIntConvertType" : "ONLY_BIGINT",
+    "documentType" : "MAPPING",
+    "name" : "Transactionadvancedsearch",
+    "links" : [
+      {
+        "link" : "Source -> Target"
+      }
+    ],
+    "parameters" : [
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "name" : "NewParameter"
+      }
+    ],
+    "transformations" : [
+      {
+        "createTime" : "2023-03-28T23:01:46.563Z",
+        "name" : "Source",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Output is deterministic",
+            "value" : "false"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "account_InternalId"
+            },
+            "name" : "account_InternalId",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "account_ExternalId"
+            },
+            "name" : "account_ExternalId",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "account_Type"
+            },
+            "name" : "account_Type",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "account_Name"
+            },
+            "name" : "account_Name",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "amount"
+            },
+            "name" : "amount",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 15,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "amountPaid"
+            },
+            "name" : "amountPaid",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 15,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "amountUnbilled"
+            },
+            "name" : "amountUnbilled",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 15,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "approvalStatus"
+            },
+            "name" : "approvalStatus",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "authCode"
+            },
+            "name" : "authCode",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "autoCalculateLag"
+            },
+            "name" : "autoCalculateLag",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "billable"
+            },
+            "name" : "billable",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "billAddress"
+            },
+            "name" : "billAddress",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "billCity"
+            },
+            "name" : "billCity",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "billCountry"
+            },
+            "name" : "billCountry",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "billCountryCode"
+            },
+            "name" : "billCountryCode",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "billedDate"
+            },
+            "name" : "billedDate",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9
+          },
+          {
+            "adapterField" : {
+              "name" : "billingAmount"
+            },
+            "name" : "billingAmount",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 15,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "posting"
+            },
+            "name" : "posting",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "postingPeriod_InternalId"
+            },
+            "name" : "postingPeriod_InternalId",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "totalCostEstimate"
+            },
+            "name" : "totalCostEstimate",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 15,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "trackingNumbers"
+            },
+            "name" : "trackingNumbers",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "tranDate"
+            },
+            "name" : "tranDate",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9
+          },
+          {
+            "adapterField" : {
+              "name" : "tranId"
+            },
+            "name" : "tranId",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "type"
+            },
+            "name" : "type",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "unit"
+            },
+            "name" : "unit",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "unitCostOverride"
+            },
+            "name" : "unitCostOverride",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 15,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@f0Dvm5BaYm6gvi8AAwWHWQ",
+          "connectionName" : "SN_netsuite_Token",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "TOOLKIT",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "TransactionSearchAdvanced",
+            "label" : "TransactionSearchAdvanced",
+            "objectName" : "TransactionSearchAdvanced",
+            "objectType" : "Advanced Search Record",
+            "path" : "TransactionSearchAdvanced",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "account_Type",
+                "fieldType" : "CONNECTOR",
+                "nativeName" : "account_Type",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "TransactionSearchAdvanced"
+                  }
+                ]
+              },
+              {
+                "name" : "account_Name",
+                "fieldType" : "CONNECTOR",
+                "nativeName" : "account_Name",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "TransactionSearchAdvanced"
+                  }
+                ]
+              },
+              {
+                "name" : "amount",
+                "fieldType" : "CONNECTOR",
+                "nativeName" : "amount",
+                "nativeType" : "double",
+                "original" : "false",
+                "precision" : 15,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "TransactionSearchAdvanced"
+                  }
+                ]
+              },
+              {
+                "name" : "amountPaid",
+                "fieldType" : "CONNECTOR",
+                "nativeName" : "amountPaid",
+                "nativeType" : "double",
+                "original" : "false",
+                "precision" : 15,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "TransactionSearchAdvanced"
+                  }
+                ]
+              },
+              {
+                "name" : "posting",
+                "fieldType" : "CONNECTOR",
+                "nativeName" : "posting",
+                "nativeType" : "boolean",
+                "original" : "false",
+                "precision" : 2,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "TransactionSearchAdvanced"
+                  }
+                ]
+              },
+              {
+                "name" : "postingPeriod_InternalId",
+                "fieldType" : "CONNECTOR",
+                "nativeName" : "postingPeriod_InternalId",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "TransactionSearchAdvanced"
+                  }
+                ]
+              },
+              {
+                "name" : "account_InternalId",
+                "fieldType" : "CONNECTOR",
+                "nativeName" : "account_InternalId",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "TransactionSearchAdvanced"
+                  }
+                ]
+              },
+              {
+                "name" : "account_ExternalId",
+                "fieldType" : "CONNECTOR",
+                "nativeName" : "account_ExternalId",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "TransactionSearchAdvanced"
+                  }
+                ]
+              },
+              {
+                "name" : "amountUnbilled",
+                "fieldType" : "CONNECTOR",
+                "nativeName" : "amountUnbilled",
+                "nativeType" : "double",
+                "original" : "false",
+                "precision" : 15,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "TransactionSearchAdvanced"
+                  }
+                ]
+              },
+              {
+                "name" : "approvalStatus",
+                "fieldType" : "CONNECTOR",
+                "nativeName" : "approvalStatus",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "TransactionSearchAdvanced"
+                  }
+                ]
+              },
+              {
+                "name" : "authCode",
+                "fieldType" : "CONNECTOR",
+                "nativeName" : "authCode",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "TransactionSearchAdvanced"
+                  }
+                ]
+              },
+              {
+                "name" : "autoCalculateLag",
+                "fieldType" : "CONNECTOR",
+                "nativeName" : "autoCalculateLag",
+                "nativeType" : "boolean",
+                "original" : "false",
+                "precision" : 2,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "TransactionSearchAdvanced"
+                  }
+                ]
+              },
+              {
+                "name" : "billable",
+                "fieldType" : "CONNECTOR",
+                "nativeName" : "billable",
+                "nativeType" : "boolean",
+                "original" : "false",
+                "precision" : 2,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "TransactionSearchAdvanced"
+                  }
+                ]
+              },
+              {
+                "name" : "billAddress",
+                "fieldType" : "CONNECTOR",
+                "nativeName" : "billAddress",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "TransactionSearchAdvanced"
+                  }
+                ]
+              },
+              {
+                "name" : "billCity",
+                "fieldType" : "CONNECTOR",
+                "nativeName" : "billCity",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "TransactionSearchAdvanced"
+                  }
+                ]
+              },
+              {
+                "name" : "billCountry",
+                "fieldType" : "CONNECTOR",
+                "nativeName" : "billCountry",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "TransactionSearchAdvanced"
+                  }
+                ]
+              },
+              {
+                "name" : "billCountryCode",
+                "fieldType" : "CONNECTOR",
+                "nativeName" : "billCountryCode",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "TransactionSearchAdvanced"
+                  }
+                ]
+              },
+              {
+                "name" : "billedDate",
+                "fieldType" : "CONNECTOR",
+                "nativeName" : "billedDate",
+                "nativeType" : "date",
+                "original" : "false",
+                "precision" : 19,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "TransactionSearchAdvanced"
+                  }
+                ]
+              },
+              {
+                "name" : "billingAmount",
+                "fieldType" : "CONNECTOR",
+                "nativeName" : "billingAmount",
+                "nativeType" : "double",
+                "original" : "false",
+                "precision" : 15,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "TransactionSearchAdvanced"
+                  }
+                ]
+              },
+              {
+                "name" : "totalCostEstimate",
+                "fieldType" : "CONNECTOR",
+                "nativeName" : "totalCostEstimate",
+                "nativeType" : "double",
+                "original" : "false",
+                "precision" : 15,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "TransactionSearchAdvanced"
+                  }
+                ]
+              },
+              {
+                "name" : "trackingNumbers",
+                "fieldType" : "CONNECTOR",
+                "nativeName" : "trackingNumbers",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "TransactionSearchAdvanced"
+                  }
+                ]
+              },
+              {
+                "name" : "tranDate",
+                "fieldType" : "CONNECTOR",
+                "nativeName" : "tranDate",
+                "nativeType" : "date",
+                "original" : "false",
+                "precision" : 19,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "TransactionSearchAdvanced"
+                  }
+                ]
+              },
+              {
+                "name" : "tranId",
+                "fieldType" : "CONNECTOR",
+                "nativeName" : "tranId",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "TransactionSearchAdvanced"
+                  }
+                ]
+              },
+              {
+                "name" : "type",
+                "fieldType" : "CONNECTOR",
+                "nativeName" : "type",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "TransactionSearchAdvanced"
+                  }
+                ]
+              },
+              {
+                "name" : "unit",
+                "fieldType" : "CONNECTOR",
+                "nativeName" : "unit",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "TransactionSearchAdvanced"
+                  }
+                ]
+              },
+              {
+                "name" : "unitCostOverride",
+                "fieldType" : "CONNECTOR",
+                "nativeName" : "unitCostOverride",
+                "nativeType" : "double",
+                "original" : "false",
+                "precision" : 15,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "TransactionSearchAdvanced"
+                  }
+                ]
+              }
+            ]
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false",
+            "filterConditions" : [
+              {
+                "fieldName" : "tranDate",
+                "filterValue" : "2010-01-01 00:00:00",
+                "objectName" : "TransactionSearchAdvanced",
+                "operator" : "GREATER_THAN"
+              },
+              {
+                "fieldName" : "tranDate",
+                "filterValue" : "2020-01-01 00:00:00",
+                "objectName" : "TransactionSearchAdvanced",
+                "operator" : "LESS_THAN"
+              },
+              {
+                "fieldName" : "postingPeriod_InternalId",
+                "filterValue" : "220",
+                "objectName" : "TransactionSearchAdvanced",
+                "operator" : "EQUALS"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "createTime" : "2023-03-28T23:01:46.563Z",
+        "name" : "Target",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          },
+          {
+            "name" : "Thousand Separator",
+            "value" : "None"
+          },
+          {
+            "name" : "Decimal Separator",
+            "value" : "."
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "createTarget" : "true",
+        "fieldMappingMode" : "BY_NAME",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "dataAdapter" : {
+          "connectionId" : "saas:@idZnFSWoJImlrbx461ZtC3",
+          "connectionName" : "sn_ff_sheetal",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "CSVFile",
+          "useDynamicFileName" : "false",
+          "bulkOptions" : {
+            "hardDelete" : "false",
+            "maxRowsPerRequest" : 0,
+            "monitorBulk" : "false",
+            "monitorBulkV2" : "false",
+            "pkChunkingEnabled" : "false",
+            "pkChunkingSize" : 0,
+            "serialMode" : "false",
+            "useBulkApi" : "false",
+            "useBulkApiV2" : "false"
+          },
+          "object" : {
+            "name" : "infatestdata.csv",
+            "label" : "infatestdata.csv",
+            "path" : "infatestdata.csv",
+            "retainMetadata" : "false",
+            "fileAttrs" : {
+              "consecutiveDelimiter" : "false",
+              "delimiter" : ",",
+              "firstDataRow" : 2,
+              "firstDataRowAsHeader" : "false",
+              "headerLineNo" : 1,
+              "multiDelimitersAsAnd" : "true",
+              "rowDelimiter" : 0,
+              "textQualifier" : "\""
+            }
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "false",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "false",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        }
+      }
+    ]
+  },
+  "vcsExportTime" : "2025-04-14 08:25:56 PDT"
+}

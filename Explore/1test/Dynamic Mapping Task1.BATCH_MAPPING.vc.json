@@ -1,0 +1,43 @@
+{
+  "name" : "Dynamic Mapping Task1",
+  "state" : "VALID",
+  "mappingId" : "017JAQ170000000000AU",
+  "mappingTemplateName" : "Lab_mPrakash_InOutParameter",
+  "mappingDocType" : "MAPPING",
+  "runtimeEnvironmentId" : "017JAQ2500000000000L",
+  "runtimeEnvironmentName" : "____Sheethal babu",
+  "params" : [
+    {
+      "uniqueName" : "p_orderid2",
+      "name" : "p_orderid2",
+      "type" : "INOUT_INT",
+      "scope" : "LOCAL"
+    }
+  ],
+  "groups" : [
+    {
+      "groupName" : "Group_1",
+      "enabled" : true
+    }
+  ],
+  "jobs" : [
+    {
+      "jobName" : "Job_1",
+      "jobType" : "USER",
+      "enabled" : true,
+      "stopOnError" : false,
+      "stopOnWarning" : false,
+      "jobParamBindings" : [
+        {
+          "type" : "INOUT",
+          "paramDefn" : "p_orderid2",
+          "retentionPolicy" : "ON_SUCCESS_OR_WARNING",
+          "aggregationType" : "MAX",
+          "currentValue" : "1"
+        }
+      ],
+      "group" : "Group_1"
+    }
+  ],
+  "vcsExportTime" : "2025-04-14 08:25:56 PDT"
+}

@@ -1,0 +1,67 @@
+{
+  "objectInfo" : {
+    "id" : "4I169ylwcF0eJTJ70ZYAud",
+    "name" : "Taskflow3",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "MSPfXBiVGkSSHCw-gt-18871660-2023-10-13T14:31:43.622Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-04-14T15:25:59.667Z",
+  "objectRefs" : [ {
+    "id" : "1fmhAseEsdGi4FywevSi2E",
+    "name" : "s_CREATE_PARAM_FILE_MULTIPLE_SESSIONS_PPDSTG",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0Z0000000001T0"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/STG/PPDSTG"
+  }, {
+    "id" : "1AjDl9Y2CWjilm1VHdND67",
+    "name" : "M_GBQ_qa_QUERY",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0Z0000000001TZ"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/CCON_66152_Custom_qry_dataset"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

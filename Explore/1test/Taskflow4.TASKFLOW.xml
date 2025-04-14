@@ -1,0 +1,64 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>J1reK8ZAZf5kck8-gt-42718451-2023-10-19T18:16:35.573Z::tf.xml</types1:EntryId>
+      <types1:Name>Taskflow4-8</types1:Name>
+      <types1:MimeType>application/xml+taskflow</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>priyaiics</types1:CreatedBy>
+      <types1:CreationDate>2023-10-19T18:16:36Z</types1:CreationDate>
+      <types1:ModifiedBy>priyaiics</types1:ModifiedBy>
+      <types1:ModificationDate>2023-10-24T17:10:57Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>priyaiics</types1:PublishedBy>
+      <types1:PublicationDate>2023-10-24T17:11:08Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/tf.Taskflow4-8/Taskflow4-8.tf.xml</types1:PublishedContributionId>
+      <types1:Entry>
+         <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                   xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                   xmlns:list="urn:activevos:spi:list:functions"
+                   displayName="Taskflow4"
+                   name="Taskflow4-8"
+                   overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <rest/>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="lo4ktres" targetId="lo4ktrer"/>
+               </start>
+               <service id="lo4ktrer">
+                  <title>Notification Task 1</title>
+                  <serviceName>emailNotificationService</serviceName>
+                  <serviceGUID/>
+                  <serviceInput>
+                     <parameter name="Email To" source="constant">navs@informatica.com</parameter>
+                     <parameter name="Email Cc" source="constant"/>
+                     <parameter name="Email Bcc" source="constant"/>
+                     <parameter name="Email Subject" source="constant"/>
+                     <parameter name="Email Content Type" source="constant">text</parameter>
+                     <parameter name="Email Body" source="constant"/>
+                  </serviceInput>
+                  <serviceOutput/>
+                  <link id="lo4ktrfj" targetId="c"/>
+               </service>
+               <end id="c"/>
+            </flow>
+         </taskflow>
+      </types1:Entry>
+      <types1:GUID>7kSxEb9kEpHgAwEDUh4kUD</types1:GUID>
+      <types1:DisplayName>Taskflow4</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2025-04-14T15:25:52.654Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

@@ -1,0 +1,47 @@
+{
+  "objectInfo" : {
+    "id" : "dTGGQwYjEUbbXIrp44Hwc0",
+    "name" : "tf_04467881",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "jiYBeMHck5qbbfU-gt-4804653-2023-03-30T11:15:39.146Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-04-14T15:25:59.673Z",
+  "objectRefs" : [ {
+    "id" : "13NDdj2MdVhgsYHnmIMnMC",
+    "name" : "mt_04457622",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0Z0000000001AI"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Ramanuja"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

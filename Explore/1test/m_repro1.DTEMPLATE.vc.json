@@ -1,0 +1,846 @@
+{
+  "content" : {
+    "allowMaxFieldLength" : "false",
+    "bigIntConvertType" : "ONLY_BIGINT",
+    "documentType" : "MAPPING",
+    "name" : "m_repro1",
+    "links" : [
+      {
+        "link" : "Source -> Expression"
+      },
+      {
+        "link" : "Expression -> Date_conversion"
+      },
+      {
+        "link" : "Date_conversion -> Target"
+      }
+    ],
+    "transformations" : [
+      {
+        "createTime" : "2022-10-28T12:43:01.462Z",
+        "name" : "Source",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Output is deterministic",
+            "value" : "false"
+          },
+          {
+            "name" : "Thousand Separator",
+            "value" : "None"
+          },
+          {
+            "name" : "Decimal Separator",
+            "value" : "."
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "Row"
+            },
+            "name" : "Row",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "AccName"
+            },
+            "name" : "AccName",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Campaign_ID"
+            },
+            "name" : "Campaign_ID",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Campaign_NAME"
+            },
+            "name" : "Campaign_NAME",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "ACCid"
+            },
+            "name" : "ACCid",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Clicks"
+            },
+            "name" : "Clicks",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Impressions"
+            },
+            "name" : "Impressions",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Spend"
+            },
+            "name" : "Spend",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Bing_Date"
+            },
+            "name" : "Bing_Date",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@4VVOo4usLo4fVN3JNTx9mH",
+          "connectionName" : "flatfile-demo1",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "CSVFile",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "repro1.csv",
+            "label" : "repro1.csv",
+            "objectName" : "repro1.csv",
+            "path" : "repro1.csv",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "Row",
+                "fieldType" : "CONNECTOR",
+                "label" : "Row",
+                "nativeName" : "Row",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "repro1.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "AccName",
+                "fieldType" : "CONNECTOR",
+                "label" : "AccName",
+                "nativeName" : "AccName",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "repro1.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Campaign_ID",
+                "fieldType" : "CONNECTOR",
+                "label" : "Campaign_ID",
+                "nativeName" : "Campaign_ID",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "repro1.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Campaign_NAME",
+                "fieldType" : "CONNECTOR",
+                "label" : "Campaign_NAME",
+                "nativeName" : "Campaign_NAME",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "repro1.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "ACCid",
+                "fieldType" : "CONNECTOR",
+                "label" : "ACCid",
+                "nativeName" : "ACCid",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "repro1.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Clicks",
+                "fieldType" : "CONNECTOR",
+                "label" : "Clicks",
+                "nativeName" : "Clicks",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "repro1.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Impressions",
+                "fieldType" : "CONNECTOR",
+                "label" : "Impressions",
+                "nativeName" : "Impressions",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "repro1.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Spend",
+                "fieldType" : "CONNECTOR",
+                "label" : "Spend",
+                "nativeName" : "Spend",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "repro1.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Bing_Date",
+                "fieldType" : "CONNECTOR",
+                "label" : "Bing_Date",
+                "nativeName" : "Bing_Date",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "repro1.csv"
+                  }
+                ]
+              }
+            ],
+            "fileAttrs" : {
+              "consecutiveDelimiter" : "false",
+              "delimiter" : ",",
+              "firstDataRow" : 2,
+              "firstDataRowAsHeader" : "false",
+              "headerLineNo" : 1,
+              "multiDelimitersAsAnd" : "true",
+              "rowDelimiter" : 0,
+              "textQualifier" : "\""
+            }
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2022-10-28T12:43:01.463Z",
+        "name" : "Target",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "createTarget" : "true",
+        "fieldMappingMode" : "BY_NAME",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "NewField"
+            },
+            "name" : "NewField",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9
+          },
+          {
+            "adapterField" : {
+              "name" : "Clicks_n"
+            },
+            "name" : "Clicks_n",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Row"
+            },
+            "name" : "Row",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "AccName"
+            },
+            "name" : "AccName",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Campaign_ID"
+            },
+            "name" : "Campaign_ID",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Campaign_NAME"
+            },
+            "name" : "Campaign_NAME",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "ACCid"
+            },
+            "name" : "ACCid",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Clicks"
+            },
+            "name" : "Clicks",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Impressions"
+            },
+            "name" : "Impressions",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Spend"
+            },
+            "name" : "Spend",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Bing_Date"
+            },
+            "name" : "Bing_Date",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@lTsEy3m6BIcdnGqNdbnwyW",
+          "connectionName" : "snowflake-demo-1Vaish",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "TOOLKIT",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "GCS/GCS_SCHEMA/Abc_1",
+            "label" : "GCS/GCS_SCHEMA/Abc_1",
+            "path" : "GCS/GCS_SCHEMA/Abc_1",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "NewField",
+                "fieldType" : "CONNECTOR",
+                "label" : "NewField",
+                "nativeName" : "NewField",
+                "nativeType" : "timestampntz",
+                "original" : "false",
+                "precision" : 29,
+                "scale" : 9,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Abc_1"
+                  }
+                ]
+              },
+              {
+                "name" : "Clicks_n",
+                "fieldType" : "CONNECTOR",
+                "label" : "Clicks_n",
+                "nativeName" : "Clicks_n",
+                "nativeType" : "number",
+                "original" : "false",
+                "precision" : 10,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Abc_1"
+                  }
+                ]
+              },
+              {
+                "name" : "Row",
+                "fieldType" : "CONNECTOR",
+                "label" : "Row",
+                "nativeName" : "Row",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Abc_1"
+                  }
+                ]
+              },
+              {
+                "name" : "AccName",
+                "fieldType" : "CONNECTOR",
+                "label" : "AccName",
+                "nativeName" : "AccName",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Abc_1"
+                  }
+                ]
+              },
+              {
+                "name" : "Campaign_ID",
+                "fieldType" : "CONNECTOR",
+                "label" : "Campaign_ID",
+                "nativeName" : "Campaign_ID",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Abc_1"
+                  }
+                ]
+              },
+              {
+                "name" : "Campaign_NAME",
+                "fieldType" : "CONNECTOR",
+                "label" : "Campaign_NAME",
+                "nativeName" : "Campaign_NAME",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Abc_1"
+                  }
+                ]
+              },
+              {
+                "name" : "ACCid",
+                "fieldType" : "CONNECTOR",
+                "label" : "ACCid",
+                "nativeName" : "ACCid",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Abc_1"
+                  }
+                ]
+              },
+              {
+                "name" : "Clicks",
+                "fieldType" : "CONNECTOR",
+                "label" : "Clicks",
+                "nativeName" : "Clicks",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Abc_1"
+                  }
+                ]
+              },
+              {
+                "name" : "Impressions",
+                "fieldType" : "CONNECTOR",
+                "label" : "Impressions",
+                "nativeName" : "Impressions",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Abc_1"
+                  }
+                ]
+              },
+              {
+                "name" : "Spend",
+                "fieldType" : "CONNECTOR",
+                "label" : "Spend",
+                "nativeName" : "Spend",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Abc_1"
+                  }
+                ]
+              },
+              {
+                "name" : "Bing_Date",
+                "fieldType" : "CONNECTOR",
+                "label" : "Bing_Date",
+                "nativeName" : "Bing_Date",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Abc_1"
+                  }
+                ]
+              }
+            ],
+            "objectAttributes" : [
+              {
+                "name" : "parent",
+                "value" : "GCS/GCS_SCHEMA"
+              }
+            ]
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "false",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "false",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false",
+            "tgtObjectAttributes" : [
+              {
+                "name" : "parent",
+                "value" : "GCS/GCS_SCHEMA"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "createTime" : "2022-10-28T12:55:14.727Z",
+        "name" : "Expression",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "windowConfigurationEnabled" : "false",
+        "fields" : [
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "Clicks_n",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "TO_INTEGER(Clicks)"
+          }
+        ],
+        "windowSpec" : {
+          "allRowsFollowing" : "false",
+          "allRowsPreceding" : "false",
+          "endOffset" : 0,
+          "startOffset" : 0,
+          "partitionKeys" : null
+        }
+      },
+      {
+        "createTime" : "2022-10-28T12:59:13.113Z",
+        "name" : "Date_conversion",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "windowConfigurationEnabled" : "false",
+        "fields" : [
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "NewField",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "TO_DATE(REG_REPLACE(REPLACECHR(0,REPLACECHR(0,Bing_Date,'\"',NULL),'-','/'),'[^a-z0-9A-Z\\/]',''),'YYYY/MM/DD')"
+          }
+        ],
+        "windowSpec" : {
+          "allRowsFollowing" : "false",
+          "allRowsPreceding" : "false",
+          "endOffset" : 0,
+          "startOffset" : 0,
+          "partitionKeys" : null
+        }
+      }
+    ]
+  },
+  "vcsExportTime" : "2025-04-14 08:25:52 PDT"
+}

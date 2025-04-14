@@ -1,0 +1,90 @@
+{
+  "objectInfo" : {
+    "id" : "8qNIVPqk7EVfCac7rg7E6T",
+    "name" : "m_fact_rapp_status_non_working_copy",
+    "type" : "DTEMPLATE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ170000000001R6"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "\nConverted using O2N Version: O2N : Framesh1ft Tool V3.03",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "updateTime" : "2025-04-14T15:25:59.675Z",
+  "objectRefs" : [ {
+    "id" : "1g0cUpVYNqgbpd62wvFTy4",
+    "name" : "INFATEST_SNOWFLAKE4",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0B00000000005G"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "test",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "fHgg0SvThk4geg1xs3JSO0",
+    "name" : "rm_ff",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0B00000000006Q"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "3yS2SJcsjwleWZQrGJpE8h",
+    "name" : "mplt_lkpc_OPL_Id_for_MC_N_S_pcache",
+    "type" : "DMAPPLET",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ40000000000027"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Dieses Mapplet ermittelt zu einem gegebenen Matchcode Name und Suppl die zugehörige OPL_Id, die gültig war zum Zeitpunkt wo der Matchcode_Name /Suppl gültig war.",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/DWH_CLOUD/_TMP"
+  } ],
+  "readableFileExtension" : "json",
+  "readableFilePresent" : true
+}

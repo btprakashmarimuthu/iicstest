@@ -1,0 +1,50 @@
+{
+  "objectInfo" : {
+    "id" : "16bCvyumCETjIUj8kuVGQT",
+    "name" : "Taskflow2",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "3KLUaaaaabbgdoG-gt-51710358-2022-02-28T11:52:56.886Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-04-14T15:25:59.671Z",
+  "objectRefs" : [ {
+    "id" : "ctBUpMa61y5hEk4Rl19oKp",
+    "name" : "Lab_mPrakash_InOutParameter_Task",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0Z0000000000B7"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/1test"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

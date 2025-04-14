@@ -1,0 +1,174 @@
+{
+  "name" : "MappingTask277",
+  "runtimeEnvironmentId" : "@5P51Lw0YGQ4bM7AueHYikJ",
+  "runtimeEnvironmentName" : "PRIYA_WNDWS",
+  "maxLogs" : 10,
+  "parameters" : [
+    {
+      "name" : "$SQ_SST_CUSTOMER_ADAPTATION$",
+      "type" : "EXTENDED_SOURCE",
+      "label" : "SQ_SST_CUSTOMER_ADAPTATION",
+      "uiProperties" : {
+        "connectionParameterized" : "false",
+        "isSelectDistinct" : "false",
+        "isMsrcFilterParameterized" : "false",
+        "isMsrcSortParameterized" : "false",
+        "objectParameterized" : "false",
+        "visible" : "false",
+        "originalPath" : "SQ_SST_CUSTOMER_ADAPTATION"
+      },
+      "sourceConnectionId" : "@bNjBUaZiuMrf3TM1XcjOG1",
+      "connectionName" : "infatest_synnapse",
+      "newFlatFile" : false,
+      "newObject" : false,
+      "showBusinessNames" : false,
+      "naturalOrder" : true,
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "customFuncCfg" : { },
+      "extendedObject" : {
+        "object" : {
+          "name" : "SST_CUSTOMER_ADAPTATION",
+          "label" : "SST_CUSTOMER_ADAPTATION",
+          "metadataUpdated" : false
+        },
+        "singleMode" : true,
+        "objects" : [
+          {
+            "name" : "SST_CUSTOMER_ADAPTATION",
+            "label" : "SST_CUSTOMER_ADAPTATION",
+            "metadataUpdated" : false
+          }
+        ]
+      },
+      "oprRuntimeAttrs" : {
+        "FieldDelimiter" : "0x1e",
+        "OnPrePostSQLError" : "Stop",
+        "BlobPartSize" : "8",
+        "StagingFileFormat" : "Delimited Text",
+        "ContainerName" : "cloudgcs",
+        "QuoteChar" : "0x1f",
+        "ConcurrentBlobConnections" : "4"
+      },
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "unspecified" : false,
+      "runtimeParameterData" : {
+        "connectionRuntimeParameter" : false,
+        "objectRuntimeParameter" : false
+      },
+      "restmodernSource" : true,
+      "fileList" : false
+    },
+    {
+      "name" : "$TGT_DVST_KAP_CUSTOMER_ADAPTATION$",
+      "type" : "TARGET",
+      "label" : "TGT_DVST_KAP_CUSTOMER_ADAPTATION",
+      "uiProperties" : {
+        "connectionParameterized" : "false",
+        "objectParameterized" : "false",
+        "visible" : "false",
+        "supportApplyDDLChanges" : "false",
+        "originalPath" : "TGT_DVST_KAP_CUSTOMER_ADAPTATION"
+      },
+      "targetConnectionId" : "@bNjBUaZiuMrf3TM1XcjOG1",
+      "connectionName" : "infatest_synnapse",
+      "targetObject" : "ODSST_KAP_CUSTOMER_ADAPTATION",
+      "targetObjectLabel" : "ODSST_KAP_CUSTOMER_ADAPTATION",
+      "newFlatFile" : false,
+      "newObject" : false,
+      "showBusinessNames" : false,
+      "naturalOrder" : true,
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "operationType" : "Insert",
+      "customFuncCfg" : { },
+      "extendedObject" : {
+        "singleMode" : true
+      },
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "objectName" : "ODSST_KAP_CUSTOMER_ADAPTATION",
+      "objectLabel" : "ODSST_KAP_CUSTOMER_ADAPTATION",
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "unspecified" : false,
+      "runtimeParameterData" : {
+        "connectionRuntimeParameter" : false,
+        "objectRuntimeParameter" : false
+      },
+      "restmodernSource" : true,
+      "fileList" : false
+    }
+  ],
+  "verbose" : false,
+  "lastRunTime" : 1696579470000,
+  "mappingId" : "@5GpdSwLIwSteZ4BWLgA3Is",
+  "mappingTemplateName" : "m_sst2dvst_CUSTOMER_ADAPTATION",
+  "sessionPropertiesList" : [
+    {
+      "name" : "Allow Temporary Sequence for Pushdown",
+      "value" : "NO"
+    },
+    {
+      "name" : "Allow Temporary View for Pushdown",
+      "value" : "NO"
+    },
+    {
+      "name" : "Pushdown Optimization",
+      "value" : "To Source"
+    },
+    {
+      "name" : "Pushdown Optimization Context",
+      "value" : "None"
+    },
+    {
+      "name" : "Pushdown Optimization Fallback Option",
+      "value" : "Partial PDO"
+    }
+  ],
+  "inOutParameters" : [
+    {
+      "name" : "BATCH_ID",
+      "datatype" : "INTEGER",
+      "precision" : "10",
+      "scale" : "0",
+      "retentionPolicy" : "NEVER",
+      "aggregationType" : "MAX"
+    },
+    {
+      "name" : "RECORD_SOURCE",
+      "datatype" : "STRING",
+      "precision" : "10",
+      "scale" : "0",
+      "retentionPolicy" : "NEVER",
+      "aggregationType" : "MAX"
+    }
+  ],
+  "hidden" : false,
+  "enableCrossSchemaPushdown" : true,
+  "enableParallelRun" : false,
+  "autoTunedApplied" : false,
+  "autoTunedAppliedType" : "NONE",
+  "paramFileType" : "PARAM_FILE_LOCAL",
+  "schemaMode" : "async",
+  "valid" : true,
+  "parameterFileEncoding" : "UTF-8",
+  "allowMaxFieldLength" : false,
+  "midstreamPreview" : false,
+  "vcsExportTime" : "2025-04-14 08:25:53 PDT"
+}

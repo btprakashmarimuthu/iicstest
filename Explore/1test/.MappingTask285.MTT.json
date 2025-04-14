@@ -1,0 +1,90 @@
+{
+  "objectInfo" : {
+    "id" : "0KfdgmBLZSxfhdsnBwtMeS",
+    "name" : "MappingTask285",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0Z0000000001VH"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "updateTime" : "2025-04-14T15:25:59.677Z",
+  "objectRefs" : [ {
+    "id" : "5P51Lw0YGQ4bM7AueHYikJ",
+    "name" : "PRIYA_WNDWS",
+    "type" : "AgentGroup",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ2500000000000G"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "fvKvFhV9ekkc8MXCHdVCK7",
+    "name" : "INFATEST_ADLSGEN2",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0B0000000000NQ"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "3zHL86MVq4PhFEVBmMwA6Q",
+    "name" : "m_LV01_RAWV_SAT_ClaimBookingBeneficiary_HSat0_Lv01_X0_test - Copy 1",
+    "type" : "DTEMPLATE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ170000000001PZ"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "This Mapping is for loading the Raw Vault Hub table from stage area",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Edw_Raw_Vault/Level"
+  } ],
+  "readableFileExtension" : "json",
+  "readableFilePresent" : true
+}

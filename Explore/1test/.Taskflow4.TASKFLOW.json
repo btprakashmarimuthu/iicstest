@@ -1,0 +1,27 @@
+{
+  "objectInfo" : {
+    "id" : "7kSxEb9kEpHgAwEDUh4kUD",
+    "name" : "Taskflow4",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "J1reK8ZAZf5kck8-gt-42718451-2023-10-19T18:16:35.573Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-04-14T15:25:59.671Z",
+  "objectRefs" : [ ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

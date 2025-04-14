@@ -1,0 +1,70 @@
+{
+  "objectInfo" : {
+    "id" : "aQUtCXumRxTjFYG94U6Fyn",
+    "name" : "Taskflowsuccessstatustest",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "5GkeHy2uI5CUP9W-gt-29946752-2022-12-21T20:39:47.91Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-04-14T15:25:59.678Z",
+  "objectRefs" : [ {
+    "id" : "bxAosKjHPA0cpAARLDkc2w",
+    "name" : "mtt_m_DQ_taskflow_status_insert",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0Z00000000011B"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/SN/RnD"
+  }, {
+    "id" : "9HtqLBozKYOkJJhk1AHzm4",
+    "name" : "Coupav2extract",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0Z000000000122"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/1test"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

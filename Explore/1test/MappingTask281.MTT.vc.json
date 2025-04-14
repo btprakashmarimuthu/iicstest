@@ -1,0 +1,43 @@
+{
+  "name" : "MappingTask281",
+  "runtimeEnvironmentId" : "@5P51Lw0YGQ4bM7AueHYikJ",
+  "runtimeEnvironmentName" : "PRIYA_WNDWS",
+  "maxLogs" : 10,
+  "verbose" : false,
+  "mappingId" : "@g4i040jTPk7iMaMYQs0pEJ",
+  "mappingTemplateName" : "Mapping846",
+  "sessionPropertiesList" : [
+    {
+      "name" : "Allow Temporary Sequence for Pushdown",
+      "value" : "NO"
+    },
+    {
+      "name" : "Allow Temporary View for Pushdown",
+      "value" : "NO"
+    },
+    {
+      "name" : "Pushdown Optimization",
+      "value" : "None"
+    },
+    {
+      "name" : "Pushdown Optimization Context",
+      "value" : "None"
+    },
+    {
+      "name" : "Pushdown Optimization Fallback Option",
+      "value" : "Partial PDO"
+    }
+  ],
+  "hidden" : false,
+  "enableCrossSchemaPushdown" : true,
+  "enableParallelRun" : false,
+  "autoTunedApplied" : false,
+  "autoTunedAppliedType" : "NONE",
+  "paramFileType" : "PARAM_FILE_LOCAL",
+  "schemaMode" : "async",
+  "valid" : true,
+  "parameterFileEncoding" : "UTF-8",
+  "allowMaxFieldLength" : false,
+  "midstreamPreview" : false,
+  "vcsExportTime" : "2025-04-14 08:25:56 PDT"
+}

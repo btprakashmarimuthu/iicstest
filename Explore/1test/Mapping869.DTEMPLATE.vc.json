@@ -1,0 +1,1173 @@
+{
+  "content" : {
+    "description" : "aaaa",
+    "allowMaxFieldLength" : "false",
+    "bigIntConvertType" : "ONLY_BIGINT",
+    "documentType" : "MAPPING",
+    "name" : "Mapping869",
+    "links" : [
+      {
+        "link" : "Source -> Target"
+      }
+    ],
+    "transformations" : [
+      {
+        "createTime" : "2023-11-06T08:26:44.530Z",
+        "name" : "Source",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Output is deterministic",
+            "value" : "false"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "SMS_HAULAGE_DELIVERY_NUMBER"
+            },
+            "name" : "SMS_HAULAGE_DELIVERY_NUMBER",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "SMS_CLAIMS_NUMBER"
+            },
+            "name" : "SMS_CLAIMS_NUMBER",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "ADD_COMM_ADDRESS_NUMBER"
+            },
+            "name" : "ADD_COMM_ADDRESS_NUMBER",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "ADDRESS_COMM_NUMBER"
+            },
+            "name" : "ADDRESS_COMM_NUMBER",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "AUTOPICK"
+            },
+            "name" : "AUTOPICK",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "COMMS_NUMBER"
+            },
+            "name" : "COMMS_NUMBER",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "COMMS_TYPE"
+            },
+            "name" : "COMMS_TYPE",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "MAIN_COMM_SEQ"
+            },
+            "name" : "MAIN_COMM_SEQ",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "LAST_AMENDED_TIME"
+            },
+            "name" : "LAST_AMENDED_TIME",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "LAST_AMENDED_DATE"
+            },
+            "name" : "LAST_AMENDED_DATE",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "CUSTOMER_PREFERENCE_LINK"
+            },
+            "name" : "CUSTOMER_PREFERENCE_LINK",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "TRANSPORT"
+            },
+            "name" : "TRANSPORT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "COMMS_SEQUENCE"
+            },
+            "name" : "COMMS_SEQUENCE",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "ADDRESS_TYPE_NUMBER"
+            },
+            "name" : "ADDRESS_TYPE_NUMBER",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "STATUS_NUMBER"
+            },
+            "name" : "STATUS_NUMBER",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "POSTCODE_AREA"
+            },
+            "name" : "POSTCODE_AREA",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "POSTCODE_DISTRICT"
+            },
+            "name" : "POSTCODE_DISTRICT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "AREA_NUMBER"
+            },
+            "name" : "AREA_NUMBER",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "HAULAGE_ZONE_NUMBER"
+            },
+            "name" : "HAULAGE_ZONE_NUMBER",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "DECIMAL_LATITIDE"
+            },
+            "name" : "DECIMAL_LATITIDE",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "DECIMAL_LONGITUDE"
+            },
+            "name" : "DECIMAL_LONGITUDE",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "ADDRESS_NUMBER"
+            },
+            "name" : "ADDRESS_NUMBER",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "MOVEMENT_RESTRICTION"
+            },
+            "name" : "MOVEMENT_RESTRICTION",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "ADDRESS_NAME"
+            },
+            "name" : "ADDRESS_NAME",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "ADDRESS_STREET"
+            },
+            "name" : "ADDRESS_STREET",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "ADDRESS_LOCALITY"
+            },
+            "name" : "ADDRESS_LOCALITY",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "ADDRESS_POSTTOWN"
+            },
+            "name" : "ADDRESS_POSTTOWN",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "ADDRESS_COUNTY"
+            },
+            "name" : "ADDRESS_COUNTY",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "ADD_XREF_ADDRESS_NUMBER"
+            },
+            "name" : "ADD_XREF_ADDRESS_NUMBER",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "TRADING_PARTNER_NUMBER"
+            },
+            "name" : "TRADING_PARTNER_NUMBER",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "ADDRESS_XREF_NUMBER"
+            },
+            "name" : "ADDRESS_XREF_NUMBER",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "INTERNAL_EXTERNAL"
+            },
+            "name" : "INTERNAL_EXTERNAL",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "DEFAULT_DELIVERY_ADDRESS"
+            },
+            "name" : "DEFAULT_DELIVERY_ADDRESS",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "DEFAULT_COLLECTION_ADDRESS"
+            },
+            "name" : "DEFAULT_COLLECTION_ADDRESS",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "DEFAULT_CONTRACT_ADDRESS"
+            },
+            "name" : "DEFAULT_CONTRACT_ADDRESS",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "THEIR_ACCOUNT"
+            },
+            "name" : "THEIR_ACCOUNT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "FileName"
+            },
+            "name" : "FileName",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 1024,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@fvKvFhV9ekkc8MXCHdVCK7",
+          "connectionName" : "INFATEST_ADLSGEN2",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "TOOLKIT",
+          "useDynamicFileName" : "false",
+          "dataFormat" : {
+            "formatId" : "Flat",
+            "validateHSchema" : "false",
+            "attributes" : [
+              {
+                "name" : "delimiter",
+                "value" : ","
+              },
+              {
+                "name" : "escapeChar",
+                "value" : "\\"
+              },
+              {
+                "name" : "qualifier",
+                "value" : "\""
+              },
+              {
+                "name" : "qualifierMode",
+                "value" : "MINIMAL"
+              },
+              {
+                "name" : "disableEscapeChar",
+                "value" : "true"
+              },
+              {
+                "name" : "codePage",
+                "value" : "UTF-8"
+              },
+              {
+                "name" : "headerLineNumber",
+                "value" : "1"
+              },
+              {
+                "name" : "firstDataRow",
+                "value" : "2"
+              },
+              {
+                "name" : "targetHeader",
+                "value" : "With Header"
+              },
+              {
+                "name" : "importColumnFromFirstLine",
+                "value" : "true"
+              },
+              {
+                "name" : "generateHeader",
+                "value" : "true"
+              },
+              {
+                "name" : "fixedWidthMode",
+                "value" : "false"
+              },
+              {
+                "name" : "maxRowsToPreview",
+                "value" : "0"
+              }
+            ]
+          },
+          "object" : {
+            "name" : "vivek/addresscomm_20230920 0000.csv",
+            "label" : "addresscomm_20230920 0000.csv",
+            "objectName" : "addresscomm_20230920 0000.csv",
+            "path" : "vivek/addresscomm_20230920 0000.csv",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "FileName",
+                "fieldType" : "CONNECTOR",
+                "label" : "FileName",
+                "nativeName" : "FileName",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 1024,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "partitionOrder",
+                    "value" : "0"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "addresscomm_20230920 0000.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "SMS_HAULAGE_DELIVERY_NUMBER",
+                "fieldType" : "PARSER",
+                "label" : "SMS_HAULAGE_DELIVERY_NUMBER",
+                "nativeName" : "SMS_HAULAGE_DELIVERY_NUMBER",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "addresscomm_20230920 0000.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "SMS_CLAIMS_NUMBER",
+                "fieldType" : "PARSER",
+                "label" : "SMS_CLAIMS_NUMBER",
+                "nativeName" : "SMS_CLAIMS_NUMBER",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "addresscomm_20230920 0000.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "ADD_COMM_ADDRESS_NUMBER",
+                "fieldType" : "PARSER",
+                "label" : "ADD_COMM_ADDRESS_NUMBER",
+                "nativeName" : "ADD_COMM_ADDRESS_NUMBER",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "addresscomm_20230920 0000.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "ADDRESS_COMM_NUMBER",
+                "fieldType" : "PARSER",
+                "label" : "ADDRESS_COMM_NUMBER",
+                "nativeName" : "ADDRESS_COMM_NUMBER",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "addresscomm_20230920 0000.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "AUTOPICK",
+                "fieldType" : "PARSER",
+                "label" : "AUTOPICK",
+                "nativeName" : "AUTOPICK",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "addresscomm_20230920 0000.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "COMMS_NUMBER",
+                "fieldType" : "PARSER",
+                "label" : "COMMS_NUMBER",
+                "nativeName" : "COMMS_NUMBER",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "addresscomm_20230920 0000.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "COMMS_TYPE",
+                "fieldType" : "PARSER",
+                "label" : "COMMS_TYPE",
+                "nativeName" : "COMMS_TYPE",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "addresscomm_20230920 0000.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "MAIN_COMM_SEQ",
+                "fieldType" : "PARSER",
+                "label" : "MAIN_COMM_SEQ",
+                "nativeName" : "MAIN_COMM_SEQ",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "addresscomm_20230920 0000.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "LAST_AMENDED_TIME",
+                "fieldType" : "PARSER",
+                "label" : "LAST_AMENDED_TIME",
+                "nativeName" : "LAST_AMENDED_TIME",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "addresscomm_20230920 0000.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "LAST_AMENDED_DATE",
+                "fieldType" : "PARSER",
+                "label" : "LAST_AMENDED_DATE",
+                "nativeName" : "LAST_AMENDED_DATE",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "addresscomm_20230920 0000.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "CUSTOMER_PREFERENCE_LINK",
+                "fieldType" : "PARSER",
+                "label" : "CUSTOMER_PREFERENCE_LINK",
+                "nativeName" : "CUSTOMER_PREFERENCE_LINK",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "addresscomm_20230920 0000.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "TRANSPORT",
+                "fieldType" : "PARSER",
+                "label" : "TRANSPORT",
+                "nativeName" : "TRANSPORT",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "addresscomm_20230920 0000.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "COMMS_SEQUENCE",
+                "fieldType" : "PARSER",
+                "label" : "COMMS_SEQUENCE",
+                "nativeName" : "COMMS_SEQUENCE",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "addresscomm_20230920 0000.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "ADDRESS_TYPE_NUMBER",
+                "fieldType" : "PARSER",
+                "label" : "ADDRESS_TYPE_NUMBER",
+                "nativeName" : "ADDRESS_TYPE_NUMBER",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "addresscomm_20230920 0000.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "STATUS_NUMBER",
+                "fieldType" : "PARSER",
+                "label" : "STATUS_NUMBER",
+                "nativeName" : "STATUS_NUMBER",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "addresscomm_20230920 0000.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "POSTCODE_AREA",
+                "fieldType" : "PARSER",
+                "label" : "POSTCODE_AREA",
+                "nativeName" : "POSTCODE_AREA",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "addresscomm_20230920 0000.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "POSTCODE_DISTRICT",
+                "fieldType" : "PARSER",
+                "label" : "POSTCODE_DISTRICT",
+                "nativeName" : "POSTCODE_DISTRICT",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "addresscomm_20230920 0000.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "AREA_NUMBER",
+                "fieldType" : "PARSER",
+                "label" : "AREA_NUMBER",
+                "nativeName" : "AREA_NUMBER",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "addresscomm_20230920 0000.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "HAULAGE_ZONE_NUMBER",
+                "fieldType" : "PARSER",
+                "label" : "HAULAGE_ZONE_NUMBER",
+                "nativeName" : "HAULAGE_ZONE_NUMBER",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "addresscomm_20230920 0000.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "DECIMAL_LATITIDE",
+                "fieldType" : "PARSER",
+                "label" : "DECIMAL_LATITIDE",
+                "nativeName" : "DECIMAL_LATITIDE",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "addresscomm_20230920 0000.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "DECIMAL_LONGITUDE",
+                "fieldType" : "PARSER",
+                "label" : "DECIMAL_LONGITUDE",
+                "nativeName" : "DECIMAL_LONGITUDE",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "addresscomm_20230920 0000.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "ADDRESS_NUMBER",
+                "fieldType" : "PARSER",
+                "label" : "ADDRESS_NUMBER",
+                "nativeName" : "ADDRESS_NUMBER",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "addresscomm_20230920 0000.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "MOVEMENT_RESTRICTION",
+                "fieldType" : "PARSER",
+                "label" : "MOVEMENT_RESTRICTION",
+                "nativeName" : "MOVEMENT_RESTRICTION",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "addresscomm_20230920 0000.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "ADDRESS_NAME",
+                "fieldType" : "PARSER",
+                "label" : "ADDRESS_NAME",
+                "nativeName" : "ADDRESS_NAME",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "addresscomm_20230920 0000.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "ADDRESS_STREET",
+                "fieldType" : "PARSER",
+                "label" : "ADDRESS_STREET",
+                "nativeName" : "ADDRESS_STREET",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "addresscomm_20230920 0000.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "ADDRESS_LOCALITY",
+                "fieldType" : "PARSER",
+                "label" : "ADDRESS_LOCALITY",
+                "nativeName" : "ADDRESS_LOCALITY",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "addresscomm_20230920 0000.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "ADDRESS_POSTTOWN",
+                "fieldType" : "PARSER",
+                "label" : "ADDRESS_POSTTOWN",
+                "nativeName" : "ADDRESS_POSTTOWN",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "addresscomm_20230920 0000.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "ADDRESS_COUNTY",
+                "fieldType" : "PARSER",
+                "label" : "ADDRESS_COUNTY",
+                "nativeName" : "ADDRESS_COUNTY",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "addresscomm_20230920 0000.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "ADD_XREF_ADDRESS_NUMBER",
+                "fieldType" : "PARSER",
+                "label" : "ADD_XREF_ADDRESS_NUMBER",
+                "nativeName" : "ADD_XREF_ADDRESS_NUMBER",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "addresscomm_20230920 0000.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "TRADING_PARTNER_NUMBER",
+                "fieldType" : "PARSER",
+                "label" : "TRADING_PARTNER_NUMBER",
+                "nativeName" : "TRADING_PARTNER_NUMBER",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "addresscomm_20230920 0000.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "ADDRESS_XREF_NUMBER",
+                "fieldType" : "PARSER",
+                "label" : "ADDRESS_XREF_NUMBER",
+                "nativeName" : "ADDRESS_XREF_NUMBER",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "addresscomm_20230920 0000.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "INTERNAL_EXTERNAL",
+                "fieldType" : "PARSER",
+                "label" : "INTERNAL_EXTERNAL",
+                "nativeName" : "INTERNAL_EXTERNAL",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "addresscomm_20230920 0000.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "DEFAULT_DELIVERY_ADDRESS",
+                "fieldType" : "PARSER",
+                "label" : "DEFAULT_DELIVERY_ADDRESS",
+                "nativeName" : "DEFAULT_DELIVERY_ADDRESS",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "addresscomm_20230920 0000.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "DEFAULT_COLLECTION_ADDRESS",
+                "fieldType" : "PARSER",
+                "label" : "DEFAULT_COLLECTION_ADDRESS",
+                "nativeName" : "DEFAULT_COLLECTION_ADDRESS",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "addresscomm_20230920 0000.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "DEFAULT_CONTRACT_ADDRESS",
+                "fieldType" : "PARSER",
+                "label" : "DEFAULT_CONTRACT_ADDRESS",
+                "nativeName" : "DEFAULT_CONTRACT_ADDRESS",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "addresscomm_20230920 0000.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "THEIR_ACCOUNT",
+                "fieldType" : "PARSER",
+                "label" : "THEIR_ACCOUNT",
+                "nativeName" : "THEIR_ACCOUNT",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "addresscomm_20230920 0000.csv"
+                  }
+                ]
+              }
+            ]
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2023-11-06T08:26:44.530Z",
+        "name" : "Target",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "createTarget" : "false",
+        "fieldMappingMode" : "MANUAL",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "dataAdapter" : {
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "useDynamicFileName" : "false",
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "false",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "false",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        }
+      }
+    ]
+  },
+  "vcsExportTime" : "2025-04-14 08:25:53 PDT"
+}

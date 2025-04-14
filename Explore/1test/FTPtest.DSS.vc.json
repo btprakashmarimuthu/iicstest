@@ -1,0 +1,186 @@
+{
+  "name" : "FTPtest",
+  "maxLogs" : 10,
+  "sourceConnectionId" : "@aozhiN8C70keYTLshBz5AX",
+  "sourceConnectionName" : "navs_FTP_2",
+  "targetConnectionId" : "@6LETxuaWfVadBcgAH16geg",
+  "targetConnectionName" : "SN_ff_PC_2",
+  "sourceObjects" : [
+    {
+      "name" : "infakafka2.csv",
+      "label" : "infakafka2.csv",
+      "metadataUpdated" : false
+    }
+  ],
+  "targetObject" : "nk/infakafka.csv",
+  "targetObjectLabel" : "infakafka.csv",
+  "operation" : "Insert",
+  "maxRows" : 0,
+  "truncateTarget" : false,
+  "bulkApiDBTarget" : false,
+  "verbose" : false,
+  "srcFlatFileAttrs" : {
+    "delimiter" : ",",
+    "textQualifier" : "\"",
+    "headerLineNo" : 1,
+    "firstDataRow" : 2,
+    "rowDelimiter" : 0,
+    "consecutiveDelimiter" : false,
+    "multiDelimitersAsAnd" : true,
+    "firstDataRowAsHeader" : false
+  },
+  "tgtFlatFileAttrs" : {
+    "delimiter" : ",",
+    "textQualifier" : "\"",
+    "headerLineNo" : 1,
+    "firstDataRow" : 2,
+    "rowDelimiter" : 0,
+    "consecutiveDelimiter" : false,
+    "multiDelimitersAsAnd" : true,
+    "firstDataRowAsHeader" : false
+  },
+  "targetMetadataUpdated" : false,
+  "queryAll" : false,
+  "srcSettings" : {
+    "showLabels" : false,
+    "naturalOrder" : true
+  },
+  "tgtSettings" : {
+    "showLabels" : false,
+    "naturalOrder" : true
+  },
+  "cfSettings" : {
+    "showLabels" : false,
+    "naturalOrder" : false
+  },
+  "bulkApi" : false,
+  "bulkApiSerialMode" : false,
+  "bulkApiMonitor" : false,
+  "isTargetObjectSfCustom" : false,
+  "fieldMaps" : [
+    {
+      "targetField" : {
+        "name" : "timestamp",
+        "type" : "nstring",
+        "uniqueName" : "timestamp",
+        "label" : "timestamp",
+        "parentObject" : "nk/infakafka.csv",
+        "pcType" : "UNISTRING",
+        "precision" : 255,
+        "scale" : 0,
+        "columnIndex" : 0,
+        "filterType" : "STRING",
+        "linkedFields" : [
+          "timestamp"
+        ],
+        "showLabel" : false,
+        "naturalOrder" : 0,
+        "key" : false,
+        "nullable" : true,
+        "createable" : false,
+        "externalId" : false,
+        "waterMarkKey" : false,
+        "calculated" : false,
+        "updateable" : true,
+        "unique" : false,
+        "sfIdLookup" : false,
+        "filterable" : true
+      },
+      "expression" : "timestamp"
+    },
+    {
+      "targetField" : {
+        "name" : "data",
+        "type" : "nstring",
+        "uniqueName" : "data",
+        "label" : "data",
+        "parentObject" : "nk/infakafka.csv",
+        "pcType" : "UNISTRING",
+        "precision" : 255,
+        "scale" : 0,
+        "columnIndex" : 1,
+        "filterType" : "STRING",
+        "linkedFields" : [
+          "data"
+        ],
+        "showLabel" : false,
+        "naturalOrder" : 0,
+        "key" : false,
+        "nullable" : true,
+        "createable" : false,
+        "externalId" : false,
+        "waterMarkKey" : false,
+        "calculated" : false,
+        "updateable" : true,
+        "unique" : false,
+        "sfIdLookup" : false,
+        "filterable" : true
+      },
+      "expression" : "data"
+    }
+  ],
+  "sourceFields" : [
+    {
+      "name" : "timestamp",
+      "type" : "nstring",
+      "uniqueName" : "timestamp",
+      "label" : "timestamp",
+      "parentObject" : "infakafka2.csv",
+      "pcType" : "UNISTRING",
+      "precision" : 255,
+      "scale" : 0,
+      "columnIndex" : 0,
+      "filterType" : "STRING",
+      "linkedFields" : [
+        "timestamp"
+      ],
+      "showLabel" : false,
+      "naturalOrder" : 0,
+      "key" : false,
+      "nullable" : true,
+      "createable" : false,
+      "externalId" : false,
+      "waterMarkKey" : false,
+      "calculated" : false,
+      "updateable" : true,
+      "unique" : false,
+      "sfIdLookup" : false,
+      "filterable" : true
+    },
+    {
+      "name" : "data",
+      "type" : "nstring",
+      "uniqueName" : "data",
+      "label" : "data",
+      "parentObject" : "infakafka2.csv",
+      "pcType" : "UNISTRING",
+      "precision" : 255,
+      "scale" : 0,
+      "columnIndex" : 1,
+      "filterType" : "STRING",
+      "linkedFields" : [
+        "data"
+      ],
+      "showLabel" : false,
+      "naturalOrder" : 0,
+      "key" : false,
+      "nullable" : true,
+      "createable" : false,
+      "externalId" : false,
+      "waterMarkKey" : false,
+      "calculated" : false,
+      "updateable" : true,
+      "unique" : false,
+      "sfIdLookup" : false,
+      "filterable" : true
+    }
+  ],
+  "allowNullUpdates" : false,
+  "targetBatchSize" : 200,
+  "assignmentRuleId" : "-1",
+  "assignmentRuleType" : "None",
+  "createSuccessFile" : false,
+  "bulkApiHardDelete" : false,
+  "parameterFileEncoding" : "UTF-8",
+  "vcsExportTime" : "2025-04-14 08:25:53 PDT"
+}

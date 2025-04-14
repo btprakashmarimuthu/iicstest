@@ -1,0 +1,90 @@
+{
+  "objectInfo" : {
+    "id" : "g4i040jTPk7iMaMYQs0pEJ",
+    "name" : "Mapping846",
+    "type" : "DTEMPLATE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ170000000001R4"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "updateTime" : "2025-04-14T15:25:59.665Z",
+  "objectRefs" : [ {
+    "id" : "1g0cUpVYNqgbpd62wvFTy4",
+    "name" : "INFATEST_SNOWFLAKE4",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0B00000000005G"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "test",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "bj7Ei9NwHQFgtmdvawJrQs",
+    "name" : "INFATEST_FF_WDWS",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ0B00000000002L"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "3yS2SJcsjwleWZQrGJpE8h",
+    "name" : "mplt_lkpc_OPL_Id_for_MC_N_S_pcache",
+    "type" : "DMAPPLET",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "017JAQ40000000000027"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Dieses Mapplet ermittelt zu einem gegebenen Matchcode Name und Suppl die zugehörige OPL_Id, die gültig war zum Zeitpunkt wo der Matchcode_Name /Suppl gültig war.",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/DWH_CLOUD/_TMP"
+  } ],
+  "readableFileExtension" : "json",
+  "readableFilePresent" : true
+}

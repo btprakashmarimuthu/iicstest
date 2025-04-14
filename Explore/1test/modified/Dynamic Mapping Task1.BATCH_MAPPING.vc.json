@@ -1,0 +1,101 @@
+{
+  "name" : "Dynamic Mapping Task1",
+  "state" : "INVALID",
+  "mappingId" : "017JAQ170000000001DC",
+  "mappingTemplateName" : "Mapping671",
+  "mappingDocType" : "MAPPING",
+  "runtimeEnvironmentId" : "017JAQ2500000000000L",
+  "runtimeEnvironmentName" : "____Sheethal babu",
+  "params" : [
+    {
+      "uniqueName" : "Source:NewParameter",
+      "name" : "NewParameter",
+      "txName" : "Source",
+      "type" : "SOURCE_CONNECTION",
+      "scope" : "DEFAULT",
+      "label" : "NewParameter"
+    },
+    {
+      "uniqueName" : "Source:NewParameter1",
+      "name" : "NewParameter1",
+      "txName" : "Source",
+      "type" : "SOURCE_OBJECT",
+      "scope" : "DEFAULT"
+    },
+    {
+      "uniqueName" : "Target:NewParameter2",
+      "name" : "NewParameter2",
+      "txName" : "Target",
+      "type" : "TARGET_CONNECTION",
+      "scope" : "DEFAULT",
+      "label" : "NewParameter2"
+    },
+    {
+      "uniqueName" : "Target:NewParameter3",
+      "name" : "NewParameter3",
+      "txName" : "Target",
+      "type" : "TARGET_OBJECT",
+      "scope" : "DEFAULT"
+    }
+  ],
+  "groups" : [
+    {
+      "groupName" : "Group_1",
+      "enabled" : true
+    }
+  ],
+  "jobs" : [
+    {
+      "jobName" : "<Default>",
+      "jobType" : "DEFAULT",
+      "enabled" : false,
+      "stopOnError" : false,
+      "stopOnWarning" : false,
+      "jobParamBindings" : [
+        {
+          "type" : "Connection",
+          "paramDefn" : "Source:NewParameter",
+          "connectionId" : "017JAQ0B0000000000L4",
+          "connectionName" : "sn_ff_sheetal"
+        },
+        {
+          "type" : "Source",
+          "paramDefn" : "Source:NewParameter1",
+          "handleSpecialChars" : false,
+          "sourceObject" : {
+            "name" : "bricks.csv",
+            "label" : "bricks.csv",
+            "metadataUpdated" : false
+          },
+          "isFileList" : false,
+          "currentlyProcessedFileName" : false
+        },
+        {
+          "type" : "Connection",
+          "paramDefn" : "Target:NewParameter2",
+          "connectionId" : "017JAQ0B0000000000L4",
+          "connectionName" : "sn_ff_sheetal"
+        },
+        {
+          "type" : "Target",
+          "paramDefn" : "Target:NewParameter3",
+          "handleSpecialChars" : false,
+          "objectName" : "BUDGET.csv",
+          "objectLabel" : "BUDGET.csv",
+          "truncateTarget" : false,
+          "bulkApiDBTarget" : false,
+          "dynamicFileName" : false,
+          "targetSchemaMode" : "DONT_APPLY_CHANGES"
+        }
+      ]
+    },
+    {
+      "jobName" : "Job_1",
+      "jobType" : "USER",
+      "enabled" : true,
+      "stopOnError" : false,
+      "stopOnWarning" : false
+    }
+  ],
+  "vcsExportTime" : "2025-04-14 08:25:57 PDT"
+}

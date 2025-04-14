@@ -1,0 +1,565 @@
+{
+  "content" : {
+    "allowMaxFieldLength" : "false",
+    "bigIntConvertType" : "ONLY_BIGINT",
+    "documentType" : "MAPPING",
+    "name" : "file_processor_file_check",
+    "links" : [
+      {
+        "link" : "Source -> Target"
+      }
+    ],
+    "transformations" : [
+      {
+        "createTime" : "2022-12-20T12:54:25.329Z",
+        "name" : "Source",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Output is deterministic",
+            "value" : "false"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "SourceFileDir"
+            },
+            "name" : "SourceFileDir",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "DestFileDir"
+            },
+            "name" : "DestFileDir",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "PatternFlag"
+            },
+            "name" : "PatternFlag",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "SFTP_User_ID"
+            },
+            "name" : "SFTP_User_ID",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "SFTP_Port"
+            },
+            "name" : "SFTP_Port",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "SFTP_Password"
+            },
+            "name" : "SFTP_Password",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "SFTP_Hostname"
+            },
+            "name" : "SFTP_Hostname",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "SFTP_SSH2_KeyFile"
+            },
+            "name" : "SFTP_SSH2_KeyFile",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "FileName"
+            },
+            "name" : "FileName",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "SFTP_Status"
+            },
+            "name" : "SFTP_Status",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "LastModDate"
+            },
+            "name" : "LastModDate",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9
+          },
+          {
+            "adapterField" : {
+              "name" : "Delete_Source"
+            },
+            "name" : "Delete_Source",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Guaranteed_Delivery"
+            },
+            "name" : "Guaranteed_Delivery",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "SFTP_PassPhrase"
+            },
+            "name" : "SFTP_PassPhrase",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Is_IBM_AS400"
+            },
+            "name" : "Is_IBM_AS400",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@aH2IHVjBslhi1QaBim0FG5",
+          "connectionName" : "rm_fileProcessor",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "TOOLKIT",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "SFTP_GET",
+            "label" : "SFTP_GET",
+            "objectName" : "SFTP_GET",
+            "path" : "SFTP_GET",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "SourceFileDir",
+                "fieldType" : "CONNECTOR",
+                "nativeName" : "SourceFileDir",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 256,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "SFTP_GET"
+                  }
+                ]
+              },
+              {
+                "name" : "DestFileDir",
+                "fieldType" : "CONNECTOR",
+                "nativeName" : "DestFileDir",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 256,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "SFTP_GET"
+                  }
+                ]
+              },
+              {
+                "name" : "PatternFlag",
+                "fieldType" : "CONNECTOR",
+                "nativeName" : "PatternFlag",
+                "nativeType" : "boolean",
+                "original" : "false",
+                "precision" : 10,
+                "scale" : 10,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "SFTP_GET"
+                  }
+                ]
+              },
+              {
+                "name" : "SFTP_User_ID",
+                "fieldType" : "CONNECTOR",
+                "nativeName" : "SFTP_User_ID",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 256,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "SFTP_GET"
+                  }
+                ]
+              },
+              {
+                "name" : "SFTP_Port",
+                "fieldType" : "CONNECTOR",
+                "nativeName" : "SFTP_Port",
+                "nativeType" : "integer",
+                "original" : "false",
+                "precision" : 10,
+                "scale" : 10,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "SFTP_GET"
+                  }
+                ]
+              },
+              {
+                "name" : "SFTP_Password",
+                "fieldType" : "CONNECTOR",
+                "nativeName" : "SFTP_Password",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 256,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "SFTP_GET"
+                  }
+                ]
+              },
+              {
+                "name" : "SFTP_Hostname",
+                "fieldType" : "CONNECTOR",
+                "nativeName" : "SFTP_Hostname",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 256,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "SFTP_GET"
+                  }
+                ]
+              },
+              {
+                "name" : "SFTP_SSH2_KeyFile",
+                "fieldType" : "CONNECTOR",
+                "nativeName" : "SFTP_SSH2_KeyFile",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 256,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "SFTP_GET"
+                  }
+                ]
+              },
+              {
+                "name" : "FileName",
+                "fieldType" : "CONNECTOR",
+                "nativeName" : "FileName",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 256,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "SFTP_GET"
+                  }
+                ]
+              },
+              {
+                "name" : "SFTP_Status",
+                "fieldType" : "CONNECTOR",
+                "nativeName" : "SFTP_Status",
+                "nativeType" : "boolean",
+                "original" : "false",
+                "precision" : 10,
+                "scale" : 10,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "SFTP_GET"
+                  }
+                ]
+              },
+              {
+                "name" : "LastModDate",
+                "fieldType" : "CONNECTOR",
+                "nativeName" : "LastModDate",
+                "nativeType" : "datetime",
+                "original" : "false",
+                "precision" : 26,
+                "scale" : 26,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "SFTP_GET"
+                  }
+                ]
+              },
+              {
+                "name" : "Delete_Source",
+                "fieldType" : "CONNECTOR",
+                "nativeName" : "Delete_Source",
+                "nativeType" : "boolean",
+                "original" : "false",
+                "precision" : 10,
+                "scale" : 10,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "SFTP_GET"
+                  }
+                ]
+              },
+              {
+                "name" : "Guaranteed_Delivery",
+                "fieldType" : "CONNECTOR",
+                "nativeName" : "Guaranteed_Delivery",
+                "nativeType" : "boolean",
+                "original" : "false",
+                "precision" : 10,
+                "scale" : 10,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "SFTP_GET"
+                  }
+                ]
+              },
+              {
+                "name" : "SFTP_PassPhrase",
+                "fieldType" : "CONNECTOR",
+                "nativeName" : "SFTP_PassPhrase",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 256,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "SFTP_GET"
+                  }
+                ]
+              },
+              {
+                "name" : "Is_IBM_AS400",
+                "fieldType" : "CONNECTOR",
+                "nativeName" : "Is_IBM_AS400",
+                "nativeType" : "boolean",
+                "original" : "false",
+                "precision" : 10,
+                "scale" : 10,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "SFTP_GET"
+                  }
+                ]
+              }
+            ]
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false",
+            "filterConditions" : [
+              {
+                "fieldName" : "FileName",
+                "filterValue" : "20221209^Agent InstallmentCommission Advice^^^^bc32877282.pdf",
+                "objectName" : "SFTP_GET",
+                "operator" : "EQUALS"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "createTime" : "2022-12-20T12:54:25.329Z",
+        "name" : "Target",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          },
+          {
+            "name" : "Thousand Separator",
+            "value" : "None"
+          },
+          {
+            "name" : "Decimal Separator",
+            "value" : "."
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "sessionProperties" : [
+          {
+            "name" : "Append if Exists",
+            "value" : "NO"
+          },
+          {
+            "name" : "Header Options",
+            "value" : "Output Field Names"
+          },
+          {
+            "name" : "Output Type",
+            "value" : "File"
+          }
+        ],
+        "createTarget" : "true",
+        "fieldMappingMode" : "BY_NAME",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "dataAdapter" : {
+          "connectionId" : "saas:@fHgg0SvThk4geg1xs3JSO0",
+          "connectionName" : "rm_ff",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "CSVFile",
+          "useDynamicFileName" : "false",
+          "bulkOptions" : {
+            "hardDelete" : "false",
+            "maxRowsPerRequest" : 0,
+            "monitorBulk" : "false",
+            "monitorBulkV2" : "false",
+            "pkChunkingEnabled" : "false",
+            "pkChunkingSize" : 0,
+            "serialMode" : "false",
+            "useBulkApi" : "false",
+            "useBulkApiV2" : "false"
+          },
+          "object" : {
+            "name" : "new_create.csv",
+            "label" : "new_create.csv",
+            "path" : "new_create.csv",
+            "retainMetadata" : "false",
+            "fileAttrs" : {
+              "consecutiveDelimiter" : "false",
+              "delimiter" : ",",
+              "firstDataRow" : 2,
+              "firstDataRowAsHeader" : "false",
+              "headerLineNo" : 1,
+              "multiDelimitersAsAnd" : "true",
+              "rowDelimiter" : 0,
+              "textQualifier" : "\""
+            }
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "false",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "false",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        }
+      }
+    ]
+  },
+  "vcsExportTime" : "2025-04-14 08:25:53 PDT"
+}

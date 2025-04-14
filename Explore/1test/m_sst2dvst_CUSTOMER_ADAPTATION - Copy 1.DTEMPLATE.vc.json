@@ -1,0 +1,4536 @@
+{
+  "content" : {
+    "description" : "\nConverted using O2N Version: O2N : Framesh1ft Tool V3.03",
+    "allowMaxFieldLength" : "false",
+    "name" : "m_sst2dvst_CUSTOMER_ADAPTATION - Copy 1",
+    "links" : [
+      {
+        "link" : "SQ_SST_CUSTOMER_ADAPTATION -> _EXPR_SHC_KAP_EXP_DEFAULT_VALUES_STRING_DATE_INTEGER_DECIMAL"
+      },
+      {
+        "link" : "_EXPR_SHC_KAP_EXP_DEFAULT_VALUES_STRING_DATE_INTEGER_DECIMAL -> SHC_KAP_EXP_DEFAULT_VALUES_STRING_DATE_INTEGER_DECIMAL"
+      },
+      {
+        "link" : "SHC_KAP_EXP_DEFAULT_VALUES_STRING_DATE_INTEGER_DECIMAL -> TGT_DVST_KAP_CUSTOMER_ADAPTATION"
+      }
+    ],
+    "parameters" : [
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "true",
+        "expressionVariable" : "false",
+        "name" : "DBConnection_Target",
+        "anonymousType" : {
+          "connectionType" : "ODBC"
+        }
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "true",
+        "expressionVariable" : "false",
+        "name" : "DBConnection_Source",
+        "anonymousType" : {
+          "connectionType" : "ODBC"
+        }
+      }
+    ],
+    "transformations" : [
+      {
+        "name" : "TGT_DVST_KAP_CUSTOMER_ADAPTATION",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              },
+              {
+                "bulkRename" : "false",
+                "include" : "false",
+                "names" : [
+                  {
+                    "inputName" : "FIELD1_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD2_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD3_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD4_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD5_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD6_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD7_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD8_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD9_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD10_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD11_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD12_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD13_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD14_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD15_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD16_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD17_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD18_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD19_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD20_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD21_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD22_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD23_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD24_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD25_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD26_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD27_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD28_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD29_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD30_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD31_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD32_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD33_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD34_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD35_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD36_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD37_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD38_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD39_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD40_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD41_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD42_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD43_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD44_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD45_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD46_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD47_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD48_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD49_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD50_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD51_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD52_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD53_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD54_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD55_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD56_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD57_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD58_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD59_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD60_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD61_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD62_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD63_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD64_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD65_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD66_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD67_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD68_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD69_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD70_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD71_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD72_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD73_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD74_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD75_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD76_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD77_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD78_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD79_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD80_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD81_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD82_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD83_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD84_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD85_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD86_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD87_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD88_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD89_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD90_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD91_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD92_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD93_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD94_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD95_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD96_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD97_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD98_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD99_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD100_STRING"
+                  },
+                  {
+                    "inputName" : "FIELD1_DATE"
+                  },
+                  {
+                    "inputName" : "FIELD2_DATE"
+                  },
+                  {
+                    "inputName" : "FIELD3_DATE"
+                  },
+                  {
+                    "inputName" : "FIELD4_DATE"
+                  },
+                  {
+                    "inputName" : "FIELD5_DATE"
+                  },
+                  {
+                    "inputName" : "FIELD6_DATE"
+                  },
+                  {
+                    "inputName" : "FIELD7_DATE"
+                  },
+                  {
+                    "inputName" : "FIELD8_DATE"
+                  },
+                  {
+                    "inputName" : "FIELD9_DATE"
+                  },
+                  {
+                    "inputName" : "FIELD10_DATE"
+                  },
+                  {
+                    "inputName" : "FIELD11_DATE"
+                  },
+                  {
+                    "inputName" : "FIELD12_DATE"
+                  },
+                  {
+                    "inputName" : "FIELD13_DATE"
+                  },
+                  {
+                    "inputName" : "FIELD14_DATE"
+                  },
+                  {
+                    "inputName" : "FIELD15_DATE"
+                  },
+                  {
+                    "inputName" : "FIELD1_INTEGER"
+                  },
+                  {
+                    "inputName" : "FIELD2_INTEGER"
+                  },
+                  {
+                    "inputName" : "FIELD3_INTEGER"
+                  },
+                  {
+                    "inputName" : "FIELD4_INTEGER"
+                  },
+                  {
+                    "inputName" : "FIELD5_INTEGER"
+                  },
+                  {
+                    "inputName" : "FIELD6_INTEGER"
+                  },
+                  {
+                    "inputName" : "FIELD7_INTEGER"
+                  },
+                  {
+                    "inputName" : "FIELD8_INTEGER"
+                  },
+                  {
+                    "inputName" : "FIELD9_INTEGER"
+                  },
+                  {
+                    "inputName" : "FIELD10_INTEGER"
+                  },
+                  {
+                    "inputName" : "FIELD11_INTEGER"
+                  },
+                  {
+                    "inputName" : "FIELD12_INTEGER"
+                  },
+                  {
+                    "inputName" : "FIELD13_INTEGER"
+                  },
+                  {
+                    "inputName" : "FIELD14_INTEGER"
+                  },
+                  {
+                    "inputName" : "FIELD15_INTEGER"
+                  },
+                  {
+                    "inputName" : "FIELD16_INTEGER"
+                  },
+                  {
+                    "inputName" : "FIELD17_INTEGER"
+                  },
+                  {
+                    "inputName" : "FIELD18_INTEGER"
+                  },
+                  {
+                    "inputName" : "FIELD19_INTEGER"
+                  },
+                  {
+                    "inputName" : "FIELD20_INTEGER"
+                  },
+                  {
+                    "inputName" : "FIELD1_DECIMAL"
+                  },
+                  {
+                    "inputName" : "FIELD2_DECIMAL"
+                  },
+                  {
+                    "inputName" : "FIELD3_DECIMAL"
+                  },
+                  {
+                    "inputName" : "FIELD4_DECIMAL"
+                  },
+                  {
+                    "inputName" : "FIELD5_DECIMAL"
+                  },
+                  {
+                    "inputName" : "FIELD6_DECIMAL"
+                  },
+                  {
+                    "inputName" : "FIELD7_DECIMAL"
+                  },
+                  {
+                    "inputName" : "FIELD8_DECIMAL"
+                  },
+                  {
+                    "inputName" : "FIELD9_DECIMAL"
+                  },
+                  {
+                    "inputName" : "FIELD10_DECIMAL"
+                  },
+                  {
+                    "inputName" : "FIELD3_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD4_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD5_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD6_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD7_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD8_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD9_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD10_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD11_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD12_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD13_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD14_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD15_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD16_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD17_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD18_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD19_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD20_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD21_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD22_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD23_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD24_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD25_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD26_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD27_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD28_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD29_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD30_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD31_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD32_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD33_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD34_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD35_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD36_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD37_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD38_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD39_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD40_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD41_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD42_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD43_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD44_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD45_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD46_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD47_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD48_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD49_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD50_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD51_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD52_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD53_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD54_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD55_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD56_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD57_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD58_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD59_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD60_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD61_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD62_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD63_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD64_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD65_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD66_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD67_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD68_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD69_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD70_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD71_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD72_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD73_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD74_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD75_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD76_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD77_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD78_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD79_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD80_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD81_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD82_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD83_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD84_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD85_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD86_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD87_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD88_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD89_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD90_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD91_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD92_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD93_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD94_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD95_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD96_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD97_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD98_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD99_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD100_STRING_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD1_DATE_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD2_DATE_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD3_DATE_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD4_DATE_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD5_DATE_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD6_DATE_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD7_DATE_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD8_DATE_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD9_DATE_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD10_DATE_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD11_DATE_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD12_DATE_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD13_DATE_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD14_DATE_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD15_DATE_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD1_INTEGER_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD2_INTEGER_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD3_INTEGER_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD4_INTEGER_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD5_INTEGER_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD6_INTEGER_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD7_INTEGER_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD8_INTEGER_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD9_INTEGER_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD10_INTEGER_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD11_INTEGER_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD12_INTEGER_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD13_INTEGER_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD14_INTEGER_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD15_INTEGER_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD16_INTEGER_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD17_INTEGER_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD18_NTEGER_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD19_INTEGER_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD20_INTEGER_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD1_DECIMAL_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD2_DECIMAL_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD3_DECIMAL_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD4_DECIMAL_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD5_DECIMAL_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD6_DECIMAL_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD7_DECIMAL_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD8_DECIMAL_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD9_DECIMAL_OUT"
+                  },
+                  {
+                    "inputName" : "FIELD10_DECIMAL_OUT"
+                  },
+                  {
+                    "inputName" : "DUMMY"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "createTarget" : "false",
+        "fieldMappingMode" : "MANUAL",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "CUSTOMER_ADAPTATION_CODE"
+            },
+            "name" : "CUSTOMER_ADAPTATION_CODE",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 400,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "CUSTOMER_ADAPTATION_NAME"
+            },
+            "name" : "CUSTOMER_ADAPTATION_NAME",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 100,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "RECORD_STATUS"
+            },
+            "name" : "RECORD_STATUS",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 3,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "RECORD_SOURCE"
+            },
+            "name" : "RECORD_SOURCE",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 30,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "BATCH_ID"
+            },
+            "name" : "BATCH_ID",
+            "platformType" : {
+              "name" : "bigint"
+            },
+            "precision" : 19,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@bNjBUaZiuMrf3TM1XcjOG1",
+          "connectionName" : "infatest_synnapse",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "TOOLKIT",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "ODSST_KAP_CUSTOMER_ADAPTATION",
+            "label" : "ODSST_KAP_CUSTOMER_ADAPTATION",
+            "objectName" : "ODSST_KAP_CUSTOMER_ADAPTATION",
+            "path" : "ODSST_KAP_CUSTOMER_ADAPTATION",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "CUSTOMER_ADAPTATION_CODE",
+                "fieldType" : "CONNECTOR",
+                "label" : "CUSTOMER_ADAPTATION_CODE",
+                "nativeName" : "CUSTOMER_ADAPTATION_CODE",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 400,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ODSST_KAP_CUSTOMER_ADAPTATION"
+                  }
+                ]
+              },
+              {
+                "name" : "CUSTOMER_ADAPTATION_NAME",
+                "fieldType" : "CONNECTOR",
+                "label" : "CUSTOMER_ADAPTATION_NAME",
+                "nativeName" : "CUSTOMER_ADAPTATION_NAME",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 100,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ODSST_KAP_CUSTOMER_ADAPTATION"
+                  }
+                ]
+              },
+              {
+                "name" : "RECORD_STATUS",
+                "fieldType" : "CONNECTOR",
+                "label" : "RECORD_STATUS",
+                "nativeName" : "RECORD_STATUS",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 3,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ODSST_KAP_CUSTOMER_ADAPTATION"
+                  }
+                ]
+              },
+              {
+                "name" : "RECORD_SOURCE",
+                "fieldType" : "CONNECTOR",
+                "label" : "RECORD_SOURCE",
+                "nativeName" : "RECORD_SOURCE",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 30,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ODSST_KAP_CUSTOMER_ADAPTATION"
+                  }
+                ]
+              },
+              {
+                "name" : "BATCH_ID",
+                "fieldType" : "CONNECTOR",
+                "label" : "BATCH_ID",
+                "nativeName" : "BATCH_ID",
+                "nativeType" : "bigint",
+                "original" : "false",
+                "precision" : 19,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "BIGINT"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ODSST_KAP_CUSTOMER_ADAPTATION"
+                  }
+                ]
+              }
+            ]
+          },
+          "runtimeAttributes" : {
+            "attributes" : [
+              {
+                "name" : "Azure Blob Container Name",
+                "value" : "cloudgcs"
+              },
+              {
+                "name" : "Copy Method",
+                "value" : "Polybase"
+              },
+              {
+                "name" : "Field Delimiter",
+                "value" : "0x1e"
+              },
+              {
+                "name" : "Number of concurrent connections to Blob Store",
+                "value" : "4"
+              },
+              {
+                "name" : "Truncate Table",
+                "value" : "NO"
+              },
+              {
+                "name" : "On Pre-Post SQL Error",
+                "value" : "Continue"
+              },
+              {
+                "name" : "Treat Source Rows As",
+                "value" : "NONE"
+              },
+              {
+                "name" : "Batch Size",
+                "value" : "2000000"
+              },
+              {
+                "name" : "Quote Character",
+                "value" : "0x1f"
+              },
+              {
+                "name" : "Compression Format",
+                "value" : "None"
+              }
+            ]
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "false",
+            "operations" : [
+              "Insert",
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "false",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        },
+        "manualMappings" : {
+          "mappingList" : [
+            {
+              "fromFieldName" : "RECORD_STATUS",
+              "toField" : {
+                "name" : "RECORD_STATUS"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "RECORD_SOURCE",
+              "toField" : {
+                "name" : "RECORD_SOURCE"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "BATCH_ID",
+              "toField" : {
+                "name" : "BATCH_ID"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "FIELD1_STRING_OUT",
+              "toField" : {
+                "name" : "CUSTOMER_ADAPTATION_CODE"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "FIELD2_STRING_OUT",
+              "toField" : {
+                "name" : "CUSTOMER_ADAPTATION_NAME"
+              },
+              "fromFieldNames" : null
+            }
+          ]
+        }
+      },
+      {
+        "name" : "SQ_SST_CUSTOMER_ADAPTATION",
+        "advancedProperties" : [
+          {
+            "name" : "Number Of Sorted Ports",
+            "value" : "0"
+          },
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Is Partitionable",
+            "value" : "false"
+          },
+          {
+            "name" : "Output is deterministic",
+            "value" : "false"
+          },
+          {
+            "name" : "Output is repeatable",
+            "value" : "Never"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "SNR"
+            },
+            "name" : "SNR",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 8,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "DES"
+            },
+            "name" : "DES",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 25,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@bNjBUaZiuMrf3TM1XcjOG1",
+          "connectionName" : "infatest_synnapse",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "TOOLKIT",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "SST_CUSTOMER_ADAPTATION",
+            "label" : "SST_CUSTOMER_ADAPTATION",
+            "objectName" : "SST_CUSTOMER_ADAPTATION",
+            "path" : "SST_CUSTOMER_ADAPTATION",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "SNR",
+                "fieldType" : "CONNECTOR",
+                "label" : "SNR",
+                "nativeName" : "SNR",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 8,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "SST_CUSTOMER_ADAPTATION"
+                  }
+                ]
+              },
+              {
+                "name" : "DES",
+                "fieldType" : "CONNECTOR",
+                "label" : "DES",
+                "nativeName" : "DES",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 25,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "SST_CUSTOMER_ADAPTATION"
+                  }
+                ]
+              }
+            ]
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          },
+          "runtimeAttributes" : {
+            "attributes" : [
+              {
+                "name" : "Azure Blob Container Name",
+                "value" : "cloudgcs"
+              },
+              {
+                "name" : "Staging File Format",
+                "value" : "Delimited Text"
+              },
+              {
+                "name" : "Field Delimiter",
+                "value" : "0x1e"
+              },
+              {
+                "name" : "Number of concurrent connections to Blob Store",
+                "value" : "4"
+              },
+              {
+                "name" : "Blob Part Size",
+                "value" : "8"
+              },
+              {
+                "name" : "On Pre-Post SQL Error",
+                "value" : "Stop"
+              },
+              {
+                "name" : "Quote Character",
+                "value" : "0x1f"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "description" : "This reuseable expression transformation is used to set default values when no/empty values are present in the input fields.\nConverted using O2N\n",
+        "name" : "SHC_KAP_EXP_DEFAULT_VALUES_STRING_DATE_INTEGER_DECIMAL",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Optional",
+            "value" : "true"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "windowConfigurationEnabled" : "false",
+        "fields" : [
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD1_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD1_STRING), 'NULL',FIELD1_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD2_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD2_STRING), 'NULL',FIELD2_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD3_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD3_STRING), 'NULL',FIELD3_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD4_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD4_STRING), 'NULL',FIELD4_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD5_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD5_STRING), 'NULL',FIELD5_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD6_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD6_STRING), 'NULL',FIELD6_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD7_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD7_STRING), 'NULL',FIELD7_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD8_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD8_STRING), 'NULL',FIELD8_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD9_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD9_STRING), 'NULL',FIELD9_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD10_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD10_STRING), 'NULL',FIELD10_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD11_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD11_STRING), 'NULL',FIELD11_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD12_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD12_STRING), 'NULL',FIELD12_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD13_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD13_STRING), 'NULL',FIELD13_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD14_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD14_STRING), 'NULL',FIELD14_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD15_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD15_STRING), 'NULL',FIELD15_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD16_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD16_STRING), 'NULL',FIELD16_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD17_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD17_STRING), 'NULL',FIELD17_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD18_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD18_STRING), 'NULL',FIELD18_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD19_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD19_STRING), 'NULL',FIELD19_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD20_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD20_STRING), 'NULL',FIELD20_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD21_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD21_STRING), 'NULL',FIELD21_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD22_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD22_STRING), 'NULL',FIELD22_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD23_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD23_STRING), 'NULL',FIELD23_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD24_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD24_STRING), 'NULL',FIELD24_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD25_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD25_STRING), 'NULL',FIELD25_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD26_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD26_STRING), 'NULL',FIELD26_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD27_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD27_STRING), 'NULL',FIELD27_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD28_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD28_STRING), 'NULL',FIELD28_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD29_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD29_STRING), 'NULL',FIELD29_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD30_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD30_STRING), 'NULL',FIELD30_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD31_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD31_STRING), 'NULL',FIELD31_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD32_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD32_STRING), 'NULL',FIELD32_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD33_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD33_STRING), 'NULL',FIELD33_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD34_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD34_STRING), 'NULL',FIELD34_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD35_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD35_STRING), 'NULL',FIELD35_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD36_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD36_STRING), 'NULL',FIELD36_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD37_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD37_STRING), 'NULL',FIELD37_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD38_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD38_STRING), 'NULL',FIELD38_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD39_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD39_STRING), 'NULL',FIELD39_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD40_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD40_STRING), 'NULL',FIELD40_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD41_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD41_STRING), 'NULL',FIELD41_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD42_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD42_STRING), 'NULL',FIELD42_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD43_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD43_STRING), 'NULL',FIELD43_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD44_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD44_STRING), 'NULL',FIELD44_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD45_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD45_STRING), 'NULL',FIELD45_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD46_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD46_STRING), 'NULL',FIELD46_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD47_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD47_STRING), 'NULL',FIELD47_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD48_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD48_STRING), 'NULL',FIELD48_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD49_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD49_STRING), 'NULL',FIELD49_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD50_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD50_STRING), 'NULL',FIELD50_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD51_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD51_STRING), 'NULL',FIELD51_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD52_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD52_STRING), 'NULL',FIELD52_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD53_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD53_STRING), 'NULL',FIELD53_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD54_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD54_STRING), 'NULL',FIELD54_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD55_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD55_STRING), 'NULL',FIELD55_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD56_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD56_STRING), 'NULL',FIELD56_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD57_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD57_STRING), 'NULL',FIELD57_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD58_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD58_STRING), 'NULL',FIELD58_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD59_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD59_STRING), 'NULL',FIELD59_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD60_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD60_STRING), 'NULL',FIELD60_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD61_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD61_STRING), 'NULL',FIELD61_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD62_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD62_STRING), 'NULL',FIELD62_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD63_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD63_STRING), 'NULL',FIELD63_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD64_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD64_STRING), 'NULL',FIELD64_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD65_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD65_STRING), 'NULL',FIELD65_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD66_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD66_STRING), 'NULL',FIELD66_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD67_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD67_STRING), 'NULL',FIELD67_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD68_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD68_STRING), 'NULL',FIELD68_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD69_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD69_STRING), 'NULL',FIELD69_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD70_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD70_STRING), 'NULL',FIELD70_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD71_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD71_STRING), 'NULL',FIELD71_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD72_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD72_STRING), 'NULL',FIELD72_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD73_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD73_STRING), 'NULL',FIELD73_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD74_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD74_STRING), 'NULL',FIELD74_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD75_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD75_STRING), 'NULL',FIELD75_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD76_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD76_STRING), 'NULL',FIELD76_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD77_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD77_STRING), 'NULL',FIELD77_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD78_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD78_STRING), 'NULL',FIELD78_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD79_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD79_STRING), 'NULL',FIELD79_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD80_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD80_STRING), 'NULL',FIELD80_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD81_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD81_STRING), 'NULL',FIELD81_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD82_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD82_STRING), 'NULL',FIELD82_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD83_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD83_STRING), 'NULL',FIELD83_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD84_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD84_STRING), 'NULL',FIELD84_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD85_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD85_STRING), 'NULL',FIELD85_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD86_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD86_STRING), 'NULL',FIELD86_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD87_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD87_STRING), 'NULL',FIELD87_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD88_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD88_STRING), 'NULL',FIELD88_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD89_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD89_STRING), 'NULL',FIELD89_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD90_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD90_STRING), 'NULL',FIELD90_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD91_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD91_STRING), 'NULL',FIELD91_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD92_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD92_STRING), 'NULL',FIELD92_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD93_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD93_STRING), 'NULL',FIELD93_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD94_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD94_STRING), 'NULL',FIELD94_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD95_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD95_STRING), 'NULL',FIELD95_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD96_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD96_STRING), 'NULL',FIELD96_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD97_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD97_STRING), 'NULL',FIELD97_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD98_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD98_STRING), 'NULL',FIELD98_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD99_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD99_STRING), 'NULL',FIELD99_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD100_STRING_OUT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD100_STRING), 'NULL',FIELD100_STRING)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD1_DATE_OUT",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD1_DATE),TO_DATE('01010001','ddmmyyyy'),FIELD1_DATE)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD2_DATE_OUT",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD2_DATE),TO_DATE('01010001','ddmmyyyy'),FIELD2_DATE)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD3_DATE_OUT",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD3_DATE),TO_DATE('01010001','ddmmyyyy'),FIELD3_DATE)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD4_DATE_OUT",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD4_DATE),TO_DATE('01010001','ddmmyyyy'),FIELD4_DATE)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD5_DATE_OUT",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD5_DATE),TO_DATE('01010001','ddmmyyyy'),FIELD5_DATE)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD6_DATE_OUT",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD6_DATE),TO_DATE('01010001','ddmmyyyy'),FIELD6_DATE)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD7_DATE_OUT",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD7_DATE),TO_DATE('01010001','ddmmyyyy'),FIELD7_DATE)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD8_DATE_OUT",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD8_DATE),TO_DATE('01010001','ddmmyyyy'),FIELD8_DATE)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD9_DATE_OUT",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD9_DATE),TO_DATE('01010001','ddmmyyyy'),FIELD9_DATE)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD10_DATE_OUT",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD10_DATE),TO_DATE('01010001','ddmmyyyy'),FIELD10_DATE)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD11_DATE_OUT",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD11_DATE),TO_DATE('01010001','ddmmyyyy'),FIELD11_DATE)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD12_DATE_OUT",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD12_DATE),TO_DATE('01010001','ddmmyyyy'),FIELD12_DATE)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD13_DATE_OUT",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD13_DATE),TO_DATE('01010001','ddmmyyyy'),FIELD13_DATE)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD14_DATE_OUT",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD14_DATE),TO_DATE('01010001','ddmmyyyy'),FIELD14_DATE)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD15_DATE_OUT",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD15_DATE),TO_DATE('01010001','ddmmyyyy'),FIELD15_DATE)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD1_INTEGER_OUT",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD1_INTEGER),-1,FIELD1_INTEGER)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD2_INTEGER_OUT",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD2_INTEGER),-1,FIELD2_INTEGER)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD3_INTEGER_OUT",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD3_INTEGER),-1,FIELD3_INTEGER)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD4_INTEGER_OUT",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD4_INTEGER),-1,FIELD4_INTEGER)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD5_INTEGER_OUT",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD5_INTEGER),-1,FIELD5_INTEGER)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD6_INTEGER_OUT",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD6_INTEGER),-1,FIELD6_INTEGER)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD7_INTEGER_OUT",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD7_INTEGER),-1,FIELD7_INTEGER)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD8_INTEGER_OUT",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD8_INTEGER),-1,FIELD8_INTEGER)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD9_INTEGER_OUT",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD9_INTEGER),-1,FIELD9_INTEGER)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD10_INTEGER_OUT",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD10_INTEGER),-1,FIELD10_INTEGER)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD11_INTEGER_OUT",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD11_INTEGER),-1,FIELD11_INTEGER)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD12_INTEGER_OUT",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD12_INTEGER),-1,FIELD12_INTEGER)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD13_INTEGER_OUT",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD13_INTEGER),-1,FIELD13_INTEGER)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD14_INTEGER_OUT",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD14_INTEGER),-1,FIELD14_INTEGER)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD15_INTEGER_OUT",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD15_INTEGER),-1,FIELD15_INTEGER)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD16_INTEGER_OUT",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD16_INTEGER),-1,FIELD16_INTEGER)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD17_INTEGER_OUT",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD17_INTEGER),-1,FIELD17_INTEGER)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD18_NTEGER_OUT",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD18_INTEGER),-1,FIELD18_INTEGER)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD19_INTEGER_OUT",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD19_INTEGER),-1,FIELD19_INTEGER)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD20_INTEGER_OUT",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD20_INTEGER),-1,FIELD20_INTEGER)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD1_DECIMAL_OUT",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 19,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD1_DECIMAL),-1,FIELD1_DECIMAL)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD2_DECIMAL_OUT",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 19,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD2_DECIMAL),-1,FIELD2_DECIMAL)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD3_DECIMAL_OUT",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 19,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD3_DECIMAL),-1,FIELD3_DECIMAL)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD4_DECIMAL_OUT",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 19,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD4_DECIMAL),-1,FIELD4_DECIMAL)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD5_DECIMAL_OUT",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 19,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD5_DECIMAL),-1,FIELD5_DECIMAL)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD6_DECIMAL_OUT",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 19,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD6_DECIMAL),-1,FIELD6_DECIMAL)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD7_DECIMAL_OUT",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 19,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD7_DECIMAL),-1,FIELD7_DECIMAL)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD8_DECIMAL_OUT",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 19,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD8_DECIMAL),-1,FIELD8_DECIMAL)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD9_DECIMAL_OUT",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 19,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD9_DECIMAL),-1,FIELD9_DECIMAL)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "FIELD10_DECIMAL_OUT",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 19,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(ISNULL(FIELD10_DECIMAL),-1,FIELD10_DECIMAL)"
+          }
+        ]
+      },
+      {
+        "description" : "This is a helper expression for SHC_KAP_EXP_DEFAULT_VALUES_STRING_DATE_INTEGER_DECIMAL, used to resolve the name conflicts. \n",
+        "name" : "_EXPR_SHC_KAP_EXP_DEFAULT_VALUES_STRING_DATE_INTEGER_DECIMAL",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              },
+              {
+                "bulkRename" : "false",
+                "include" : "true",
+                "names" : [
+                  {
+                    "inputName" : "SNR",
+                    "outputName" : "FIELD1_STRING"
+                  },
+                  {
+                    "inputName" : "DES",
+                    "outputName" : "FIELD2_STRING"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "windowConfigurationEnabled" : "false",
+        "fields" : [
+          {
+            "name" : "FIELD3_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "'NULL'"
+          },
+          {
+            "name" : "FIELD4_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD5_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD6_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD7_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD8_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD9_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD10_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD11_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD12_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD13_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD14_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD15_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD16_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD17_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD18_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD19_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD20_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD21_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD22_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD23_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD24_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD25_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD26_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD27_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD28_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD29_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD30_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD31_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD32_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD33_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD34_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD35_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD36_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD37_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD38_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD39_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD40_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD41_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD42_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD43_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD44_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD45_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD46_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD47_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD48_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD49_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD50_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD51_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD52_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD53_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD54_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD55_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD56_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD57_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD58_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD59_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD60_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD61_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD62_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD63_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD64_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD65_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD66_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD67_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD68_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD69_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD70_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD71_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD72_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD73_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD74_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD75_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD76_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD77_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD78_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD79_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD80_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD81_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD82_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD83_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD84_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD85_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD86_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD87_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD88_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD89_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD90_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD91_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD92_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD93_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD94_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD95_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD96_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD97_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD98_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD99_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD100_STRING",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD1_DATE",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD2_DATE",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD3_DATE",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD4_DATE",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD5_DATE",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD6_DATE",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD7_DATE",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD8_DATE",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD9_DATE",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD10_DATE",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD11_DATE",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD12_DATE",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD13_DATE",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD14_DATE",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD15_DATE",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD1_INTEGER",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD2_INTEGER",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD3_INTEGER",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD4_INTEGER",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD5_INTEGER",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD6_INTEGER",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD7_INTEGER",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD8_INTEGER",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD9_INTEGER",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD10_INTEGER",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD11_INTEGER",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD12_INTEGER",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD13_INTEGER",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD14_INTEGER",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD15_INTEGER",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD16_INTEGER",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD17_INTEGER",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD18_INTEGER",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD19_INTEGER",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD20_INTEGER",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD1_DECIMAL",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 19,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD2_DECIMAL",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 19,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD3_DECIMAL",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 19,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD4_DECIMAL",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 19,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD5_DECIMAL",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 19,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD6_DECIMAL",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 19,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD7_DECIMAL",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 19,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD8_DECIMAL",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 19,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD9_DECIMAL",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 19,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "FIELD10_DECIMAL",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 19,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "RECORD_STATUS",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "'I'"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "RECORD_SOURCE",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 30,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "$$RECORD_SOURCE"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "BATCH_ID",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "$$BATCH_ID"
+          }
+        ]
+      }
+    ],
+    "variables" : [
+      {
+        "aggregationType" : "MAX",
+        "expressionVariable" : "false",
+        "name" : "BATCH_ID",
+        "platformType" : {
+          "name" : "integer"
+        },
+        "precision" : 10,
+        "retentionPolicy" : "NEVER",
+        "scale" : 0
+      },
+      {
+        "aggregationType" : "MAX",
+        "expressionVariable" : "false",
+        "name" : "RECORD_SOURCE",
+        "platformType" : {
+          "name" : "string"
+        },
+        "precision" : 10,
+        "retentionPolicy" : "NEVER",
+        "scale" : 0
+      }
+    ]
+  },
+  "vcsExportTime" : "2025-04-14 08:25:52 PDT"
+}

@@ -1,0 +1,2052 @@
+{
+  "content" : {
+    "allowMaxFieldLength" : "false",
+    "bigIntConvertType" : "ONLY_BIGINT",
+    "documentType" : "MAPPING",
+    "name" : "Mapping846",
+    "links" : [
+      {
+        "link" : "_EXPR_mplt_get_opl_id_by_matchcode_pc_MR -> mplt_get_opl_id_by_matchcode_pc_MR",
+        "groupLink" : "DefaultGroup -> mplt_in_find_OPL_Id_for_MC_N_S"
+      },
+      {
+        "link" : "mplt_get_opl_id_by_matchcode_pc_MR -> _EXPR_mplt_get_opl_id_by_matchcode_pc_MR2",
+        "groupLink" : "mplt_out_OPL_Id -> DefaultGroup"
+      },
+      {
+        "link" : "sq_ov_TF0900CP -> _EXPR_mplt_get_opl_id_by_matchcode_pc_MR"
+      },
+      {
+        "link" : "sq_ov_TF0900CP -> _EXPR_mplt_get_opl_id_by_matchcode_USEROFF_pc"
+      },
+      {
+        "link" : "_EXPR_mplt_get_opl_id_by_matchcode_USEROFF_pc2 -> sc_trg_FACT_RAPP_STATUS_MRG"
+      },
+      {
+        "link" : "_EXPR_mplt_get_opl_id_by_matchcode_pc_MR2 -> Target"
+      },
+      {
+        "link" : "_EXPR_mplt_get_opl_id_by_matchcode_USEROFF_pc -> _EXPR_mplt_get_opl_id_by_matchcode_USEROFF_pc2"
+      }
+    ],
+    "transformations" : [
+      {
+        "name" : "sq_ov_TF0900CP",
+        "advancedProperties" : [
+          {
+            "name" : "UpdateMode",
+            "value" : "None"
+          },
+          {
+            "name" : "Truncate Target Table",
+            "value" : "NO"
+          },
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "DELETE",
+            "value" : "NO"
+          },
+          {
+            "name" : "INSERT",
+            "value" : "NO"
+          },
+          {
+            "name" : "UPDATE",
+            "value" : "None"
+          },
+          {
+            "name" : "SQL Override",
+            "value" : "WITH TF0900CP_TAKEOVER AS ( \nSELECT \n  FK_TF0420CLIENT, \n  FK_TF0420ID_NUMBER,  \n  SCOPE,  \n  ACTION,  \n  Q_SRV_REL_NO,  \n  Q_RG_REL_NO,  \n  Q_RATE_REL_NO \nFROM \n  TF0900CP, \n  META_PROCESS_CTRL \nWHERE \n  META_PROCESS_CTRL.PCTRL_PRC_SCOPE = '$$SESSIONNAME' \n  AND TF0900CP.LOAD_CYCLE_ID > META_PROCESS_CTRL.PCTRL_VRS_CTRL_NO \nGROUP BY \n  FK_TF0420CLIENT, \n  FK_TF0420ID_NUMBER,  \n  SCOPE,  \n  ACTION,  \n  Q_SRV_REL_NO,  \n  Q_RG_REL_NO,  \n  Q_RATE_REL_NO \n), \n \n     TF0420CP_Q AS ( \nSELECT \n  TF0420CP.CLIENT AS CLIENT, \n  TF0420CP.ID_NUMBER AS ID_NUMBER, \n     \n  ( CASE \n          WHEN ((VALID_FROM IS NULL) OR (VALID_FROM = '0001-01-01')) \n          THEN '0001-01-01' \n          ELSE TF0420CP.VALID_FROM - 1 YEAR \n          END \n  ) AS VALID_FROM, \n   \n  ( CASE  \n                WHEN ((TF0420CP.VALID_TO IS NULL) OR (TF0420CP.VALID_TO < TF0420CP.VALID_FROM)) \n          THEN ( CASE \n                      WHEN ((TF0420CP.VALID_FROM IS NULL) OR (YEAR(TF0420CP.VALID_FROM) = '9999')) \n                      THEN '9999-12-31' \n                      ELSE TF0420CP.VALID_FROM + 1 YEAR \n                      END \n          )   \n          ELSE ( CASE \n                      WHEN ((TF0420CP.VALID_TO = '0001-01-01') OR (YEAR(TF0420CP.VALID_TO) = '9999')) \n                      THEN '9999-12-31' \n                      ELSE TF0420CP.VALID_TO + 1 YEAR \n                      END \n          ) \n          END  \n  ) AS VALID_TO, \n   \n  LOWER(TF0420CP.CREATOR) AS CREATOR, \n  TF0420CP.LOAD_CYCLE_ID AS LOAD_CYCLE_ID, \n  TF0420CP.ACTION_CODE AS ACTION_CODE, \n  TF0420CP.QUOTATION_TYPE AS QUOTATION_TYPE \n   \nFROM \n  TF0420CP \nWHERE  \n  (TF0420CP.CLIENT, TF0420CP.ID_NUMBER, VALID_FROM, TF0420CP.LOAD_CYCLE_ID) IN ( \n  SELECT CLIENT, ID_NUMBER, VALID_FROM, MAX(LOAD_CYCLE_ID)  \n  FROM TF0420CP \n  GROUP BY CLIENT, ID_NUMBER, VALID_FROM \n  ) \nAND TF0420CP.ACTION_CODE <> 'D' \n), \n \n     TF0900CP_Q AS \n( \nSELECT \n \n  TF0900CP.RELATIVE_NUMBER,  \n  TF0900CP.QUOT_NUMBER,  \n  TF0900CP.QUOT_EDITION_NO,  \n   \n  MAX (TF0900CP.QUOT_EDITION_NO) OVER ( \n                                  PARTITION BY \n                                    TF0900CP.FK_TF0420CLIENT, \n                                    TF0900CP.FK_TF0420ID_NUMBER, \n                                    TF0900CP.SCOPE, \n                                    TF0900CP.ACTION, \n                                    TF0900CP.Q_SRV_REL_NO, \n                                    TF0900CP.Q_RG_REL_NO, \n                                    TF0900CP.Q_RATE_REL_NO ) as MAX_QUOT_EDITION_NO, \n    \n  TF0900CP.NO_OF_SRV_IN_QUOT,  \n  TF0900CP.NO_OF_RG_IN_QUOT,  \n  TF0900CP.EXPECTED_VOLUME,  \n  TF0900CP.EXPECTED_VOL_UOM,  \n  TF0900CP.EXP_VOL_PERIOD_IND,  \n  TF0900CP.STATUS_TIMESTAMP, \n   \n  DATE (TO_DATE (TO_CHAR (STATUS_TIMESTAMP, 'YYYY-MM-DD'), 'YYYY-MM-DD')) as STATUS_DATE, \n    \n  TF0900CP.SCOPE,  \n  TF0900CP.ACTION,  \n  TF0900CP.TYPE,  \n  TF0900CP.Q_SRV_REL_NO,  \n  TF0900CP.Q_RG_REL_NO,  \n  TF0900CP.Q_RATE_REL_NO,  \n  TF0900CP.Q_RATE_CHARGE_CODE,  \n  TF0900CP.T_RA_ID,  \n  TF0900CP.T_SRV_REL_NO,  \n  TF0900CP.T_RG_REL_NO,  \n  TF0900CP.T_RATE_REL_NO,  \n  TF0900CP.CUSTOMER_NAME,  \n  TF0900CP.CUSTOMER_SUPPL,  \n  TF0900CP.USER, \n  TF0900CP.USER_OFF_MC_N,  \n  TF0900CP.USER_OFF_MC_S,  \n  TF0900CP.RESP_OFF_MC_N,  \n  TF0900CP.RESP_OFF_MC_S,  \n  TF0900CP.SRT_LOCODE,  \n  TF0900CP.BFR_LOCODE,  \n  TF0900CP.BTO_LOCODE,  \n  TF0900CP.END_LOCODE,  \n  TF0900CP.QUOT_TIER,  \n  TF0900CP.COMMODITY_GRP_CODE,  \n  TF0900CP.COMMODITY_GRP_NO,  \n  TF0900CP.COMMODITY_DESCR,  \n  TF0900CP.RG_GROUP_CODE,  \n  TF0900CP.RG_STD_GRP_NAME,  \n  TF0900CP.CONT_TYPE_GROUP,  \n  TF0900CP.QUOT_SOW,  \n  TF0900CP.QUOT_NOR,  \n  TF0900CP.QUOT_OOG_GENERAL,  \n  TF0900CP.QUOT_DG,  \n  TF0900CP.GL_NAME,  \n  TF0900CP.GL_SEA_AMOUNT,  \n  TF0900CP.GL_SEA_CURR, \n  TF0900CP.QUOT_SEA_AMOUNT,  \n  TF0900CP.QUOT_SEA_CURR,  \n  TF0900CP.Q_SEA_AMT_USD,  \n  TF0900CP.Q_SEA_AMT_GL_CURR,  \n  TF0900CP.GL_SEA_AMT_USD,  \n  TF0900CP.GL_SEA_AMT_Q_CURR,  \n  TF0900CP.DUR_QUOT_SNT_1ST,  \n  TF0900CP.DUR_APP_REQ,  \n  TF0900CP.FK_TF0420CLIENT,  \n  TF0900CP.FK_TF0420ID_NUMBER,  \n  TF0900CP.FK1TF0420ID_NUMBER,  \n  TF0900CP.FK1TF0430RELATIVE,  \n  TF0900CP.FK1TF0440RELATIVE,  \n  TF0900CP.FK1TF0450REL_NUM,  \n  TF0900CP.GL_SUB_NAME,  \n  TF0900CP.LOAD_CYCLE_ID,  \n  TF0900CP.ACTION_CODE, \n  TF0900CP.QUOT_VALID_FROM, \n  TF0900CP.QUOT_VALID_TO, \n  TF0900CP.GL_TOTAL_AMT_USD, \n  TF0900CP.Q_TOTAL_AMT_USD, \n  TF0900CP.Q_SEA_AMT_ORI, \n  TF0900CP.Q_SEA_AMT_USD_ORI, \n  TF0900CP.Q_SEA_AMT_GL_C_ORI, \n  TF0900CP.Q_RATE_TERM_NAME, \n  TF0900CP.Q_RATE_TERM_CODE, \n  TF0900CP.GL_RATE_TERM_NAME, \n  TF0900CP.GL_RATE_TERM_CODE, \n  TF0900CP.NEEDED_REASON, \n  TF0900CP.Q_RG_CL2_USD \n \nFROM \n  TF0900CP, \n  TF0900CP_TAKEOVER \n   \nWHERE \n  TF0900CP.FK_TF0420CLIENT = TF0900CP_TAKEOVER.FK_TF0420CLIENT \n  AND TF0900CP.FK_TF0420ID_NUMBER = TF0900CP_TAKEOVER.FK_TF0420ID_NUMBER \n  AND TF0900CP.SCOPE = TF0900CP_TAKEOVER.SCOPE \n  AND TF0900CP.ACTION = TF0900CP_TAKEOVER.ACTION \n  AND TF0900CP.Q_SRV_REL_NO =  TF0900CP_TAKEOVER.Q_SRV_REL_NO \n  AND TF0900CP.Q_RG_REL_NO = TF0900CP_TAKEOVER.Q_RG_REL_NO \n  AND TF0900CP.Q_RATE_REL_NO = TF0900CP_TAKEOVER.Q_RATE_REL_NO \n) \n \nSELECT \nTF0900CP_Q.*, \nTF0420CP_Q.CREATOR, \n(\tCASE \n\t   WHEN TF0420CP_Q.QUOTATION_TYPE = 'C' THEN 'FIS' \n       WHEN TF0420CP_Q.QUOTATION_TYPE = 'W' THEN 'WEB' \n       WHEN TF0420CP_Q.QUOTATION_TYPE = 'V' THEN 'WCAS' \n       ELSE 'N/A' \n    END \n) as RAPP_QUOTATION_TYPE, \nTF0420CP_Q.VALID_FROM \n \n \nFROM \n \nTF0900CP_Q \n \nLEFT OUTER JOIN \n \nTF0420CP_Q \n   \nON \n  TF0900CP_Q.FK_TF0420CLIENT = TF0420CP_Q.CLIENT \n  AND TF0900CP_Q.FK_TF0420ID_NUMBER = TF0420CP_Q.ID_NUMBER  \n  AND TF0900CP_Q.STATUS_DATE >= TF0420CP_Q.VALID_FROM \n  AND TF0900CP_Q.STATUS_DATE <= TF0420CP_Q.VALID_TO"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "ACCOUNT_ID"
+            },
+            "name" : "ACCOUNT_ID",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 38,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "ACCOUNT_TYPE_ID"
+            },
+            "name" : "ACCOUNT_TYPE_ID",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 38,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "ACCOUNT_NUMBER"
+            },
+            "name" : "ACCOUNT_NUMBER",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "ACCOUNT_OPEN_DATE"
+            },
+            "name" : "ACCOUNT_OPEN_DATE",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9
+          },
+          {
+            "adapterField" : {
+              "name" : "SOURCE_SYSTEM_CODE"
+            },
+            "name" : "SOURCE_SYSTEM_CODE",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 10,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "CREATED_BY"
+            },
+            "name" : "CREATED_BY",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 40,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "CREATED_DTTM"
+            },
+            "name" : "CREATED_DTTM",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9
+          },
+          {
+            "adapterField" : {
+              "name" : "UPDATED_BY"
+            },
+            "name" : "UPDATED_BY",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 40,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "UPDATED_DTTM"
+            },
+            "name" : "UPDATED_DTTM",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9
+          },
+          {
+            "adapterField" : {
+              "name" : "PROCESS_ID"
+            },
+            "name" : "PROCESS_ID",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 38,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "CYCLE_ID"
+            },
+            "name" : "CYCLE_ID",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 38,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "ACTIVE_FLAG"
+            },
+            "name" : "ACTIVE_FLAG",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 1,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "START_DATE"
+            },
+            "name" : "START_DATE",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9
+          },
+          {
+            "adapterField" : {
+              "name" : "END_DATE"
+            },
+            "name" : "END_DATE",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9
+          },
+          {
+            "adapterField" : {
+              "name" : "DATA_HASH"
+            },
+            "name" : "DATA_HASH",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 4000,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "IS_PURGED"
+            },
+            "name" : "IS_PURGED",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 1,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "start"
+            },
+            "name" : "start",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9
+          },
+          {
+            "adapterField" : {
+              "name" : "end"
+            },
+            "name" : "end",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@1g0cUpVYNqgbpd62wvFTy4",
+          "connectionName" : "INFATEST_SNOWFLAKE4",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "TOOLKIT",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "GCS/GCS_SCHEMA/ACCOUNT124",
+            "label" : "ACCOUNT124",
+            "objectName" : "ACCOUNT124",
+            "objectType" : "table",
+            "path" : "GCS/GCS_SCHEMA/ACCOUNT124",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "ACCOUNT_ID",
+                "fieldType" : "CONNECTOR",
+                "label" : "ACCOUNT_ID",
+                "nativeName" : "ACCOUNT_ID",
+                "nativeType" : "number",
+                "original" : "false",
+                "precision" : 38,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ACCOUNT124"
+                  }
+                ]
+              },
+              {
+                "name" : "ACCOUNT_TYPE_ID",
+                "fieldType" : "CONNECTOR",
+                "label" : "ACCOUNT_TYPE_ID",
+                "nativeName" : "ACCOUNT_TYPE_ID",
+                "nativeType" : "number",
+                "original" : "false",
+                "precision" : 38,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ACCOUNT124"
+                  }
+                ]
+              },
+              {
+                "name" : "ACCOUNT_NUMBER",
+                "fieldType" : "CONNECTOR",
+                "label" : "ACCOUNT_NUMBER",
+                "nativeName" : "ACCOUNT_NUMBER",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ACCOUNT124"
+                  }
+                ]
+              },
+              {
+                "name" : "ACCOUNT_OPEN_DATE",
+                "fieldType" : "CONNECTOR",
+                "label" : "ACCOUNT_OPEN_DATE",
+                "nativeName" : "ACCOUNT_OPEN_DATE",
+                "nativeType" : "timestampntz",
+                "original" : "false",
+                "precision" : 38,
+                "scale" : 9,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ACCOUNT124"
+                  }
+                ]
+              },
+              {
+                "name" : "SOURCE_SYSTEM_CODE",
+                "fieldType" : "CONNECTOR",
+                "label" : "SOURCE_SYSTEM_CODE",
+                "nativeName" : "SOURCE_SYSTEM_CODE",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 10,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ACCOUNT124"
+                  }
+                ]
+              },
+              {
+                "name" : "CREATED_BY",
+                "fieldType" : "CONNECTOR",
+                "label" : "CREATED_BY",
+                "nativeName" : "CREATED_BY",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 40,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ACCOUNT124"
+                  }
+                ]
+              },
+              {
+                "name" : "CREATED_DTTM",
+                "fieldType" : "CONNECTOR",
+                "label" : "CREATED_DTTM",
+                "nativeName" : "CREATED_DTTM",
+                "nativeType" : "timestampntz",
+                "original" : "false",
+                "precision" : 38,
+                "scale" : 9,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ACCOUNT124"
+                  }
+                ]
+              },
+              {
+                "name" : "UPDATED_BY",
+                "fieldType" : "CONNECTOR",
+                "label" : "UPDATED_BY",
+                "nativeName" : "UPDATED_BY",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 40,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ACCOUNT124"
+                  }
+                ]
+              },
+              {
+                "name" : "UPDATED_DTTM",
+                "fieldType" : "CONNECTOR",
+                "label" : "UPDATED_DTTM",
+                "nativeName" : "UPDATED_DTTM",
+                "nativeType" : "timestampntz",
+                "original" : "false",
+                "precision" : 38,
+                "scale" : 9,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ACCOUNT124"
+                  }
+                ]
+              },
+              {
+                "name" : "PROCESS_ID",
+                "fieldType" : "CONNECTOR",
+                "label" : "PROCESS_ID",
+                "nativeName" : "PROCESS_ID",
+                "nativeType" : "number",
+                "original" : "false",
+                "precision" : 38,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ACCOUNT124"
+                  }
+                ]
+              },
+              {
+                "name" : "CYCLE_ID",
+                "fieldType" : "CONNECTOR",
+                "label" : "CYCLE_ID",
+                "nativeName" : "CYCLE_ID",
+                "nativeType" : "number",
+                "original" : "false",
+                "precision" : 38,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ACCOUNT124"
+                  }
+                ]
+              },
+              {
+                "name" : "ACTIVE_FLAG",
+                "fieldType" : "CONNECTOR",
+                "label" : "ACTIVE_FLAG",
+                "nativeName" : "ACTIVE_FLAG",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 1,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ACCOUNT124"
+                  }
+                ]
+              },
+              {
+                "name" : "START_DATE",
+                "fieldType" : "CONNECTOR",
+                "label" : "START_DATE",
+                "nativeName" : "START_DATE",
+                "nativeType" : "timestampntz",
+                "original" : "false",
+                "precision" : 38,
+                "scale" : 9,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ACCOUNT124"
+                  }
+                ]
+              },
+              {
+                "name" : "END_DATE",
+                "fieldType" : "CONNECTOR",
+                "label" : "END_DATE",
+                "nativeName" : "END_DATE",
+                "nativeType" : "timestampntz",
+                "original" : "false",
+                "precision" : 38,
+                "scale" : 9,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ACCOUNT124"
+                  }
+                ]
+              },
+              {
+                "name" : "DATA_HASH",
+                "fieldType" : "CONNECTOR",
+                "label" : "DATA_HASH",
+                "nativeName" : "DATA_HASH",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 4000,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ACCOUNT124"
+                  }
+                ]
+              },
+              {
+                "name" : "IS_PURGED",
+                "fieldType" : "CONNECTOR",
+                "label" : "IS_PURGED",
+                "nativeName" : "IS_PURGED",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 1,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ACCOUNT124"
+                  }
+                ]
+              },
+              {
+                "name" : "start",
+                "fieldType" : "CONNECTOR",
+                "label" : "start",
+                "nativeName" : "start",
+                "nativeType" : "timestampntz",
+                "original" : "false",
+                "precision" : 38,
+                "scale" : 9,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ACCOUNT124"
+                  }
+                ]
+              },
+              {
+                "name" : "end",
+                "fieldType" : "CONNECTOR",
+                "label" : "end",
+                "nativeName" : "end",
+                "nativeType" : "timestampntz",
+                "original" : "false",
+                "precision" : 38,
+                "scale" : 9,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ACCOUNT124"
+                  }
+                ]
+              }
+            ],
+            "objectAttributes" : [
+              {
+                "name" : "tableType",
+                "value" : "TABLE"
+              }
+            ]
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          }
+        }
+      },
+      {
+        "description" : "This is a helper expression for mplt_get_opl_id_by_matchcode_pc_MR, used to resolve the name conflicts. \n",
+        "name" : "_EXPR_mplt_get_opl_id_by_matchcode_pc_MR",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "conflictResolutions" : [
+              {
+                "precedingGroupName" : "MERGE",
+                "precedingTxName" : "rtr_del_mrg",
+                "rule" : {
+                  "bulkRename" : "true",
+                  "include" : "true",
+                  "bulkRenameOption" : {
+                    "pattern" : "^(LOAD_CYCLE_ID)$/$0_rtr_del_mrg",
+                    "suffix" : "false"
+                  }
+                }
+              },
+              {
+                "precedingGroupName" : "DefaultGroup",
+                "precedingTxName" : "exp_central_cleanse_and_calculation",
+                "rule" : {
+                  "bulkRename" : "true",
+                  "include" : "true",
+                  "bulkRenameOption" : {
+                    "pattern" : "^(out_MATCHCODE_SUPPL_MR)$/$0_exp_central_cleanse_and_calculation",
+                    "suffix" : "false"
+                  }
+                }
+              }
+            ],
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              },
+              {
+                "bulkRename" : "false",
+                "include" : "false",
+                "names" : [
+                  {
+                    "inputName" : "ACTION_CODE"
+                  },
+                  {
+                    "inputName" : "RELATIVE_NUMBER"
+                  },
+                  {
+                    "inputName" : "QUOT_NUMBER"
+                  },
+                  {
+                    "inputName" : "QUOT_EDITION_NO"
+                  },
+                  {
+                    "inputName" : "MAX_QUOT_EDITION_NO"
+                  },
+                  {
+                    "inputName" : "NO_OF_SRV_IN_QUOT"
+                  },
+                  {
+                    "inputName" : "NO_OF_RG_IN_QUOT"
+                  },
+                  {
+                    "inputName" : "EXPECTED_VOLUME"
+                  },
+                  {
+                    "inputName" : "EXPECTED_VOL_UOM"
+                  },
+                  {
+                    "inputName" : "EXP_VOL_PERIOD_IND"
+                  },
+                  {
+                    "inputName" : "STATUS_TIMESTAMP"
+                  },
+                  {
+                    "inputName" : "STATUS_DATE"
+                  },
+                  {
+                    "inputName" : "SCOPE"
+                  },
+                  {
+                    "inputName" : "ACTION"
+                  },
+                  {
+                    "inputName" : "TYPE"
+                  },
+                  {
+                    "inputName" : "Q_SRV_REL_NO"
+                  },
+                  {
+                    "inputName" : "Q_RG_REL_NO"
+                  },
+                  {
+                    "inputName" : "Q_RATE_REL_NO"
+                  },
+                  {
+                    "inputName" : "Q_RATE_CHARGE_CODE"
+                  },
+                  {
+                    "inputName" : "T_RA_ID"
+                  },
+                  {
+                    "inputName" : "T_SRV_REL_NO"
+                  },
+                  {
+                    "inputName" : "T_RG_REL_NO"
+                  },
+                  {
+                    "inputName" : "T_RATE_REL_NO"
+                  },
+                  {
+                    "inputName" : "CUSTOMER_NAME"
+                  },
+                  {
+                    "inputName" : "CUSTOMER_SUPPL"
+                  },
+                  {
+                    "inputName" : "USER"
+                  },
+                  {
+                    "inputName" : "USER_OFF_MC_N"
+                  },
+                  {
+                    "inputName" : "USER_OFF_MC_S"
+                  },
+                  {
+                    "inputName" : "RESP_OFF_MC_N"
+                  },
+                  {
+                    "inputName" : "RESP_OFF_MC_S"
+                  },
+                  {
+                    "inputName" : "SRT_LOCODE"
+                  },
+                  {
+                    "inputName" : "BFR_LOCODE"
+                  },
+                  {
+                    "inputName" : "BTO_LOCODE"
+                  },
+                  {
+                    "inputName" : "END_LOCODE"
+                  },
+                  {
+                    "inputName" : "QUOT_TIER"
+                  },
+                  {
+                    "inputName" : "COMMODITY_GRP_CODE"
+                  },
+                  {
+                    "inputName" : "COMMODITY_GRP_NO"
+                  },
+                  {
+                    "inputName" : "COMMODITY_DESCR"
+                  },
+                  {
+                    "inputName" : "RG_GROUP_CODE"
+                  },
+                  {
+                    "inputName" : "RG_STD_GRP_NAME"
+                  },
+                  {
+                    "inputName" : "CONT_TYPE_GROUP"
+                  },
+                  {
+                    "inputName" : "QUOT_SOW"
+                  },
+                  {
+                    "inputName" : "QUOT_NOR"
+                  },
+                  {
+                    "inputName" : "QUOT_OOG_GENERAL"
+                  },
+                  {
+                    "inputName" : "QUOT_DG"
+                  },
+                  {
+                    "inputName" : "GL_NAME"
+                  },
+                  {
+                    "inputName" : "GL_SEA_AMOUNT"
+                  },
+                  {
+                    "inputName" : "GL_SEA_CURR"
+                  },
+                  {
+                    "inputName" : "QUOT_SEA_AMOUNT"
+                  },
+                  {
+                    "inputName" : "QUOT_SEA_CURR"
+                  },
+                  {
+                    "inputName" : "Q_SEA_AMT_USD"
+                  },
+                  {
+                    "inputName" : "Q_SEA_AMT_GL_CURR"
+                  },
+                  {
+                    "inputName" : "GL_SEA_AMT_USD"
+                  },
+                  {
+                    "inputName" : "GL_SEA_AMT_Q_CURR"
+                  },
+                  {
+                    "inputName" : "DUR_QUOT_SNT_1ST"
+                  },
+                  {
+                    "inputName" : "DUR_APP_REQ"
+                  },
+                  {
+                    "inputName" : "FK_TF0420CLIENT"
+                  },
+                  {
+                    "inputName" : "FK_TF0420ID_NUMBER"
+                  },
+                  {
+                    "inputName" : "FK1TF0420ID_NUMBER"
+                  },
+                  {
+                    "inputName" : "FK1TF0430RELATIVE"
+                  },
+                  {
+                    "inputName" : "FK1TF0440RELATIVE"
+                  },
+                  {
+                    "inputName" : "FK1TF0450REL_NUM"
+                  },
+                  {
+                    "inputName" : "GL_SUB_NAME"
+                  },
+                  {
+                    "inputName" : "QUOT_VALID_FROM"
+                  },
+                  {
+                    "inputName" : "QUOT_VALID_TO"
+                  },
+                  {
+                    "inputName" : "GL_TOTAL_AMT_USD"
+                  },
+                  {
+                    "inputName" : "Q_TOTAL_AMT_USD"
+                  },
+                  {
+                    "inputName" : "Q_SEA_AMT_ORI"
+                  },
+                  {
+                    "inputName" : "Q_SEA_AMT_USD_ORI"
+                  },
+                  {
+                    "inputName" : "Q_SEA_AMT_GL_C_ORI"
+                  },
+                  {
+                    "inputName" : "Q_RATE_TERM_NAME"
+                  },
+                  {
+                    "inputName" : "Q_RATE_TERM_CODE"
+                  },
+                  {
+                    "inputName" : "GL_RATE_TERM_NAME"
+                  },
+                  {
+                    "inputName" : "GL_RATE_TERM_CODE"
+                  },
+                  {
+                    "inputName" : "NEEDED_REASON"
+                  },
+                  {
+                    "inputName" : "Q_RG_CL2_USD"
+                  },
+                  {
+                    "inputName" : "CREATOR"
+                  },
+                  {
+                    "inputName" : "RAPP_QUOTATION_TYPE"
+                  },
+                  {
+                    "inputName" : "in_QUOT_NUMBER"
+                  },
+                  {
+                    "inputName" : "in_QUOT_EDITION_NO"
+                  },
+                  {
+                    "inputName" : "in_MAX_QUOT_EDITION_NO"
+                  },
+                  {
+                    "inputName" : "in_FK_TF0420CLIENT"
+                  },
+                  {
+                    "inputName" : "in_STATUS_TIMESTAMP"
+                  },
+                  {
+                    "inputName" : "in_SCOPE"
+                  },
+                  {
+                    "inputName" : "in_ACTION"
+                  },
+                  {
+                    "inputName" : "in_T_RA_ID"
+                  },
+                  {
+                    "inputName" : "in_T_SRV_REL_NO"
+                  },
+                  {
+                    "inputName" : "in_T_RG_REL_NO"
+                  },
+                  {
+                    "inputName" : "in_T_RATE_REL_NO"
+                  },
+                  {
+                    "inputName" : "in_CUSTOMER_NAME"
+                  },
+                  {
+                    "inputName" : "in_CUSTOMER_SUPPL"
+                  },
+                  {
+                    "inputName" : "in_USER"
+                  },
+                  {
+                    "inputName" : "in_USER_OFF_MC_N"
+                  },
+                  {
+                    "inputName" : "in_USER_OFF_MC_S"
+                  },
+                  {
+                    "inputName" : "in_RESP_OFF_MC_N"
+                  },
+                  {
+                    "inputName" : "in_RESP_OFF_MC_S"
+                  },
+                  {
+                    "inputName" : "in_RG_GROUP_CODE"
+                  },
+                  {
+                    "inputName" : "in_CONT_TYPE_GROUP"
+                  },
+                  {
+                    "inputName" : "in_QUOT_TIER"
+                  },
+                  {
+                    "inputName" : "out_STATUS_DATE"
+                  },
+                  {
+                    "inputName" : "out_RAPP_T_RA_ID"
+                  },
+                  {
+                    "inputName" : "out_RAPP_T_SRV_REL_NO"
+                  },
+                  {
+                    "inputName" : "out_RAPP_T_RG_REL_NO"
+                  },
+                  {
+                    "inputName" : "out_RAPP_T_RATE_REL_NO"
+                  },
+                  {
+                    "inputName" : "out_MATCHCODE_NAME_USEROFF"
+                  },
+                  {
+                    "inputName" : "out_MATCHCODE_SUPPL_USEROFF"
+                  },
+                  {
+                    "inputName" : "out_MATCHCODE_NAME_MIS"
+                  },
+                  {
+                    "inputName" : "out_MATCHCODE_SUPPL_MIS"
+                  },
+                  {
+                    "inputName" : "out_EQT_TYPE_GRP_CODE"
+                  },
+                  {
+                    "inputName" : "out_EQT_LENGTH_SDESC"
+                  },
+                  {
+                    "inputName" : "out_RAPP_USER"
+                  },
+                  {
+                    "inputName" : "out_RAPP_SENT"
+                  },
+                  {
+                    "inputName" : "out_RAPP_TRANSFERED"
+                  },
+                  {
+                    "inputName" : "out_RAPP_ISLASTEDITION"
+                  },
+                  {
+                    "inputName" : "out_RAPP_QUOTATION_TIER"
+                  },
+                  {
+                    "inputName" : "out_YEAR_MONTH_FK_TW0111QUCR"
+                  }
+                ]
+              },
+              {
+                "bulkRename" : "false",
+                "include" : "true",
+                "names" : [
+                  {
+                    "inputName" : "out_CLIENT",
+                    "outputName" : "CLIENT"
+                  },
+                  {
+                    "inputName" : "out_MATCHCODE_NAME_MR",
+                    "outputName" : "MATCHCODE_NAME"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "windowConfigurationEnabled" : "false"
+      },
+      {
+        "description" : "Dieses Mapplet ermittelt zu einem gegebenen Matchcode Name und Suppl die zugehörige OPL_Id, die gültig war zum Zeitpunkt wo der Matchcode_Name /Suppl gültig war.\n",
+        "name" : "mplt_get_opl_id_by_matchcode_pc_MR",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Optional",
+            "value" : "true"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "mplt_in_find_OPL_Id_for_MC_N_S",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              },
+              {
+                "bulkRename" : "false",
+                "include" : "false",
+                "names" : [
+                  {
+                    "inputName" : "LOAD_CYCLE_ID_rtr_del_mrg"
+                  },
+                  {
+                    "inputName" : "out_MATCHCODE_SUPPL_MR_exp_central_cleanse_and_calculation"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "input" : "false",
+            "name" : "mplt_out_OPL_Id",
+            "output" : "true"
+          }
+        ],
+        "active" : "false",
+        "fieldMappingMode" : "MANUAL",
+        "saasMappletId" : "@3yS2SJcsjwleWZQrGJpE8h",
+        "saasMappletName" : "mplt_lkpc_OPL_Id_for_MC_N_S_pcache",
+        "type" : "NATIVE",
+        "inputGroups" : [
+          {
+            "name" : "mplt_in_find_OPL_Id_for_MC_N_S",
+            "fields" : [
+              {
+                "name" : "CLIENT",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 10,
+                "scale" : 0
+              },
+              {
+                "name" : "MATCHCODE_NAME",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 10,
+                "scale" : 0
+              },
+              {
+                "name" : "MATCHCODE_SUPPL",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 10,
+                "scale" : 0
+              },
+              {
+                "name" : "LOAD_CYCLE_ID",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 10,
+                "scale" : 0
+              }
+            ]
+          }
+        ],
+        "outputGroups" : [
+          {
+            "name" : "mplt_out_OPL_Id",
+            "fields" : [
+              {
+                "name" : "OPL_ID",
+                "platformType" : {
+                  "name" : "decimal"
+                },
+                "precision" : 38,
+                "scale" : 0
+              }
+            ]
+          }
+        ],
+        "parameterBindings" : [
+          {
+            "mappletParameter" : {
+              "input" : "true",
+              "output" : "false",
+              "precision" : 0,
+              "scale" : 0,
+              "allowRuntimeOverride" : "true",
+              "expressionVariable" : "false",
+              "name" : "lkpu_TS1970CPLookupParameter",
+              "anonymousType" : {
+                "connectionType" : "Snowflake Cloud Data Warehouse V2"
+              }
+            }
+          },
+          {
+            "mappletParameter" : {
+              "input" : "true",
+              "output" : "false",
+              "precision" : 0,
+              "scale" : 0,
+              "allowRuntimeOverride" : "true",
+              "expressionVariable" : "false",
+              "name" : "lkpc_TS1970CPLookupParameter",
+              "anonymousType" : {
+                "connectionType" : "Snowflake Cloud Data Warehouse V2"
+              }
+            }
+          },
+          {
+            "mappletParameter" : {
+              "input" : "true",
+              "output" : "false",
+              "precision" : 0,
+              "scale" : 0,
+              "allowRuntimeOverride" : "true",
+              "expressionVariable" : "false",
+              "name" : "lkpc_read_OPL_Id_from_dim_Organisation_PlaceLookupParameter",
+              "anonymousType" : {
+                "connectionType" : "Snowflake Cloud Data Warehouse V2"
+              }
+            }
+          }
+        ],
+        "validForEngines" : [
+          "CDI"
+        ],
+        "dataAdapter" : {
+          "name" : "Data Adapter for mplt_lkpc_OPL_Id_for_MC_N_S_pcache",
+          "inputFields" : [
+            {
+              "name" : "CLIENT",
+              "fieldType" : "UNDEFINED",
+              "label" : "CLIENT",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 10,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "mplt_lkpc_OPL_Id_for_MC_N_S_pcache"
+                }
+              ]
+            },
+            {
+              "name" : "MATCHCODE_NAME",
+              "fieldType" : "UNDEFINED",
+              "label" : "MATCHCODE_NAME",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 10,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "mplt_lkpc_OPL_Id_for_MC_N_S_pcache"
+                }
+              ]
+            },
+            {
+              "name" : "MATCHCODE_SUPPL",
+              "fieldType" : "UNDEFINED",
+              "label" : "MATCHCODE_SUPPL",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 10,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "mplt_lkpc_OPL_Id_for_MC_N_S_pcache"
+                }
+              ]
+            },
+            {
+              "name" : "LOAD_CYCLE_ID",
+              "fieldType" : "UNDEFINED",
+              "label" : "LOAD_CYCLE_ID",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 10,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "mplt_lkpc_OPL_Id_for_MC_N_S_pcache"
+                }
+              ]
+            }
+          ],
+          "outputFields" : [
+            {
+              "name" : "OPL_ID",
+              "fieldType" : "UNDEFINED",
+              "label" : "OPL_ID",
+              "nativeType" : "decimal",
+              "original" : "false",
+              "precision" : 38,
+              "scale" : 0
+            }
+          ]
+        },
+        "fieldMapping" : {
+          "fields" : [
+            {
+              "adapterField" : {
+                "name" : "CLIENT"
+              },
+              "name" : "ACCOUNT_NUMBER",
+              "precision" : 0,
+              "scale" : 0
+            },
+            {
+              "adapterField" : {
+                "name" : "MATCHCODE_NAME"
+              },
+              "name" : "SOURCE_SYSTEM_CODE",
+              "precision" : 0,
+              "scale" : 0
+            },
+            {
+              "adapterField" : {
+                "name" : "MATCHCODE_SUPPL"
+              },
+              "name" : "CREATED_BY",
+              "precision" : 0,
+              "scale" : 0
+            },
+            {
+              "adapterField" : {
+                "name" : "LOAD_CYCLE_ID"
+              },
+              "name" : "UPDATED_BY",
+              "precision" : 0,
+              "scale" : 0
+            }
+          ]
+        }
+      },
+      {
+        "createTime" : "2022-06-14T11:08:16.673Z",
+        "name" : "_EXPR_mplt_get_opl_id_by_matchcode_pc_MR2",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "windowConfigurationEnabled" : "false",
+        "windowSpec" : {
+          "allRowsFollowing" : "false",
+          "allRowsPreceding" : "false",
+          "endOffset" : 0,
+          "startOffset" : 0,
+          "partitionKeys" : null
+        }
+      },
+      {
+        "createTime" : "2023-09-29T11:12:44.316Z",
+        "name" : "Target",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          },
+          {
+            "name" : "Thousand Separator",
+            "value" : "None"
+          },
+          {
+            "name" : "Decimal Separator",
+            "value" : "."
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "sessionProperties" : [
+          {
+            "name" : "Append if Exists",
+            "value" : "NO"
+          },
+          {
+            "name" : "Create Target Directory",
+            "value" : "NO"
+          },
+          {
+            "name" : "Header Options",
+            "value" : "Output Field Names"
+          },
+          {
+            "name" : "Output Type",
+            "value" : "File"
+          }
+        ],
+        "createTarget" : "true",
+        "fieldMappingMode" : "BY_NAME",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "dataAdapter" : {
+          "connectionId" : "saas:@bj7Ei9NwHQFgtmdvawJrQs",
+          "connectionName" : "INFATEST_FF_WDWS",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "CSVFile",
+          "useDynamicFileName" : "false",
+          "bulkOptions" : {
+            "hardDelete" : "false",
+            "maxRowsPerRequest" : 0,
+            "monitorBulk" : "false",
+            "monitorBulkV2" : "false",
+            "pkChunkingEnabled" : "false",
+            "pkChunkingSize" : 0,
+            "serialMode" : "false",
+            "useBulkApi" : "false",
+            "useBulkApiV2" : "false"
+          },
+          "object" : {
+            "name" : "FF_1.txt",
+            "label" : "FF_1.txt",
+            "path" : "FF_1.txt",
+            "retainMetadata" : "false",
+            "fileAttrs" : {
+              "consecutiveDelimiter" : "false",
+              "delimiter" : ",",
+              "firstDataRow" : 2,
+              "firstDataRowAsHeader" : "false",
+              "headerLineNo" : 1,
+              "multiDelimitersAsAnd" : "true",
+              "rowDelimiter" : 0,
+              "textQualifier" : "\""
+            }
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "false",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "false",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        }
+      },
+      {
+        "description" : "This is a helper expression for mplt_get_opl_id_by_matchcode_USEROFF_pc, used to resolve the name conflicts. \n",
+        "name" : "_EXPR_mplt_get_opl_id_by_matchcode_USEROFF_pc",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "conflictResolutions" : [
+              {
+                "precedingGroupName" : "MERGE",
+                "precedingTxName" : "rtr_del_mrg",
+                "rule" : {
+                  "bulkRename" : "true",
+                  "include" : "true",
+                  "bulkRenameOption" : {
+                    "pattern" : "^(LOAD_CYCLE_ID)$/$0_rtr_del_mrg",
+                    "suffix" : "false"
+                  }
+                }
+              },
+              {
+                "precedingGroupName" : "DefaultGroup",
+                "precedingTxName" : "exp_central_cleanse_and_calculation",
+                "rule" : {
+                  "bulkRename" : "true",
+                  "include" : "true",
+                  "bulkRenameOption" : {
+                    "pattern" : "^(out_MATCHCODE_SUPPL_USEROFF)$/$0_exp_central_cleanse_and_calculation",
+                    "suffix" : "false"
+                  }
+                }
+              }
+            ],
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              },
+              {
+                "bulkRename" : "false",
+                "include" : "false",
+                "names" : [
+                  {
+                    "inputName" : "ACTION_CODE"
+                  },
+                  {
+                    "inputName" : "RELATIVE_NUMBER"
+                  },
+                  {
+                    "inputName" : "QUOT_NUMBER"
+                  },
+                  {
+                    "inputName" : "QUOT_EDITION_NO"
+                  },
+                  {
+                    "inputName" : "MAX_QUOT_EDITION_NO"
+                  },
+                  {
+                    "inputName" : "NO_OF_SRV_IN_QUOT"
+                  },
+                  {
+                    "inputName" : "NO_OF_RG_IN_QUOT"
+                  },
+                  {
+                    "inputName" : "EXPECTED_VOLUME"
+                  },
+                  {
+                    "inputName" : "EXPECTED_VOL_UOM"
+                  },
+                  {
+                    "inputName" : "EXP_VOL_PERIOD_IND"
+                  },
+                  {
+                    "inputName" : "STATUS_TIMESTAMP"
+                  },
+                  {
+                    "inputName" : "STATUS_DATE"
+                  },
+                  {
+                    "inputName" : "SCOPE"
+                  },
+                  {
+                    "inputName" : "ACTION"
+                  },
+                  {
+                    "inputName" : "TYPE"
+                  },
+                  {
+                    "inputName" : "Q_SRV_REL_NO"
+                  },
+                  {
+                    "inputName" : "Q_RG_REL_NO"
+                  },
+                  {
+                    "inputName" : "Q_RATE_REL_NO"
+                  },
+                  {
+                    "inputName" : "Q_RATE_CHARGE_CODE"
+                  },
+                  {
+                    "inputName" : "T_RA_ID"
+                  },
+                  {
+                    "inputName" : "T_SRV_REL_NO"
+                  },
+                  {
+                    "inputName" : "T_RG_REL_NO"
+                  },
+                  {
+                    "inputName" : "T_RATE_REL_NO"
+                  },
+                  {
+                    "inputName" : "CUSTOMER_NAME"
+                  },
+                  {
+                    "inputName" : "CUSTOMER_SUPPL"
+                  },
+                  {
+                    "inputName" : "USER"
+                  },
+                  {
+                    "inputName" : "USER_OFF_MC_N"
+                  },
+                  {
+                    "inputName" : "USER_OFF_MC_S"
+                  },
+                  {
+                    "inputName" : "RESP_OFF_MC_N"
+                  },
+                  {
+                    "inputName" : "RESP_OFF_MC_S"
+                  },
+                  {
+                    "inputName" : "SRT_LOCODE"
+                  },
+                  {
+                    "inputName" : "BFR_LOCODE"
+                  },
+                  {
+                    "inputName" : "BTO_LOCODE"
+                  },
+                  {
+                    "inputName" : "END_LOCODE"
+                  },
+                  {
+                    "inputName" : "QUOT_TIER"
+                  },
+                  {
+                    "inputName" : "COMMODITY_GRP_CODE"
+                  },
+                  {
+                    "inputName" : "COMMODITY_GRP_NO"
+                  },
+                  {
+                    "inputName" : "COMMODITY_DESCR"
+                  },
+                  {
+                    "inputName" : "RG_GROUP_CODE"
+                  },
+                  {
+                    "inputName" : "RG_STD_GRP_NAME"
+                  },
+                  {
+                    "inputName" : "CONT_TYPE_GROUP"
+                  },
+                  {
+                    "inputName" : "QUOT_SOW"
+                  },
+                  {
+                    "inputName" : "QUOT_NOR"
+                  },
+                  {
+                    "inputName" : "QUOT_OOG_GENERAL"
+                  },
+                  {
+                    "inputName" : "QUOT_DG"
+                  },
+                  {
+                    "inputName" : "GL_NAME"
+                  },
+                  {
+                    "inputName" : "GL_SEA_AMOUNT"
+                  },
+                  {
+                    "inputName" : "GL_SEA_CURR"
+                  },
+                  {
+                    "inputName" : "QUOT_SEA_AMOUNT"
+                  },
+                  {
+                    "inputName" : "QUOT_SEA_CURR"
+                  },
+                  {
+                    "inputName" : "Q_SEA_AMT_USD"
+                  },
+                  {
+                    "inputName" : "Q_SEA_AMT_GL_CURR"
+                  },
+                  {
+                    "inputName" : "GL_SEA_AMT_USD"
+                  },
+                  {
+                    "inputName" : "GL_SEA_AMT_Q_CURR"
+                  },
+                  {
+                    "inputName" : "DUR_QUOT_SNT_1ST"
+                  },
+                  {
+                    "inputName" : "DUR_APP_REQ"
+                  },
+                  {
+                    "inputName" : "FK_TF0420CLIENT"
+                  },
+                  {
+                    "inputName" : "FK_TF0420ID_NUMBER"
+                  },
+                  {
+                    "inputName" : "FK1TF0420ID_NUMBER"
+                  },
+                  {
+                    "inputName" : "FK1TF0430RELATIVE"
+                  },
+                  {
+                    "inputName" : "FK1TF0440RELATIVE"
+                  },
+                  {
+                    "inputName" : "FK1TF0450REL_NUM"
+                  },
+                  {
+                    "inputName" : "GL_SUB_NAME"
+                  },
+                  {
+                    "inputName" : "QUOT_VALID_FROM"
+                  },
+                  {
+                    "inputName" : "QUOT_VALID_TO"
+                  },
+                  {
+                    "inputName" : "GL_TOTAL_AMT_USD"
+                  },
+                  {
+                    "inputName" : "Q_TOTAL_AMT_USD"
+                  },
+                  {
+                    "inputName" : "Q_SEA_AMT_ORI"
+                  },
+                  {
+                    "inputName" : "Q_SEA_AMT_USD_ORI"
+                  },
+                  {
+                    "inputName" : "Q_SEA_AMT_GL_C_ORI"
+                  },
+                  {
+                    "inputName" : "Q_RATE_TERM_NAME"
+                  },
+                  {
+                    "inputName" : "Q_RATE_TERM_CODE"
+                  },
+                  {
+                    "inputName" : "GL_RATE_TERM_NAME"
+                  },
+                  {
+                    "inputName" : "GL_RATE_TERM_CODE"
+                  },
+                  {
+                    "inputName" : "NEEDED_REASON"
+                  },
+                  {
+                    "inputName" : "Q_RG_CL2_USD"
+                  },
+                  {
+                    "inputName" : "CREATOR"
+                  },
+                  {
+                    "inputName" : "RAPP_QUOTATION_TYPE"
+                  },
+                  {
+                    "inputName" : "in_QUOT_NUMBER"
+                  },
+                  {
+                    "inputName" : "in_QUOT_EDITION_NO"
+                  },
+                  {
+                    "inputName" : "in_MAX_QUOT_EDITION_NO"
+                  },
+                  {
+                    "inputName" : "in_FK_TF0420CLIENT"
+                  },
+                  {
+                    "inputName" : "in_STATUS_TIMESTAMP"
+                  },
+                  {
+                    "inputName" : "in_SCOPE"
+                  },
+                  {
+                    "inputName" : "in_ACTION"
+                  },
+                  {
+                    "inputName" : "in_T_RA_ID"
+                  },
+                  {
+                    "inputName" : "in_T_SRV_REL_NO"
+                  },
+                  {
+                    "inputName" : "in_T_RG_REL_NO"
+                  },
+                  {
+                    "inputName" : "in_T_RATE_REL_NO"
+                  },
+                  {
+                    "inputName" : "in_CUSTOMER_NAME"
+                  },
+                  {
+                    "inputName" : "in_CUSTOMER_SUPPL"
+                  },
+                  {
+                    "inputName" : "in_USER"
+                  },
+                  {
+                    "inputName" : "in_USER_OFF_MC_N"
+                  },
+                  {
+                    "inputName" : "in_USER_OFF_MC_S"
+                  },
+                  {
+                    "inputName" : "in_RESP_OFF_MC_N"
+                  },
+                  {
+                    "inputName" : "in_RESP_OFF_MC_S"
+                  },
+                  {
+                    "inputName" : "in_RG_GROUP_CODE"
+                  },
+                  {
+                    "inputName" : "in_CONT_TYPE_GROUP"
+                  },
+                  {
+                    "inputName" : "in_QUOT_TIER"
+                  },
+                  {
+                    "inputName" : "out_STATUS_DATE"
+                  },
+                  {
+                    "inputName" : "out_RAPP_T_RA_ID"
+                  },
+                  {
+                    "inputName" : "out_RAPP_T_SRV_REL_NO"
+                  },
+                  {
+                    "inputName" : "out_RAPP_T_RG_REL_NO"
+                  },
+                  {
+                    "inputName" : "out_RAPP_T_RATE_REL_NO"
+                  },
+                  {
+                    "inputName" : "out_MATCHCODE_NAME_MR"
+                  },
+                  {
+                    "inputName" : "out_MATCHCODE_SUPPL_MR"
+                  },
+                  {
+                    "inputName" : "out_MATCHCODE_NAME_MIS"
+                  },
+                  {
+                    "inputName" : "out_MATCHCODE_SUPPL_MIS"
+                  },
+                  {
+                    "inputName" : "out_EQT_TYPE_GRP_CODE"
+                  },
+                  {
+                    "inputName" : "out_EQT_LENGTH_SDESC"
+                  },
+                  {
+                    "inputName" : "out_RAPP_USER"
+                  },
+                  {
+                    "inputName" : "out_RAPP_SENT"
+                  },
+                  {
+                    "inputName" : "out_RAPP_TRANSFERED"
+                  },
+                  {
+                    "inputName" : "out_RAPP_ISLASTEDITION"
+                  },
+                  {
+                    "inputName" : "out_RAPP_QUOTATION_TIER"
+                  },
+                  {
+                    "inputName" : "out_YEAR_MONTH_FK_TW0111QUCR"
+                  }
+                ]
+              },
+              {
+                "bulkRename" : "false",
+                "include" : "true",
+                "names" : [
+                  {
+                    "inputName" : "out_CLIENT",
+                    "outputName" : "CLIENT"
+                  },
+                  {
+                    "inputName" : "out_MATCHCODE_NAME_USEROFF",
+                    "outputName" : "MATCHCODE_NAME"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "windowConfigurationEnabled" : "false"
+      },
+      {
+        "createTime" : "2022-06-14T11:19:27.870Z",
+        "name" : "_EXPR_mplt_get_opl_id_by_matchcode_USEROFF_pc2",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "windowConfigurationEnabled" : "false",
+        "windowSpec" : {
+          "allRowsFollowing" : "false",
+          "allRowsPreceding" : "false",
+          "endOffset" : 0,
+          "startOffset" : 0,
+          "partitionKeys" : null
+        }
+      },
+      {
+        "description" : "\nConverted using O2N",
+        "name" : "sc_trg_FACT_RAPP_STATUS_MRG",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "conflictResolutions" : [
+              {
+                "precedingGroupName" : "MERGE",
+                "precedingTxName" : "rtr_del_mrg",
+                "rule" : {
+                  "bulkRename" : "true",
+                  "include" : "true",
+                  "bulkRenameOption" : {
+                    "pattern" : "^(RAPP_QUOTATION_TYPE)$/$0_rtr_del_mrg",
+                    "suffix" : "false"
+                  }
+                }
+              },
+              {
+                "precedingGroupName" : "DefaultGroup",
+                "precedingTxName" : "exp_DIM_RAAR",
+                "rule" : {
+                  "bulkRename" : "true",
+                  "include" : "true",
+                  "bulkRenameOption" : {
+                    "pattern" : "^(in_SCOPE)$/$0_exp_DIM_RAAR",
+                    "suffix" : "false"
+                  }
+                }
+              }
+            ],
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "createTarget" : "true",
+        "fieldMappingMode" : "BY_NAME",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "dataAdapter" : {
+          "connectionId" : "saas:@bj7Ei9NwHQFgtmdvawJrQs",
+          "connectionName" : "INFATEST_FF_WDWS",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "CSVFile",
+          "useDynamicFileName" : "false",
+          "bulkOptions" : {
+            "hardDelete" : "false",
+            "maxRowsPerRequest" : 0,
+            "monitorBulk" : "false",
+            "monitorBulkV2" : "false",
+            "pkChunkingEnabled" : "false",
+            "pkChunkingSize" : 0,
+            "serialMode" : "false",
+            "useBulkApi" : "false",
+            "useBulkApiV2" : "false"
+          },
+          "object" : {
+            "name" : "FF_2.txt",
+            "label" : "FF_2.txt",
+            "path" : "FF_2.txt",
+            "retainMetadata" : "false",
+            "fileAttrs" : {
+              "consecutiveDelimiter" : "false",
+              "delimiter" : ",",
+              "firstDataRow" : 2,
+              "firstDataRowAsHeader" : "false",
+              "headerLineNo" : 1,
+              "multiDelimitersAsAnd" : "true",
+              "rowDelimiter" : 0,
+              "textQualifier" : "\""
+            }
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "false",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "false",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        }
+      }
+    ]
+  },
+  "vcsExportTime" : "2025-04-14 08:25:52 PDT"
+}
